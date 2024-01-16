@@ -1,5 +1,5 @@
 function App() {
-  return <div>React Project Template</div>;
+  return <div>Main Page</div>;
 }
 
 export { App };
