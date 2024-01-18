@@ -1,5 +1,6 @@
 import { useFormik } from "formik";
 import { useState } from "react";
+import { FormikForm } from "./FormikForm";
 
 function App() {
   const [values, setValues] = useState();
@@ -18,7 +19,7 @@ function App() {
   return (
     <div>
       <h1>Main Page</h1>
-      <form onSubmit={formik.handleSubmit}>
+      <FormikForm formik={formik}>
         <label htmlFor="name">User Name</label>
         <input
           id="name"
@@ -47,7 +48,7 @@ function App() {
         />
 
         <button type="submit">Submit</button>
-      </form>
+      </FormikForm>
       <div>{JSON.stringify(values)}</div>
     </div>
   );

@@ -1,4 +1,4 @@
-const FormikForm = ({ children }) => {
+const FormikForm = ({ formik, children }) => {
   return <form onSubmit={formik.handleSubmit}>{children}</form>;
 };
 
