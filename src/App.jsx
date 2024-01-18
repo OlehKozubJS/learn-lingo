@@ -1,6 +1,7 @@
 import { useFormikValues } from "./useFormikValues";
 import { FormikForm } from "./FormikForm";
 import { FormikInput } from "./FormikInput";
+import { SVGImage } from "./icons";
 
 function App() {
   const [formik, values] = useFormikValues({
@@ -24,6 +25,9 @@ function App() {
         </FormikInput>
       </FormikForm>
       <div>{JSON.stringify(values)}</div>
+      <SVGImage name="up" />
+      <SVGImage name="down" />
+      <SVGImage name="hidden" />
     </div>
   );
 }
