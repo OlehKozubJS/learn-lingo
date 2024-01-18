@@ -1,0 +1,1 @@
+{"version":3,"file":"static/css/main.25d3cd19.css","mappings":"AAAA,0BACE,aAAc,CAEd,WAAY,CADZ,UAEF","sources":["icons/SVGImage.module.css"],"sourcesContent":[".SVGImage {\n  display: block;\n  width: 20px;\n  height: 20px;\n}\n"],"names":[],"sourceRoot":""}
