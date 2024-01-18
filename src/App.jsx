@@ -1,6 +1,7 @@
 import { useFormik } from "formik";
 import { useState } from "react";
 import { FormikForm } from "./FormikForm";
+import { FormikInput } from "./FormikInput";
 
 function App() {
   const [values, setValues] = useState();
@@ -20,34 +21,15 @@ function App() {
     <div>
       <h1>Main Page</h1>
       <FormikForm formik={formik}>
-        <label htmlFor="name">User Name</label>
-        <input
-          id="name"
-          name="name"
-          type="text"
-          onChange={formik.handleChange}
-          value={formik.values.name}
-        />
-
-        <label htmlFor="email">Email Address</label>
-        <input
-          id="email"
-          name="email"
-          type="email"
-          onChange={formik.handleChange}
-          value={formik.values.email}
-        />
-
-        <label htmlFor="password">Password</label>
-        <input
-          id="password"
-          name="password"
-          type="password"
-          onChange={formik.handleChange}
-          value={formik.values.password}
-        />
-
-        <button type="submit">Submit</button>
+        <FormikInput key={1} formik={formik} name="name" type="text">
+          User Name
+        </FormikInput>
+        <FormikInput key={2} formik={formik} name="email" type="email">
+          Email Address
+        </FormikInput>
+        <FormikInput key={3} formik={formik} name="password" type="password">
+          Password
+        </FormikInput>
       </FormikForm>
       <div>{JSON.stringify(values)}</div>
     </div>
