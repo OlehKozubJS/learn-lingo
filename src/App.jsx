@@ -27,6 +27,7 @@ function App() {
       <div>{JSON.stringify(values)}</div>
       <SVGImage name="up" />
       <SVGImage name="down" />
+      <SVGImage name="visible" />
       <SVGImage name="hidden" />
     </div>
   );
