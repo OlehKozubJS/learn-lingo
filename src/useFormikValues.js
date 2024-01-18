@@ -1,7 +1,7 @@
 import { useFormik } from "formik";
 import { useState } from "react";
 
-const seFormikValues = (values) => {
+const useFormikValues = (values) => {
   const [values, setValues] = useState();
   const formik = useFormik({
     initialValues: values,
@@ -11,3 +11,5 @@ const seFormikValues = (values) => {
   });
   return [formik, values];
 };
+
+export { useFormikValues };
