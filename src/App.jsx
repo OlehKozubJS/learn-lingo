@@ -1,20 +1,12 @@
-import { useFormik } from "formik";
-import { useState } from "react";
+import { useFormikValues } from "./useFormikValues";
 import { FormikForm } from "./FormikForm";
 import { FormikInput } from "./FormikInput";
 
 function App() {
-  const [values, setValues] = useState();
-
-  const formik = useFormik({
-    initialValues: {
-      name: "",
-      email: "",
-      password: "",
-    },
-    onSubmit: (values) => {
-      setValues(values, null, 2);
-    },
+  const [formik, values] = useFormikValues({
+    name: "",
+    email: "",
+    password: "",
   });
 
   return (
