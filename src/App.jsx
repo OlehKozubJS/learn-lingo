@@ -28,7 +28,6 @@ function App() {
       <SVGImage name="up" />
       <SVGImage name="down" />
       <SVGImage name="visible" />
-      <SVGImage name="visible1" />
       <SVGImage name="hidden" />
     </div>
   );
