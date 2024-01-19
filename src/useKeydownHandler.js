@@ -13,3 +13,5 @@ const useKeydownHandler = (callbackName) => {
     window.removeEventListener("keydown", handleKeydown);
   };
 };
+
+export { useKeydownHandler };
