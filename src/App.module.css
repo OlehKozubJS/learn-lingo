@@ -8,7 +8,13 @@
   display: flex;
   justify-content: center;
   align-items: center;
+
+  background-color: rgba(0, 0, 0, 0.7);
 }
 
 .Modal {
+  width: 200px;
+  height: 200px;
+  border-radius: 20px;
+  background-color: rgb(150, 100, 200);
 }
