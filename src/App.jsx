@@ -1,10 +1,10 @@
-import { useState, useEffect } from "react";
+import AppStyles from "./App.module.css";
+import { useState } from "react";
 
 import { useFormikValues } from "./useFormikValues";
 import { FormikForm } from "./FormikForm";
 import { FormikInput } from "./FormikInput";
 import { SVGImage } from "./icons";
-import AppStyles from "./App.module.css";
 import { useKeydown } from "./useKeydownHandler";
 
 function App() {
