@@ -29,7 +29,7 @@ function App() {
     }
   };
 
-  useKeydownHandler(closeModal, "Escape");
+  useKeydown(closeModal, "Escape");
 
   return (
     <div>
