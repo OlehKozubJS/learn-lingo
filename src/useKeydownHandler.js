@@ -2,7 +2,7 @@
 
 const useKeydownHandler = (callbackName, keyName) => {
   const handleKeydown = (event) => {
-    if (event.type === "keydown" && event.key === "Escape") {
+    if (event.type === "keydown" && event.key === keyName) {
       callbackName();
     }
   };
