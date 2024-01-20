@@ -4,7 +4,7 @@ import { useFormikValues } from "./useFormikValues";
 import { FormikForm } from "./FormikForm";
 import { FormikInput } from "./FormikInput";
 import { SVGImage } from "./icons";
-import appStyles from "./App.module.css";
+import AppStyles from "./App.module.css";
 import { useKeydownHandler } from "./useKeydownHandler";
 
 function App() {
@@ -15,8 +15,18 @@ function App() {
     password: "",
   });
 
+  const openModal = () => {
+    setIsModal(true);
+  };
+
   const closeModal = () => {
     setIsModal(false);
+  };
+
+  const handleBackdropClick = (event) => {
+    if (event.target.className === AppStyles.Backdrop) {
+      closeModal();
+    }
   };
 
   useEffect(() => {
@@ -42,9 +52,12 @@ function App() {
       <SVGImage name="down" />
       <SVGImage name="visible" />
       <SVGImage name="hidden" />
+      <button type="button" onClick={openModal}>
+        Open Modal
+      </button>
       {isModal && (
-        <div className={appStyles.Backdrop} onClick={closeModal}>
-          <div className={appStyles.Modal}>This is Modal</div>
+        <div className={AppStyles.Backdrop} onClick={handleBackdropClick}>
+          <div className={AppStyles.Modal}>This is Modal</div>
         </div>
       )}
     </div>
