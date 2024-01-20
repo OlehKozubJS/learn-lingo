@@ -50,6 +50,7 @@ function App() {
       <SVGImage name="down" />
       <SVGImage name="visible" />
       <SVGImage name="hidden" />
+      <SVGImage name="close" />
       <button type="button" onClick={openModal}>
         Open Modal
       </button>
