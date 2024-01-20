@@ -29,9 +29,7 @@ function App() {
     }
   };
 
-  useEffect(() => {
-    useKeydownHandler(closeModal);
-  }, [closeModal]);
+  useKeydownHandler(closeModal, "Escape");
 
   return (
     <div>
