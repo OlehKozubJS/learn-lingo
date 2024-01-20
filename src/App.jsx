@@ -4,7 +4,7 @@ import { useFormikValues } from "./useFormikValues";
 import { FormikForm } from "./FormikForm";
 import { FormikInput } from "./FormikInput";
 import { SVGImage } from "./icons";
-import { Backdrop, Modal } from "./App.module.css";
+import appStyles from "./App.module.css";
 import { useKeydownHandler } from "./useKeydownHandler";
 
 function App() {
@@ -43,8 +43,8 @@ function App() {
       <SVGImage name="visible" />
       <SVGImage name="hidden" />
       {isModal && (
-        <div className={Backdrop} onClick={closeModal}>
-          <div className={Modal}>This is Modal</div>
+        <div className={appStyles.Backdrop} onClick={closeModal}>
+          <div className={appStyles.Modal}>This is Modal</div>
         </div>
       )}
     </div>
