@@ -1,6 +1,4 @@
-//import { useEffect } from "react";
-
-const useKeydownHandler = (callbackName, keyName) => {
+const useKeydown = (callbackName, keyName) => {
   const handleKeydown = (event) => {
     if (event.type === "keydown" && event.key === keyName) {
       callbackName();
@@ -12,7 +10,6 @@ const useKeydownHandler = (callbackName, keyName) => {
   return () => {
     window.removeEventListener("keydown", handleKeydown);
   };
-  //useEffect(() => {}, []);
 };
 
-export { useKeydownHandler };
+export { useKeydown };
