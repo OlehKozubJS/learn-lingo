@@ -1,14 +1,27 @@
+import { useState, useEffect } from "react";
+
 import { useFormikValues } from "./useFormikValues";
 import { FormikForm } from "./FormikForm";
 import { FormikInput } from "./FormikInput";
 import { SVGImage } from "./icons";
+import { Backdrop, Modal } from "./App.module.css";
+import { useKeydownHandler } from "./useKeydownHandler";
 
 function App() {
+  const [isModal, setIsModal] = useState(false);
   const [formik, values] = useFormikValues({
     name: "",
     email: "",
     password: "",
   });
+
+  const closeModal = () => {
+    setIsModal(false);
+  };
+
+  useEffect(() => {
+    useKeydownHandler(closeModal);
+  }, [closeModal]);
 
   return (
     <div>
@@ -29,6 +42,11 @@ function App() {
       <SVGImage name="down" />
       <SVGImage name="visible" />
       <SVGImage name="hidden" />
+      {isModal && (
+        <div className={Backdrop} onClick={closeModal}>
+          <div className={Modal}>This is Modal</div>
+        </div>
+      )}
     </div>
   );
 }
