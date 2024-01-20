@@ -1,15 +1,15 @@
 import { useFormik } from "formik";
-//import { useState } from "react";
+import { useState } from "react";
 
 const useFormikValues = (initialValues) => {
-  //const [values, setValues] = useState();
+  const [values, setValues] = useState();
   const formik = useFormik({
     initialValues,
     onSubmit: (values) => {
-      return values;
+      setValues(values, null, 2);
     },
   });
-  return null;
+  return [formik, values];
 };
 
 export { useFormikValues };
