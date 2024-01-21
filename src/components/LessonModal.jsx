@@ -1,5 +1,8 @@
 import ModalStyles from "./Modal.module.css";
+import {} from "../formik-components";
 
-const LessonModal = () => {};
+const LessonModal = () => {
+    return();
+};
 
 export { LessonModal };
