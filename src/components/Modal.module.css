@@ -19,7 +19,6 @@
 
 .ModalHeader {
   box-sizing: border-box;
-  width: 100%;
   padding: 20px 20px 12px 20px;
 
   display: flex;
@@ -49,6 +48,5 @@
 
 .ModalContent {
   box-sizing: border-box;
-  width: 100%;
   padding: 0px 64px 64px 64px;
 }
