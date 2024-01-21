@@ -41,6 +41,7 @@ const Modal = ({ closeModal, children }) => {
           >
             <SVGImage
               name={isHover ? "close-hover" : "close"}
+              onClick={handleClick}
               data-close={true}
             />
           </button>
