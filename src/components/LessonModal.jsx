@@ -12,7 +12,12 @@ const LessonModal = ({ handleSubmit }) => {
     },
   });
 
-  return <FormikForm formik={formik}></FormikForm>;
+  return (
+    <FormikForm formik={formik}>
+      <FormikEmail formik={formik}>Full Name</FormikEmail>
+      <FormikEmail formik={formik}>Email</FormikEmail>
+    </FormikForm>
+  );
 };
 
 export { LessonModal };
