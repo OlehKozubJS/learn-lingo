@@ -16,6 +16,13 @@ const Modal = ({ isOpen, children }) => {
     }
   };
 
+  const handleMouseOver = () => {
+    setIsHover(true);
+  };
+  const handleMouseLeave = () => {
+    setIsHover(false);
+  };
+
   const closeModal = () => {
     setIsModalOpen(false);
   };
@@ -34,9 +41,11 @@ const Modal = ({ isOpen, children }) => {
             <button
               className={ModalStyles.CloseButton}
               onClick={handleClick}
+              onMouseOver={handleMouseOver}
+              onMouseLeave={handleMouseLeave}
               data-close={true}
             >
-              <SVGImage name="close" />
+              <SVGImage name={isHover ? "close" : "close-hover"} />
             </button>
           </div>
           <div className={ModalStyles.ModalContent}>{children}</div>
