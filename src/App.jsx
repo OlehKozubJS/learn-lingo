@@ -1,16 +1,11 @@
-import AppStyles from "./App.module.css";
 import { useState } from "react";
 
-import { useFormikValues } from "./useFormikValues";
 import { useKeydown } from "./useKeydown";
+
+import AppStyles from "./App.module.css";
 
 function App() {
   const [isModal, setIsModal] = useState(false);
-  const [formik, values] = useFormikValues({
-    name: "",
-    email: "",
-    password: "",
-  });
 
   const openModal = () => {
     setIsModal(true);
