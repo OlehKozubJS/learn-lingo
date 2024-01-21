@@ -1,0 +1,3 @@
+const LessonModal = () => {};
+
+export { LessonModal };
