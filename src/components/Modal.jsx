@@ -1,23 +1,48 @@
+import { useState } from "react";
+
 import { useKeydown } from "../hooks";
 
 import { SVGImage } from "../icons";
 
 import ModalStyles from "./Modal.module.css";
 
-const Modal = ({ onClose, children }) => {
-  useKeydown(onClose, "Escape");
+const Modal = ({ isOpen, children }) => {
+  const [isModalOpen, setIsModalOpen] = useState(isOpen);
+  const [isHover, setIsHover] = useState(false);
+
+  const handleClick = (event) => {
+    if (event.target.dataset.close) {
+      setIsModalOpen(false);
+    }
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+  };
+
+  useKeydown(closeModal, "Escape");
 
   return (
-    <div className={ModalStyles.Backdrop} data-close>
-      <div className={ModalStyles.Modal}>
-        <div className={ModalStyles.ModalHeader}>
-          <button onClick={onClose}>
-            <SVGImage name="close" data-close />
-          </button>
+    isModalOpen && (
+      <div
+        className={ModalStyles.Backdrop}
+        onClick={handleClick}
+        data-close={true}
+      >
+        <div className={ModalStyles.Modal}>
+          <div className={ModalStyles.ModalHeader}>
+            <button
+              className={ModalStyles.CloseButton}
+              onClick={handleClick}
+              data-close={true}
+            >
+              <SVGImage name="close" />
+            </button>
+          </div>
+          <div className={ModalStyles.ModalContent}>{children}</div>
         </div>
-        <div className={ModalStyles.ModalContent}>{children}</div>
       </div>
-    </div>
+    )
   );
 };
 
