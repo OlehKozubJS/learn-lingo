@@ -45,7 +45,7 @@ const Modal = ({ isOpen, children }) => {
               onMouseLeave={handleMouseLeave}
               data-close={true}
             >
-              <SVGImage name={isHover ? "close" : "close-hover"} />
+              <SVGImage name={isHover ? "close-hover" : "close"} />
             </button>
           </div>
           <div className={ModalStyles.ModalContent}>{children}</div>
