@@ -1,4 +1,4 @@
-const FormikInput = ({ formik, children }) => {
+const FormikPassword = ({ formik, children }) => {
   return (
     <label htmlFor="password">
       <input
@@ -13,4 +13,4 @@ const FormikInput = ({ formik, children }) => {
   );
 };
 
-export { FormikInput };
+export { FormikPassword };
