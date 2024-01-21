@@ -13,14 +13,17 @@
 }
 
 .Modal {
-  width: 200px;
-  height: 200px;
+  width: 600px;
   padding: 10px;
 
-  border-radius: 20px;
-  background-color: rgb(150, 100, 200);
+  border-radius: 30px;
+  background: #fff;
+}
 
-  text-align: center;
-  font-size: 24px;
-  color: rgb(250, 245, 255);
+.ModalHeader {
+  padding: 12px;
+}
+
+.ModalContent {
+  padding: 0px 64px 64px 64px;
 }

@@ -1,5 +1,3 @@
-import { useFormik } from "formik";
-
 import { useKeydown } from "../hooks";
 
 import { SVGImage } from "../icons";
@@ -10,11 +8,13 @@ const Modal = ({ onClose, children }) => {
   useKeydown(onClose, "Escape");
 
   return (
-    <div>
-      <div>
-        <SVGImage name="close" />
+    <div className={ModalStyles.Backdrop}>
+      <div className={ModalStyles.Modal}>
+        <div className={ModalStyles.ModalHeader}>
+          <SVGImage name="close" />
+        </div>
+        <div className={ModalStyles.ModalContent}>{children}</div>
       </div>
-      <div>{children}</div>
     </div>
   );
 };
