@@ -1,12 +1,14 @@
 import { useFormik } from "formik";
 
-import {} from "";
+import { useKeydown } from "../hooks";
 
 import { SVGImage } from "../icons";
 
 import ModalStyles from "./Modal.module.css";
 
-const Modal = ({ children }) => {
+const Modal = ({ onClose, children }) => {
+  useKeydown(onClose, "Escape");
+
   return (
     <div>
       <div>
