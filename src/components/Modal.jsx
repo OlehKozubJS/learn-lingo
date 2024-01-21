@@ -2,7 +2,7 @@ import { useState } from "react";
 
 import { useKeydown } from "../hooks";
 
-import { SVGImage } from "../icons";
+import icons from "../icons/icons.svg";
 
 import ModalStyles from "./Modal.module.css";
 
@@ -39,11 +39,11 @@ const Modal = ({ closeModal, children }) => {
             onMouseLeave={handleMouseLeave}
             data-close={true}
           >
-            <SVGImage
-              name={isHover ? "close-hover" : "close"}
-              onClick={handleClick}
-              data-close={true}
-            />
+            <svg onClick={handleClick} data-close={true}>
+              <use
+                xlinkHref={`${icons}#${isHover ? "close-hover" : "close"}`}
+              />
+            </svg>
           </button>
         </div>
         <div className={ModalStyles.ModalContent}>{children}</div>
