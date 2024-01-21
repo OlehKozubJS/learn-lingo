@@ -8,10 +8,12 @@ const Modal = ({ onClose, children }) => {
   useKeydown(onClose, "Escape");
 
   return (
-    <div className={ModalStyles.Backdrop}>
+    <div className={ModalStyles.Backdrop} data-close>
       <div className={ModalStyles.Modal}>
         <div className={ModalStyles.ModalHeader}>
-          <SVGImage name="close" />
+          <button onClick={onClose}>
+            <SVGImage name="close" data-close />
+          </button>
         </div>
         <div className={ModalStyles.ModalContent}>{children}</div>
       </div>
