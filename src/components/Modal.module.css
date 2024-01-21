@@ -21,9 +21,32 @@
 }
 
 .ModalHeader {
-  padding: 12px;
+  padding: 10px;
+
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
 }
 
 .ModalContent {
   padding: 0px 64px 64px 64px;
+}
+
+.CloseButton {
+  box-sizing: border-box;
+  width: 24px;
+  height: 24px;
+
+  border-radius: 50%;
+  border: 2px solid #fff;
+  background-color: #fff;
+}
+
+.CloseButton:hover {
+  border: 2px solid #f4c550;
+}
+
+.CloseButton:active {
+  border: 2px solid #f4c550;
+  background-color: #f4c550;
 }
