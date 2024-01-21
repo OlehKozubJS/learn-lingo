@@ -16,10 +16,14 @@ const Modal = ({ closeModal, children }) => {
     setIsHover(false);
   };
 
-  const handleClick = (event) => {
+  const handleBackdropClick = (event) => {
     if (event.target.dataset.close) {
-      closeModal(false);
+      closeModal();
     }
+  };
+
+  const handleCloseButtonClick = () => {
+    closeModal();
   };
 
   useKeydown(closeModal, "Escape");
@@ -27,23 +31,18 @@ const Modal = ({ closeModal, children }) => {
   return (
     <div
       className={ModalStyles.Backdrop}
-      onClick={handleClick}
+      onClick={handleBackdropClick}
       data-close={true}
     >
       <div className={ModalStyles.Modal}>
         <div className={ModalStyles.ModalHeader}>
           <button
             className={ModalStyles.CloseButton}
-            onClick={handleClick}
+            onClick={handleCloseButtonClick}
             onMouseOver={handleMouseOver}
             onMouseLeave={handleMouseLeave}
-            data-close={true}
           >
-            <SVGImage
-              name={isHover ? "close-hover" : "close"}
-              onClick={handleClick}
-              data-close={true}
-            />
+            <SVGImage name={isHover ? "close-hover" : "close"} />
           </button>
         </div>
         <div className={ModalStyles.ModalContent}>{children}</div>
