@@ -1,22 +1,19 @@
 import { useFormik } from "formik";
 
-import { FormikForm, FormikName, FormikEmail } from "../formik-components";
+import {} from "";
+
+import { SVGImage } from "../icons";
 
 import ModalStyles from "./Modal.module.css";
 
-const Modal = ({ handleSubmit }) => {
-  const formik = useFormik({
-    initialValues: { reason: "", name: "", email: "", phone: "" },
-    onSubmit: (values) => {
-      handleSubmit(values);
-    },
-  });
-
+const Modal = ({ children }) => {
   return (
-    <FormikForm formik={formik}>
-      <FormikEmail formik={formik}>Full Name</FormikEmail>
-      <FormikEmail formik={formik}>Email</FormikEmail>
-    </FormikForm>
+    <div>
+      <div>
+        <SVGImage name="close" />
+      </div>
+      <div>{children}</div>
+    </div>
   );
 };
 
