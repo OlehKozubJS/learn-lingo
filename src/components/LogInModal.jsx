@@ -1,0 +1,3 @@
+const LoginModal = () => {};
+
+export { LoginModal };
