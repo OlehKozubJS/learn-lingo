@@ -18,7 +18,9 @@ function App() {
         Open Modal
       </button>
       {isModal && (
-        <Modal isOpen={isModal}>This is common modal window component</Modal>
+        <Modal isOpen={isModal}>
+          <p>This is common modal window component</p>
+        </Modal>
       )}
       <div>Values</div>
     </div>
