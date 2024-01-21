@@ -11,6 +11,10 @@ function App() {
     setIsModal(true);
   };
 
+  const closeModal = () => {
+    setIsModal(false);
+  };
+
   return (
     <div>
       <h1>Main Page</h1>
@@ -18,7 +22,7 @@ function App() {
         Open Modal
       </button>
       {isModal && (
-        <Modal isOpen={isModal}>
+        <Modal closeModal={closeModal}>
           <p>This is common modal window component</p>
         </Modal>
       )}
