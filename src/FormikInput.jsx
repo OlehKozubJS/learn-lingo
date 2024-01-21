@@ -1,16 +1,16 @@
-const FormikInput = ({ formik, name, type, children }) => {
+const FormikEmail = ({ formik, children }) => {
   return (
-    <label htmlFor={name}>
+    <label htmlFor="email">
       <input
-        id={name}
-        name={name}
-        type={type}
+        id="email"
+        name="email"
+        type="email"
         placeholder={children}
         onChange={formik.handleChange}
-        value={formik.values[name]}
+        value={formik.values.email}
       />
     </label>
   );
 };
 
-export { FormikInput };
+export { FormikEmail };
