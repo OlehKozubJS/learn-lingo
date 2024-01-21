@@ -17,7 +17,7 @@ const Modal = ({ closeModal, children }) => {
   };
 
   const handleBackdropClick = (event) => {
-    if (event.target.dataset.close) {
+    if (event.target.className === ModalStyles.Backdrop) {
       closeModal();
     }
   };
@@ -29,11 +29,7 @@ const Modal = ({ closeModal, children }) => {
   useKeydown(closeModal, "Escape");
 
   return (
-    <div
-      className={ModalStyles.Backdrop}
-      onClick={handleBackdropClick}
-      data-close={true}
-    >
+    <div className={ModalStyles.Backdrop} onClick={handleBackdropClick}>
       <div className={ModalStyles.Modal}>
         <div className={ModalStyles.ModalHeader}>
           <button
