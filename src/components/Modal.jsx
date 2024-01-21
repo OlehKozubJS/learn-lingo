@@ -4,7 +4,7 @@ import { FormikForm, FormikName, FormikEmail } from "../formik-components";
 
 import ModalStyles from "./Modal.module.css";
 
-const LessonModal = ({ handleSubmit }) => {
+const Modal = ({ handleSubmit }) => {
   const formik = useFormik({
     initialValues: { reason: "", name: "", email: "", phone: "" },
     onSubmit: (values) => {
@@ -20,4 +20,4 @@ const LessonModal = ({ handleSubmit }) => {
   );
 };
 
-export { LessonModal };
+export { Modal };
