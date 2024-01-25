@@ -13,7 +13,7 @@ import styles from "./Modal.module.css";
 
 const LessonModal = ({ onSubmit, closeModal }) => {
   const formik = useFormik({
-    initialValues: { name: "", email: "", password: "" },
+    initialValues: { reasonForLearning: "", name: "", email: "", tel: "" },
     onSubmit: (values) => {
       onSubmit(values);
     },
@@ -27,6 +27,18 @@ const LessonModal = ({ onSubmit, closeModal }) => {
         your learning goals, and tailor the lesson to your specific needs.
       </p>
       <FormikForm formik={formik} submitName="Sign Up">
+        <FormikRadio
+          formik={formik}
+          name={"reasonForLearning"}
+          title="What is your main reason for learning English?"
+          options={[
+            "Career and business",
+            "Lesson for kids",
+            "Living abroad",
+            "Exams and coursework",
+            "Culture, travel or hobby",
+          ]}
+        />
         <FormikName formik={formik}>Name</FormikName>
         <FormikEmail formik={formik} />
         <FormikPhone formik={formik} />
