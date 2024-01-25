@@ -1,11 +1,12 @@
 import { useState } from "react";
 
-import { LoginModal } from "./components/LogInModal";
+import { LoginModal, RegisterModal } from "./components";
 
 //import AppStyles from "./App.module.css";
 
 function App() {
-  const [isModal, setIsModal] = useState(false);
+  const [isLogIn, setIsLogIn] = useState(false);
+  const [isSignUp, setIsSignUp] = useState(false);
   const [values, setValues] = useState("");
 
   const openModal = () => {
@@ -26,9 +27,13 @@ function App() {
       <button type="button" onClick={openModal}>
         Open Modal
       </button>
-      {isModal && (
+      {isLogIn && (
         <LoginModal closeModal={closeModal} onSubmit={handleSubmit} />
       )}
+      {isSignUp && (
+        <RegisterModal closeModal={closeModal} onSubmit={handleSubmit} />
+      )}
+      {is}
       <div>{values}</div>
     </div>
   );
