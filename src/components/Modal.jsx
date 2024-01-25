@@ -17,7 +17,6 @@ const Modal = ({ closeModal, children }) => {
   };
 
   const handleClick = (event) => {
-    setIsHover(true);
     const isModal = event.target.className === ModalStyles.Backdrop;
     const isCloseButton =
       event.currentTarget.className === ModalStyles.CloseButton;
