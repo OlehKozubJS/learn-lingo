@@ -8,15 +8,25 @@ import ModalStyles from "./Modal.module.css";
 
 const Modal = ({ closeModal, children }) => {
   const [isHover, setIsHover] = useState(false);
+  const [isMouseDown, setIsMouseDown] = useState(false);
 
   const handleMouseOver = () => {
     setIsHover(true);
   };
+
   const handleMouseLeave = () => {
-    setIsHover(false);
+    if (!isMouseDown) {
+      setIsHover(false);
+    }
+  };
+
+  const handleMouseDown = () => {
+    setIsMouseDown(true);
   };
 
   const handleClick = (event) => {
+    setIsHover(false);
+    setIsMouseDown(false);
     if (
       event.target.dataset.isbackdrop ||
       event.currentTarget.dataset.isclosebutton
@@ -41,6 +51,7 @@ const Modal = ({ closeModal, children }) => {
             onClick={handleClick}
             onMouseOver={handleMouseOver}
             onMouseLeave={handleMouseLeave}
+            onMouseDown={handleMouseDown}
           >
             <SVGImage name={isHover ? "close-hover" : "close"} />
           </button>
