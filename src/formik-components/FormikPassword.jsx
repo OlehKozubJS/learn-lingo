@@ -1,5 +1,7 @@
-import { SVGImage } from "../icons";
 import { useState } from "react";
+
+import { SVGImage } from "../icons";
+
 import styles from "./FormikComponents.module.css";
 
 const FormikPassword = ({ formik }) => {
