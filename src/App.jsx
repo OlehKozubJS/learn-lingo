@@ -5,36 +5,62 @@ import { LoginModal, RegisterModal } from "./components";
 //import AppStyles from "./App.module.css";
 
 function App() {
-  const [isLogIn, setIsLogIn] = useState(false);
-  const [isSignUp, setIsSignUp] = useState(false);
-  const [values, setValues] = useState("");
+  const [isLogInModal, setIsLogInModal] = useState(false);
+  const [isSignUpModal, setIsSignUpModal] = useState(false);
+  const [logInValues, setLogInValues] = useState({ email: "", password: "" });
+  const [signUpValues, setSignUpValues] = useState({
+    name: "",
+    email: "",
+    password: "",
+  });
 
-  const openModal = () => {
-    setIsModal(true);
+  const openLogInModal = () => {
+    setIsLogInModal(true);
   };
 
-  const closeModal = () => {
-    setIsModal(false);
+  const closeLogInModal = () => {
+    setIsLogInModal(false);
   };
 
-  const handleSubmit = (values) => {
-    setValues(JSON.stringify(values));
+  const openSignUpModal = () => {
+    setIsSignUpModal(true);
+  };
+
+  const closeSignUpModal = () => {
+    setIsSignUpModal(false);
+  };
+
+  const handleLogInSubmit = (values) => {
+    setLogInValues(values);
+  };
+
+  const handleSignUpSubmit = (values) => {
+    setSignUpValues(values);
   };
 
   return (
     <div>
       <h1>Main Page</h1>
-      <button type="button" onClick={openModal}>
-        Open Modal
+      <button type="button" onClick={openLogInModal}>
+        Open Log In Modal
       </button>
-      {isLogIn && (
-        <LoginModal closeModal={closeModal} onSubmit={handleSubmit} />
+      <button type="button" onClick={openSignUpModal}>
+        Open Register Modal
+      </button>
+      {isLogInModal && (
+        <LoginModal closeModal={closeLogInModal} onSubmit={handleLogInSubmit} />
       )}
-      {isSignUp && (
-        <RegisterModal closeModal={closeModal} onSubmit={handleSubmit} />
+      {isSignUpModal && (
+        <RegisterModal
+          closeModal={closeSignUpModal}
+          onSubmit={handleSignUpSubmit}
+        />
       )}
-      {is}
-      <div>{values}</div>
+      <div>{logInValues.email}</div>
+      <div>{logInValues.password}</div>
+      <div>{signUpValues.name}</div>
+      <div>{signUpValues.email}</div>
+      <div>{signUpValues.password}</div>
     </div>
   );
 }
