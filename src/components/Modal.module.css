@@ -39,6 +39,8 @@
   border-radius: 50%;
   border: none;
   background: none;
+
+  transition: 500ms;
 }
 
 .CloseButton:hover {
