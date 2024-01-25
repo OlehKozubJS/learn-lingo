@@ -44,7 +44,7 @@ const Modal = ({ closeModal, children }) => {
       onClick={handleClick}
     >
       <div className={ModalStyles.Modal}>
-        <div className={ModalStyles.ModalHeader}>
+        <div className={ModalStyles.CloseButtonContainer}>
           <button
             data-isclosebutton={true}
             className={ModalStyles.CloseButton}
