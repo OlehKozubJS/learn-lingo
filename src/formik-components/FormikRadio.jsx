@@ -1,5 +1,3 @@
-import { useState } from "react";
-
 import { SVGImage } from "../icons";
 
 import styles from "./FormikRadio.module.css";
