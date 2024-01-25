@@ -2,7 +2,7 @@ import { SVGImage } from "../icons";
 import { useState } from "react";
 import styles from "./FormikComponents.module.css";
 
-const FormikPassword = ({ formik, children }) => {
+const FormikPassword = ({ formik }) => {
   const [isVisible, setIsVisible] = useState(false);
   const [isFocus, setIsFocus] = useState(false);
 
@@ -33,7 +33,7 @@ const FormikPassword = ({ formik, children }) => {
         id="password"
         name="password"
         type={isVisible ? "text" : "password"}
-        placeholder={children}
+        placeholder="Password"
         onFocus={handleFocus}
         onBlur={handleBlur}
         onChange={formik.handleChange}
