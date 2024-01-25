@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-import { Modal } from "./components/Modal";
+import { LoginModal } from "./components/LogInModal";
 
 //import AppStyles from "./App.module.css";
 
@@ -22,9 +22,9 @@ function App() {
         Open Modal
       </button>
       {isModal && (
-        <Modal closeModal={closeModal}>
+        <LoginModal closeModal={closeModal}>
           <p>This is common modal window component</p>
-        </Modal>
+        </LoginModal>
       )}
       <div>Values</div>
     </div>
