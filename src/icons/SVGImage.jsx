@@ -1,9 +1,8 @@
 import icons from "./icons.svg";
-import styles from "./SVGImage.module.css";
 
-const SVGImage = ({ name }) => {
+const SVGImage = ({ name, size }) => {
   return (
-    <svg className={styles.SVGImage}>
+    <svg style={{ width: `${size}px`, height: `${size}px` }}>
       <use xlinkHref={`${icons}#${name}`} />
     </svg>
   );
