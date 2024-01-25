@@ -14,14 +14,17 @@
 
 .FormikSubmitButton {
   width: 438px;
-  padding: 16px 210px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   border-radius: 12px;
   border: none;
   background: #f4c550;
 
   color: #121417;
-  font-family: Roboto;
+  font-family: "Roboto", sans-serif;
   font-size: 18px;
   font-style: normal;
   font-weight: 700;
