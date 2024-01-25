@@ -12,7 +12,7 @@ import styles from "./Modal.module.css";
 
 const RegisterModal = ({ onSubmit, closeModal }) => {
   const formik = useFormik({
-    initialValues: { email: "", password: "" },
+    initialValues: { name: "", email: "", password: "" },
     onSubmit: (values) => {
       onSubmit(values);
     },
@@ -26,7 +26,7 @@ const RegisterModal = ({ onSubmit, closeModal }) => {
         need some information. Please provide us with the following information
       </p>
       <FormikForm formik={formik} submitName="Sign Up">
-        <FormikName formik={formik} />
+        <FormikName formik={formik}>Name</FormikName>
         <FormikEmail formik={formik} />
         <FormikPassword formik={formik} />
       </FormikForm>
