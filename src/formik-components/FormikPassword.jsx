@@ -41,6 +41,7 @@ const FormikPassword = ({ formik }) => {
         className={styles.FormikInput}
       />
       <button
+        type="button"
         onClick={isVisible ? hidePassword : showPassword}
         className={styles.PasswordButton}
       >
