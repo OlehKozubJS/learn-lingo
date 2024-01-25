@@ -3,9 +3,10 @@ import { useFormik } from "formik";
 import { Modal } from "./Modal";
 import {
   FormikForm,
+  FormikRadio,
   FormikName,
   FormikEmail,
-  FormikPassword,
+  FormikPhone,
 } from "../formik-components";
 
 import styles from "./Modal.module.css";
@@ -20,15 +21,15 @@ const LessonModal = ({ onSubmit, closeModal }) => {
 
   return (
     <Modal closeModal={closeModal}>
-      <h2 className={styles.ModalHeader}>Registration</h2>
+      <h2 className={styles.ModalHeader}>Book trial lesson</h2>
       <p className={styles.ModalText}>
-        Thank you for your interest in our platform! In order to register, we
-        need some information. Please provide us with the following information
+        Our experienced tutor will assess your current language level, discuss
+        your learning goals, and tailor the lesson to your specific needs.
       </p>
       <FormikForm formik={formik} submitName="Sign Up">
         <FormikName formik={formik}>Name</FormikName>
         <FormikEmail formik={formik} />
-        <FormikPassword formik={formik} />
+        <FormikPhone formik={formik} />
       </FormikForm>
     </Modal>
   );
