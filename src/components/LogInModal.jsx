@@ -5,7 +5,7 @@ import { FormikForm, FormikEmail, FormikPassword } from "../formik-components";
 
 import styles from "./Modal.module.css";
 
-const LoginModal = ({ onSubmit }) => {
+const LoginModal = ({ onSubmit, closeModal }) => {
   const formik = useFormik({
     initialValues: { email: "", password: "" },
     onSubmit: (values) => {
@@ -14,7 +14,7 @@ const LoginModal = ({ onSubmit }) => {
   });
 
   return (
-    <Modal closeModal={formik}>
+    <Modal closeModal={closeModal}>
       <h2 className={styles.ModalHeader}>Log In</h2>
       <p className={styles.ModalText}>
         Welcome back! Please enter your credentials to access your account and
