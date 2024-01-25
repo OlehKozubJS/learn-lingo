@@ -9,11 +9,11 @@
 .FormikInputs {
   display: flex;
   flex-direction: column;
-  column-gap: 18px;
+  row-gap: 18px;
 }
 
 .FormikSubmitButton {
-  display: flex;
+  width: 438px;
   padding: 16px 210px;
 
   border-radius: 12px;
