@@ -17,10 +17,10 @@ const Modal = ({ closeModal, children }) => {
   };
 
   const handleClick = (event) => {
-    const isModal = event.target.className === ModalStyles.Backdrop;
-    const isCloseButton =
-      event.currentTarget.className === ModalStyles.CloseButton;
-    if (isModal || isCloseButton) {
+    if (
+      event.target.dataset.isbackdrop ||
+      event.currentTarget.dataset.isclosebutton
+    ) {
       closeModal();
     }
   };
@@ -28,10 +28,15 @@ const Modal = ({ closeModal, children }) => {
   useKeydown(closeModal, "Escape");
 
   return (
-    <div className={ModalStyles.Backdrop} onClick={handleClick}>
+    <div
+      data-isbackdrop={true}
+      className={ModalStyles.Backdrop}
+      onClick={handleClick}
+    >
       <div className={ModalStyles.Modal}>
         <div className={ModalStyles.ModalHeader}>
           <button
+            data-isclosebutton={true}
             className={ModalStyles.CloseButton}
             onClick={handleClick}
             onMouseOver={handleMouseOver}
