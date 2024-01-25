@@ -10,7 +10,7 @@ import {
 
 import styles from "./Modal.module.css";
 
-const RegisterModal = ({ onSubmit, closeModal }) => {
+const LessonModal = ({ onSubmit, closeModal }) => {
   const formik = useFormik({
     initialValues: { name: "", email: "", password: "" },
     onSubmit: (values) => {
