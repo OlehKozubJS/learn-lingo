@@ -20,7 +20,7 @@ const LoginModal = ({ onSubmit, closeModal }) => {
         Welcome back! Please enter your credentials to access your account and
         continue your search for an teacher.
       </p>
-      <FormikForm formik={formik}>
+      <FormikForm formik={formik} submitName="Log In">
         <FormikEmail formik={formik} />
         <FormikPassword formik={formik} />
       </FormikForm>
