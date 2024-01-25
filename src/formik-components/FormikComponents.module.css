@@ -20,6 +20,13 @@
   border: none;
   background: #f4c550;
 
+  color: #121417;
+  font-family: Roboto;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 28px;
+
   transition: 500ms;
 }
 
