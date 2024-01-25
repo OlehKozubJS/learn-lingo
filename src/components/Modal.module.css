@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
 .Backdrop {
   position: fixed;
   top: 0px;
@@ -49,4 +51,23 @@
 .ModalContent {
   box-sizing: border-box;
   padding: 0px 64px 64px 64px;
+}
+
+.ModalHeader {
+  color: #121417;
+  font-family: "Roboto", sans-serif;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 48px;
+  letter-spacing: -0.8px;
+}
+
+.ModalText {
+  color: rgba(18, 20, 23, 0.8);
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22px;
 }
