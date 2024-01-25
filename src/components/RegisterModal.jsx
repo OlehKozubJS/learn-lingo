@@ -1,5 +1,37 @@
-import ModalStyles from "./Modal.module.css";
+import { useFormik } from "formik";
 
-const RegisterModal = () => {};
+import { Modal } from "./Modal";
+import {
+  FormikForm,
+  FormikName,
+  FormikEmail,
+  FormikPassword,
+} from "../formik-components";
+
+import styles from "./Modal.module.css";
+
+const RegisterModal = ({ onSubmit, closeModal }) => {
+  const formik = useFormik({
+    initialValues: { email: "", password: "" },
+    onSubmit: (values) => {
+      onSubmit(values);
+    },
+  });
+
+  return (
+    <Modal closeModal={closeModal}>
+      <h2 className={styles.ModalHeader}>Registration</h2>
+      <p className={styles.ModalText}>
+        Thank you for your interest in our platform! In order to register, we
+        need some information. Please provide us with the following information
+      </p>
+      <FormikForm formik={formik} submitName="Sign Up">
+        <FormikName formik={formik} />
+        <FormikEmail formik={formik} />
+        <FormikPassword formik={formik} />
+      </FormikForm>
+    </Modal>
+  );
+};
 
 export { RegisterModal };
