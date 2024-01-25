@@ -2,7 +2,7 @@ import { useState } from "react";
 
 import { SVGImage } from "../icons";
 
-import styles from "./FormikComponents.module.css";
+import styles from "./FormikRadio.module.css";
 
 const FormikRadio = ({ formik, title, name, options }) => {
   return (
