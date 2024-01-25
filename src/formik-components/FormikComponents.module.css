@@ -14,10 +14,7 @@
 
 .FormikSubmitButton {
   width: 438px;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  padding-block: 16px;
 
   border-radius: 12px;
   border: none;
