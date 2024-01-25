@@ -44,7 +44,7 @@ const FormikPassword = ({ formik }) => {
         onClick={isVisible ? hidePassword : showPassword}
         className={styles.PasswordButton}
       >
-        <SVGImage name={isVisible ? "visible" : "hidden"} />
+        <SVGImage name={isVisible ? "visible" : "hidden"} size={20} />
       </button>
     </label>
   );
