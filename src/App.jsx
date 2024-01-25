@@ -7,11 +7,18 @@ import { LoginModal, RegisterModal } from "./components";
 function App() {
   const [isLogInModal, setIsLogInModal] = useState(false);
   const [isSignUpModal, setIsSignUpModal] = useState(false);
+  const [isLessonModal, setIsLessonModal] = useState(false);
   const [logInValues, setLogInValues] = useState({ email: "", password: "" });
   const [signUpValues, setSignUpValues] = useState({
     name: "",
     email: "",
     password: "",
+  });
+  const [lessonValues, setLessonValues] = useState({
+    reasonForLearning: "",
+    name: "",
+    email: "",
+    tel: "",
   });
 
   const openLogInModal = () => {
@@ -28,6 +35,14 @@ function App() {
 
   const closeSignUpModal = () => {
     setIsSignUpModal(false);
+  };
+
+  const openLessonModal = () => {
+    setIsLessonModal(true);
+  };
+
+  const closeLessonModal = () => {
+    setIsLessonModal(false);
   };
 
   const handleLogInSubmit = (values) => {
@@ -61,6 +76,7 @@ function App() {
       <div>{signUpValues.name}</div>
       <div>{signUpValues.email}</div>
       <div>{signUpValues.password}</div>
+      <div>{JSON.stringify(lessonValues)}</div>
     </div>
   );
 }
