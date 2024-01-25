@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-import { LoginModal, RegisterModal } from "./components";
+import { LoginModal, RegisterModal, LessonModal } from "./components";
 
 //import AppStyles from "./App.module.css";
 
@@ -53,6 +53,10 @@ function App() {
     setSignUpValues(values);
   };
 
+  const handleLessonSubmit = (values) => {
+    setLessonValues(values);
+  };
+
   return (
     <div>
       <h1>Main Page</h1>
@@ -62,6 +66,9 @@ function App() {
       <button type="button" onClick={openSignUpModal}>
         Open Register Modal
       </button>
+      <button type="button" onClick={openLessonModal}>
+        Open Lesson Modal
+      </button>
       {isLogInModal && (
         <LoginModal closeModal={closeLogInModal} onSubmit={handleLogInSubmit} />
       )}
@@ -69,6 +76,12 @@ function App() {
         <RegisterModal
           closeModal={closeSignUpModal}
           onSubmit={handleSignUpSubmit}
+        />
+      )}
+      {isLessonModal && (
+        <LessonModal
+          closeModal={closeLessonModal}
+          onSubmit={handleLessonSubmit}
         />
       )}
       <div>{logInValues.email}</div>
