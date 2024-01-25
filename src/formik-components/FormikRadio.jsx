@@ -4,53 +4,33 @@ import { SVGImage } from "../icons";
 
 import styles from "./FormikComponents.module.css";
 
-const FormikPassword = ({ formik }) => {
-  const [isVisible, setIsVisible] = useState(false);
-  const [isFocus, setIsFocus] = useState(false);
-
-  const showPassword = () => {
-    setIsVisible(true);
-  };
-
-  const hidePassword = () => {
-    setIsVisible(false);
-  };
-
-  const handleFocus = () => {
-    setIsFocus(true);
-  };
-
-  const handleBlur = () => {
-    setIsFocus(false);
-  };
-
+const FormikRadio = ({ formik, title, name, options }) => {
   return (
-    <label
-      htmlFor="password"
-      className={`${styles.FormikLabel} ${
-        isFocus ? styles.Focus : styles.Blur
-      }`}
-    >
-      <input
-        id="password"
-        name="password"
-        type={isVisible ? "text" : "password"}
-        placeholder="Password"
-        onFocus={handleFocus}
-        onBlur={handleBlur}
-        onChange={formik.handleChange}
-        value={formik.values.password}
-        className={styles.FormikInput}
-      />
-      <button
-        type="button"
-        onClick={isVisible ? hidePassword : showPassword}
-        className={styles.PasswordButton}
-      >
-        <SVGImage name={isVisible ? "visible" : "hidden"} size={20} />
-      </button>
-    </label>
+    <div className={styles.FormikRadio}>
+      <h3 className={styles.FormikRadioHeader}>{title}</h3>
+      <ul className={styles.FormikRadioList}>
+        {options.map((option, index) => (
+          <li key={index} className={styles.FormikRadioItem}>
+            <label htmlFor={option} className={styles.FormikRadioLabel}>
+              <SVGImage
+                name={`radio${formik.values[name] === option && "-checked"}`}
+                size={20}
+              />
+              <input
+                id={option}
+                name={option}
+                type="radio"
+                onChange={formik.handleChange}
+                value={option}
+                className={styles.FormikRadioButton}
+              />
+              <p className={styles.FormikRadioText}>{option}</p>
+            </label>
+          </li>
+        ))}
+      </ul>
+    </div>
   );
 };
 
-export { FormikPassword };
+export { FormikRadio };
