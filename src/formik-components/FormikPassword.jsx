@@ -1,5 +1,6 @@
 import { SVGImage } from "../icons";
 import { useState } from "react";
+import styles from "./FormikComponents.module.css";
 
 const FormikPassword = ({ formik, children }) => {
   const [isVisible, setIsVisible] = useState(false);
@@ -22,7 +23,12 @@ const FormikPassword = ({ formik, children }) => {
   };
 
   return (
-    <label htmlFor="password">
+    <label
+      htmlFor="password"
+      className={`${styles.FormikLabel} ${
+        isFocus ? styles.Focus : styles.Blur
+      }`}
+    >
       <input
         id="password"
         name="password"
@@ -32,8 +38,12 @@ const FormikPassword = ({ formik, children }) => {
         onBlur={handleBlur}
         onChange={formik.handleChange}
         value={formik.values.password}
+        className={styles.FormikInput}
       />
-      <button onClick={isVisible ? hidePassword : showPassword}>
+      <button
+        onClick={isVisible ? hidePassword : showPassword}
+        className={styles.PasswordButton}
+      >
         <SVGImage name={isVisible ? "visible" : "hidden"} />
       </button>
     </label>
