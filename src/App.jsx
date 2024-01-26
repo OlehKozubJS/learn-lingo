@@ -82,6 +82,8 @@ function App() {
         <LessonModal
           closeModal={closeLessonModal}
           onSubmit={handleLessonSubmit}
+          teacherName="John Doe"
+          teacherPhoto={"https://ftp.goit.study/img/avatars/1.jpg"}
         />
       )}
       <div>{logInValues.email}</div>
