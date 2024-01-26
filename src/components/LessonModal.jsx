@@ -46,7 +46,7 @@ const LessonModal = ({ onSubmit, closeModal }) => {
             "Culture, travel or hobby",
           ]}
         />
-        <FormikName formik={formik}>Name</FormikName>
+        <FormikName formik={formik}>Full Name</FormikName>
         <FormikEmail formik={formik} />
         <FormikPhone formik={formik} />
       </FormikForm>
