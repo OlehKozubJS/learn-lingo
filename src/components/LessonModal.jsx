@@ -38,7 +38,7 @@ const LessonModal = ({ onSubmit, closeModal }) => {
           <p className={styles.TeacherName}>Jane Smith</p>
         </div>
       </div>
-      <FormikForm formik={formik} submitName="Sign Up">
+      <FormikForm formik={formik} submitName="Book">
         <FormikRadio
           formik={formik}
           name={"reasonForLearning"}
