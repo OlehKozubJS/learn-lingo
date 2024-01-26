@@ -2,7 +2,7 @@ import { useState } from "react";
 
 import { LoginModal, RegisterModal, LessonModal } from "./components";
 
-//import AppStyles from "./App.module.css";
+import AppStyles from "./App.module.css";
 
 function App() {
   const [isLogInModal, setIsLogInModal] = useState(false);
