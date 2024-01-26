@@ -11,7 +11,7 @@ import {
 
 import styles from "./Modal.module.css";
 
-const LessonModal = ({ onSubmit, closeModal }) => {
+const LessonModal = ({ onSubmit, closeModal, teacherPhoto, teacherName }) => {
   const formik = useFormik({
     initialValues: {
       reasonForLearning: "Career and business",
@@ -32,10 +32,10 @@ const LessonModal = ({ onSubmit, closeModal }) => {
         your learning goals, and tailor the lesson to your specific needs.
       </p>
       <div className={styles.Teacher}>
-        <img src="" alt="" className={styles.TeacherPhoto} />
+        <img src={teacherPhoto} alt="" className={styles.TeacherPhoto} />
         <div className={styles.TeacherInfo}>
           <h3 className={styles.TeacherHeader}>Your teacher</h3>
-          <p className={styles.TeacherName}>Jane Smith</p>
+          <p className={styles.TeacherName}>{teacherName}</p>
         </div>
       </div>
       <FormikForm formik={formik} submitName="Book">
