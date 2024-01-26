@@ -31,11 +31,11 @@ const LessonModal = ({ onSubmit, closeModal }) => {
         Our experienced tutor will assess your current language level, discuss
         your learning goals, and tailor the lesson to your specific needs.
       </p>
-      <div>
-        <img src="" alt="" />
-        <div>
-          <h3>Your teacher</h3>
-          <p>Jane Smith</p>
+      <div className={styles.Teacher}>
+        <img src="" alt="" className={styles.TeacherPhoto} />
+        <div className={styles.TeacherInfo}>
+          <h3 className={styles.TeacherHeader}>Your teacher</h3>
+          <p className={styles.TeacherName}>Jane Smith</p>
         </div>
       </div>
       <FormikForm formik={formik} submitName="Sign Up">
