@@ -2,52 +2,50 @@ import { useState } from "react";
 
 import { SVGImage } from "../icons";
 
-import styles from "./FormikComponents.module.css";
+import styles from "./TeacherFilter.module.css";
 
-const FormikSelect = ({ formik }) => {
-  const [isVisible, setIsVisible] = useState(false);
-  const [isFocus, setIsFocus] = useState(false);
+const FormikSelect = ({ options, selected, select }) => {
+  const [isOptionsList, setIsOptionsList] = useState(false);
 
-  const showPassword = () => {
-    setIsVisible(true);
+  const openOptionsList = () => {
+    setIsOptionsList(true);
   };
 
-  const hidePassword = () => {
-    setIsVisible(false);
+  const closeOptionsList = () => {
+    setIsOptionsList(false);
   };
 
-  const handleFocus = () => {
-    setIsFocus(true);
-  };
-
-  const handleBlur = () => {
-    setIsFocus(false);
+  const handleClick = (event) => {
+    select(event.target.value);
   };
 
   return (
-    <div className={styles.FormikRadio}>
-      <h3 className={styles.FormikRadioHeader}>{title}</h3>
-      <ul className={styles.FormikRadioList}>
-        {options.map((option, index) => (
-          <li key={index} className={styles.FormikRadioItem}>
-            <label htmlFor={option} className={styles.FormikRadioLabel}>
-              <SVGImage
-                name={`radio${formik.values[name] === option && "-checked"}`}
-                size={20}
-              />
-              <input
-                id={option}
-                name={option}
-                type="radio"
-                onChange={formik.handleChange}
+    <div className={styles.FilterSelect}>
+      <div className={styles.SelectedItemContainer}>
+        <p className={styles.SelectedItem}>{selected}</p>
+        <button
+          type="button"
+          onClick={isOptionsList ? closeOptionsList : openOptionsList}
+        >
+          <SVGImage name={isOptionsList ? "up" : "down"} size={20} />
+        </button>
+      </div>
+      {isOptionsList && (
+        <ul className={styles.OptionsList}>
+          {options.map((option, index) => (
+            <li key={index} className={styles.OptionItem}>
+              <button
+                type="button"
+                onClick={handleClick}
+                className={styles.OptionButton}
                 value={option}
-                className={styles.FormikRadioButton}
-              />
-              <p className={styles.FormikRadioText}>{option}</p>
-            </label>
-          </li>
-        ))}
-      </ul>
+              >
+                {option}
+              </button>
+            </li>
+          ))}
+        </ul>
+      )}
     </div>
   );
 };
