@@ -4,7 +4,7 @@ import { SVGImage } from "../icons";
 
 import styles from "./TeacherFilter.module.css";
 
-const FormikSelect = ({ options, selected, select }) => {
+const FormikSelect = ({ title, options, selected, select }) => {
   const [isOptionsList, setIsOptionsList] = useState(false);
 
   const openOptionsList = () => {
@@ -21,6 +21,7 @@ const FormikSelect = ({ options, selected, select }) => {
 
   return (
     <div className={styles.FilterSelect}>
+      <h3 className={styles.FilterSelectHeader}>{title}</h3>
       <div className={styles.SelectedItemContainer}>
         <p className={styles.SelectedItem}>{selected}</p>
         <button
