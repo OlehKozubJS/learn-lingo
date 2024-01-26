@@ -13,7 +13,12 @@ import styles from "./Modal.module.css";
 
 const LessonModal = ({ onSubmit, closeModal }) => {
   const formik = useFormik({
-    initialValues: { reasonForLearning: "", name: "", email: "", tel: "" },
+    initialValues: {
+      reasonForLearning: "Career and business",
+      name: "",
+      email: "",
+      tel: "",
+    },
     onSubmit: (values) => {
       onSubmit(values);
     },
