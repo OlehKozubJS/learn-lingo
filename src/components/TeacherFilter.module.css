@@ -13,33 +13,24 @@
   margin-bottom: 8px;
 }
 
-.SelectedItemContainer {
+.OptionListButton {
   box-sizing: border-box;
   width: 100%;
   padding: 14px 18px;
   display: flex;
   justify-content: space-between;
 
+  border: 0;
   border-radius: 14px;
   background: #fff;
 
   margin-bottom: 4px;
-}
-
-.SelectedItem {
-  margin: 0;
 
   color: #121417;
   font-family: "Roboto", sans-serif;
   font-size: 18px;
   font-weight: 500;
   line-height: 20px;
-}
-
-.OptionListButton {
-  border: 0;
-  padding: 0;
-  background: 0;
 }
 
 .OptionList {
@@ -72,6 +63,16 @@
   font-weight: 500;
   line-height: 20px;
   text-align: start;
+}
+
+.OptionItemButton:hover {
+  background-color: #f4c550;
+  color: #fff;
+}
+
+.OptionItemButton:active {
+  background-color: #ffdc86;
+  color: #fff;
 }
 
 .Selected {

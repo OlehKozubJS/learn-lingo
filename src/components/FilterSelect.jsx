@@ -26,16 +26,14 @@ const FilterSelect = ({ title, options, select, width }) => {
   return (
     <div className={styles.FilterSelect} style={{ width }}>
       <h3 className={styles.FilterSelectHeader}>{title}</h3>
-      <div className={styles.SelectedItemContainer}>
-        <p className={styles.SelectedItem}>{selected}</p>
-        <button
-          type="button"
-          onClick={isOptionsList ? closeOptionsList : openOptionsList}
-          className={styles.OptionListButton}
-        >
-          <SVGImage name={isOptionsList ? "up" : "down"} size={20} />
-        </button>
-      </div>
+      <button
+        type="button"
+        onClick={isOptionsList ? closeOptionsList : openOptionsList}
+        className={styles.OptionListButton}
+      >
+        {selected}
+        <SVGImage name={isOptionsList ? "up" : "down"} size={20} />
+      </button>
       {isOptionsList && (
         <ul className={styles.OptionList}>
           {options.map((option, index) => (
