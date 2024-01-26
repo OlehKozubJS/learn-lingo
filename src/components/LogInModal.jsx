@@ -8,9 +8,7 @@ import styles from "./Modal.module.css";
 const LoginModal = ({ onSubmit, closeModal }) => {
   const formik = useFormik({
     initialValues: { email: "", password: "" },
-    onSubmit: (values) => {
-      onSubmit(values);
-    },
+    onSubmit,
   });
 
   return (
