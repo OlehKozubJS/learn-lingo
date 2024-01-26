@@ -17,6 +17,7 @@ const FormikSelect = ({ title, options, selected, select }) => {
 
   const handleClick = (event) => {
     select(event.target.value);
+    setIsOptionsList(false);
   };
 
   return (
