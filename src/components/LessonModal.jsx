@@ -19,9 +19,7 @@ const LessonModal = ({ onSubmit, closeModal, teacherPhoto, teacherName }) => {
       email: "",
       tel: "",
     },
-    onSubmit: (values) => {
-      onSubmit(values);
-    },
+    onSubmit,
   });
 
   return (
