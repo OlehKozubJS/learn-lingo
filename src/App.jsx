@@ -1,6 +1,5 @@
 import { useState } from "react";
 
-import { LoginModal, RegisterModal, LessonModal } from "./components";
 import { FilterSelect } from "./components/FilterSelect";
 
 import AppStyles from "./App.module.css";
