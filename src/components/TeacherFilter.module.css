@@ -68,6 +68,8 @@
 .OptionItemButton:hover {
   background-color: #f4c550;
   color: #fff;
+  border-radius: 10px;
+  padding-left: 5px;
 }
 
 .OptionItemButton:active {
