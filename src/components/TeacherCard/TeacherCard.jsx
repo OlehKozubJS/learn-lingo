@@ -14,11 +14,11 @@ const TeacherCard = ({ teacherData, bookTrialLesson }) => {
   };
 
   const handleBookTrialLesson = () => {
-    bookTrialLesson(
+    bookTrialLesson({
       teacherData.avatar_url,
       teacherData.name,
       teacherData.surname
-    );
+    });
   };
 
   return (
