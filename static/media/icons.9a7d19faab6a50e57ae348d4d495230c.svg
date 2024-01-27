@@ -10,7 +10,7 @@
     <symbol id="vector" viewBox="0 0 2 16">
       <path d="M1 0V16" fill="none" stroke="#121417" stroke-opacity="0.2"/>
     </symbol>
-    <symbol id="online" viewBox="0 0 12 12">
+    <symbol id="teacher-icon" viewBox="0 0 12 12">
       <circle cx="6" cy="6" r="6" fill="white"/>
       <circle cx="6" cy="6" r="4" fill="#38CD3E"/>
     </symbol>
