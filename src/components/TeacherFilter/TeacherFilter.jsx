@@ -39,7 +39,9 @@ const TeacherFilter = ({ onChange }) => {
           "A1 Beginner",
           "A2 Elementary",
           "B1 Intermediate",
-          "UB2 Upper-Intermediate",
+          "B2 Upper-Intermediate",
+          "C1 Advanced",
+          "C2 Proficient",
         ]}
         select={selectLevelOfKnowledge}
         width="250px"
