@@ -1,6 +1,6 @@
-import { useState } from "react";
+//import { useState } from "react";
 
-import { TeacherFilter } from "./components/TeacherFilter";
+//import { TeacherFilter } from "./components/TeacherFilter";
 
 import AppStyles from "./App.module.css";
 
