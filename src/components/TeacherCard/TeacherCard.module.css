@@ -2,7 +2,22 @@
   display: flex;
   width: 1184px;
   padding: 24px;
-  gap: 48px;
+  column-gap: 48px;
+
+  border-radius: 24px;
+  background: #fff;
+}
+
+.TeacherImageContainer {
+  width: 120px;
+  height: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 100px;
+  border: 3px solid #fbe9ba;
+  background: #fff;
 }
 
 .TeacherImage {
