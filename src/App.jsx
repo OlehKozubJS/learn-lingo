@@ -16,9 +16,7 @@ function App() {
     <div>
       <h1>Main Page</h1>
       <div>{JSON.stringify(selectedItems)}</div>
-      <div style={{ backgroundColor: "rgb(200, 200, 250)" }}>
-        <TeacherFilter onChange={selectItems} />
-      </div>
+      <TeacherFilter onChange={selectItems} />
     </div>
   );
 }
