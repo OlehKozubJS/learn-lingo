@@ -15,9 +15,9 @@ const TeacherCard = ({ teacherData, bookTrialLesson }) => {
 
   const handleBookTrialLesson = () => {
     bookTrialLesson({
-      teacherData.avatar_url,
-      teacherData.name,
-      teacherData.surname
+      avatar_url: teacherData.avatar_url,
+      name: teacherData.name,
+      surname: teacherData.surname,
     });
   };
 
