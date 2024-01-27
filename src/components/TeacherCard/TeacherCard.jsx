@@ -33,11 +33,11 @@ const TeacherCard = ({ teacherData, bookTrialLesson }) => {
             className={styles.TeacherImage}
           />
           <div className={styles.TeacherIconContainer}>
-            <SVGImage name="online" size="12" />
+            <SVGImage name="teacher-icon" size={12} />
           </div>
         </div>
         <div className={styles.TeacherTextInfo}>
-          <div></div>
+          <div className={styles.CommonInfo}></div>
           <div>
             <div></div>
             {isReadMore && <div></div>}

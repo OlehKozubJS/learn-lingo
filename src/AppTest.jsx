@@ -19,7 +19,7 @@ function AppTest() {
       <div>{JSON.stringify(teacherData)}</div>
       <ul>
         <TeacherCard
-          teacherData={teachers[0]}
+          teacherData={teachers[1]}
           bookTrialLesson={bookTrialLesson}
         />
       </ul>
