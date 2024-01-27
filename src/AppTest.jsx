@@ -5,7 +5,7 @@ import { TeacherFilter } from "./components/TeacherFilter";
 import AppStyles from "./App.module.css";
 import { SVGImage } from "./icons";
 
-function App() {
+function AppTest() {
   const [selectedItems, setSelectedItems] = useState({});
 
   const selectItems = (items) => {
@@ -21,4 +21,4 @@ function App() {
   );
 }
 
-export { App };
+export { AppTest };
