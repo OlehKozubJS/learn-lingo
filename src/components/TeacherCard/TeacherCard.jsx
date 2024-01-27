@@ -5,6 +5,22 @@ import styles from "./TeacherCard.module.css";
 const TeacherCard = ({ teacherData, bookTrialLesson }) => {
   const [isReadMore, setIsReadMore] = useState(false);
 
+  const showInfo = () => {
+    setIsReadMore(true);
+  };
+
+  const hideInfo = () => {
+    setIsReadMore(false);
+  };
+
+  const handleBookTrialLesson = () => {
+    handleBookTrialLesson(
+      teacherData.avatar_url,
+      teacherData.name,
+      teacherData.surname
+    );
+  };
+
   return (
     <article className={styles.TeacherCard}>
       <div className={styles.TeacherImageContainer}>
@@ -21,9 +37,11 @@ const TeacherCard = ({ teacherData, bookTrialLesson }) => {
           {isReadMore && <div></div>}
         </div>
         {isReadMore && <div></div>}
-        <button>{isReadMore ? "Hide" : "Read More"}</button>
+        <button onClick={isReadMore ? hideInfo : showInfo}>
+          {isReadMore ? "Hide" : "Read More"}
+        </button>
         <div></div>
-        <button>Book trial lesson</button>
+        <button onClick={handleBookTrialLesson}>Book trial lesson</button>
       </div>
     </article>
   );
