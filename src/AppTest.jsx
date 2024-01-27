@@ -17,10 +17,12 @@ function AppTest() {
     <div>
       <h1>Test Page</h1>
       <div>{JSON.stringify(teacherData)}</div>
-      <TeacherCard
-        teacherData={teachers[0]}
-        bookTrialLesson={bookTrialLesson}
-      />
+      <ul>
+        <TeacherCard
+          teacherData={teachers[0]}
+          bookTrialLesson={bookTrialLesson}
+        />
+      </ul>
     </div>
   );
 }
