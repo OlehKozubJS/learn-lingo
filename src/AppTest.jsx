@@ -18,7 +18,7 @@ function AppTest() {
       <h1>Test Page</h1>
       <div>{JSON.stringify(teacherData)}</div>
       <TeacherCard
-        teacherData={teachers[1]}
+        teacherData={teachers[0]}
         bookTrialLesson={bookTrialLesson}
       />
     </div>
