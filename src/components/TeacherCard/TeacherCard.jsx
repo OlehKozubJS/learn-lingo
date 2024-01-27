@@ -2,6 +2,8 @@ import { useState } from "react";
 
 import styles from "./TeacherCard.module.css";
 
+import { SVGImage } from "../../icons";
+
 const TeacherCard = ({ teacherData, bookTrialLesson }) => {
   const [isReadMore, setIsReadMore] = useState(false);
 
@@ -41,7 +43,9 @@ const TeacherCard = ({ teacherData, bookTrialLesson }) => {
           <button onClick={isReadMore ? hideInfo : showInfo}>
             {isReadMore ? "Hide" : "Read More"}
           </button>
-          <div></div>
+          <div>
+            <SVGImage name="vector" size="16" />
+          </div>
           <button onClick={handleBookTrialLesson}>Book trial lesson</button>
         </div>
       </article>
