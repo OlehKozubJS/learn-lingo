@@ -6,7 +6,7 @@ import {
   FormikName,
   FormikEmail,
   FormikPassword,
-} from "../formik-components";
+} from "../../formik-components";
 
 import styles from "./Modal.module.css";
 

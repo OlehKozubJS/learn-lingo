@@ -1,8 +1,8 @@
 import { useState } from "react";
 
-import { useKeydown } from "../hooks";
+import { useKeydown } from "../../hooks";
 
-import { SVGImage } from "../icons";
+import { SVGImage } from "../../icons";
 
 import ModalStyles from "./Modal.module.css";
 

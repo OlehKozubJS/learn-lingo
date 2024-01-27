@@ -1,7 +1,11 @@
 import { useFormik } from "formik";
 
 import { Modal } from "./Modal";
-import { FormikForm, FormikEmail, FormikPassword } from "../formik-components";
+import {
+  FormikForm,
+  FormikEmail,
+  FormikPassword,
+} from "../../formik-components";
 
 import styles from "./Modal.module.css";
 

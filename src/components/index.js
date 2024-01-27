@@ -1,6 +1,7 @@
-import { LoginModal } from "./LogInModal";
-import { RegisterModal } from "./RegisterModal.jsx";
-import { LessonModal } from "./LessonModal.jsx";
-import { LessonModal } from "./LessonModal.jsx";
+import { LoginModal } from "./modals";
+import { RegisterModal } from "./modals";
+import { LessonModal } from "./modals";
+import { TeacherFilter } from "./TeacherFilter";
+import { TeacherCard } from "./TeacherCard";
 
-export { LoginModal, RegisterModal, LessonModal, LessonModal };
+export { LoginModal, RegisterModal, LessonModal, TeacherFilter, TeacherCard };

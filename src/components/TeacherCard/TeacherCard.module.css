@@ -1,0 +1,17 @@
+.TeacherCard {
+  display: flex;
+  width: 1184px;
+  padding: 24px;
+  gap: 48px;
+}
+
+.TeacherImage {
+  width: 96px;
+  height: 96px;
+
+  border-radius: 100px;
+}
+
+.TeacherTextInfo {
+  display: flex;
+}

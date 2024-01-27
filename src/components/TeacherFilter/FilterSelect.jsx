@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-import { SVGImage } from "../icons";
+import { SVGImage } from "../../icons";
 
 import styles from "./TeacherFilter.module.css";
 

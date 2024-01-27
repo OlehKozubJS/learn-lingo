@@ -7,7 +7,7 @@ import {
   FormikName,
   FormikEmail,
   FormikPhone,
-} from "../formik-components";
+} from "../../formik-components";
 
 import styles from "./Modal.module.css";
 
