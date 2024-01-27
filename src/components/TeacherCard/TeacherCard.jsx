@@ -38,16 +38,26 @@ const TeacherCard = ({ teacherData, bookTrialLesson }) => {
         </div>
         <div className={styles.TeacherTextInfo}>
           <div className={styles.CommonInfo}></div>
-          <div>
+          <div className={styles.DetailedInfo}>
             <div></div>
-            {isReadMore && <div></div>}
+            {isReadMore && (
+              <p className={styles.Experience}>{teacherData.experience}</p>
+            )}
+            <button
+              onClick={isReadMore ? hideInfo : showInfo}
+              className={styles.ReadMoreButton}
+            >
+              {isReadMore ? "Hide" : "Read More"}
+            </button>
           </div>
-          {isReadMore && <div></div>}
-          <button onClick={isReadMore ? hideInfo : showInfo}>
-            {isReadMore ? "Hide" : "Read More"}
-          </button>
+          {isReadMore && <div>{"Reviews"}</div>}
           <div></div>
-          <button onClick={handleBookTrialLesson}>Book trial lesson</button>
+          <button
+            onClick={handleBookTrialLesson}
+            className={styles.BookTrialLessonButton}
+          >
+            Book trial lesson
+          </button>
         </div>
       </article>
     </li>
