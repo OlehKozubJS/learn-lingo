@@ -32,6 +32,9 @@ const TeacherCard = ({ teacherData, bookTrialLesson }) => {
             alt=""
             className={styles.TeacherImage}
           />
+          <div className={styles.TeacherIconContainer}>
+            <SVGImage name="online" size="12" />
+          </div>
         </div>
         <div className={styles.TeacherTextInfo}>
           <div></div>
@@ -43,9 +46,7 @@ const TeacherCard = ({ teacherData, bookTrialLesson }) => {
           <button onClick={isReadMore ? hideInfo : showInfo}>
             {isReadMore ? "Hide" : "Read More"}
           </button>
-          <div>
-            <SVGImage name="vector" size="16" />
-          </div>
+          <div></div>
           <button onClick={handleBookTrialLesson}>Book trial lesson</button>
         </div>
       </article>
