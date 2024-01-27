@@ -1,4 +1,4 @@
-//import { useState } from "react";
+import { useState } from "react";
 
 import teachers from "./teachers.json";
 
@@ -7,10 +7,20 @@ import { TeacherCard } from "./components";
 import AppStyles from "./App.module.css";
 
 function AppTest() {
+  const [teacherData, setTeacherData] = useState({});
+
+  const bookTrialLesson = (newTeacherData) => {
+    setTeacherData(newTeacherData);
+  };
+
   return (
     <div>
       <h1>Test Page</h1>
-      <TeacherCard teacherData={teachers[1]} />
+      <div>{JSON.stringify(teacherData)}</div>
+      <TeacherCard
+        teacherData={teachers[1]}
+        bookTrialLesson={bookTrialLesson}
+      />
     </div>
   );
 }
