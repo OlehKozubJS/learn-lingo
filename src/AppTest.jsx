@@ -38,7 +38,7 @@ function AppTest() {
       )}
       <ul>
         <TeacherCards
-          teachersData={teachers}
+          teachersData={teachers.slice(4, 7)}
           bookTrialLesson={bookTrialLesson}
         />
       </ul>
