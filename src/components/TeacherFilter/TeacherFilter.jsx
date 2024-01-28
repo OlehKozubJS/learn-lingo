@@ -29,13 +29,21 @@ const TeacherFilter = ({ onChange }) => {
     <div className={styles.TeacherFilter}>
       <FilterSelect
         title="Languages"
-        options={["French", "English", "German", "Ukrainian", "Polish"]}
+        options={[
+          "any language",
+          "French",
+          "English",
+          "German",
+          "Ukrainian",
+          "Polish",
+        ]}
         select={selectLanguage}
         width="221px"
       />
       <FilterSelect
         title="Level of knowledge"
         options={[
+          "any level",
           "A1 Beginner",
           "A2 Elementary",
           "B1 Intermediate",
@@ -48,7 +56,7 @@ const TeacherFilter = ({ onChange }) => {
       />
       <FilterSelect
         title="Price"
-        options={["10 $", "20 $", "30 $", "40 $"]}
+        options={["any price", "10 $", "20 $", "30 $", "40 $"]}
         select={selectPrice}
         width="124px"
       />
