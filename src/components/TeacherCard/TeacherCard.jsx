@@ -142,12 +142,14 @@ const TeacherCard = ({ teacherData, bookTrialLesson }) => {
               );
             })}
           </ul>
-          <button
-            onClick={handleBookTrialLesson}
-            className={styles.BookTrialLessonButton}
-          >
-            Book trial lesson
-          </button>
+          {isReadMore && (
+            <button
+              onClick={handleBookTrialLesson}
+              className={styles.BookTrialLessonButton}
+            >
+              Book trial lesson
+            </button>
+          )}
         </div>
       </article>
     </li>
