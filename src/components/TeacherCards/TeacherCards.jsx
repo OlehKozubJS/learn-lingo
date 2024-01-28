@@ -5,7 +5,7 @@ import styles from "./TeacherCards.module.css";
 const TeacherCards = (teachersData, bookTrialLesson) => {
   return (
     <ul className={styles.TeacherCards}>
-      {(teacherData, index) => {
+      {teachersData.map((teacherData, index) => {
         return (
           <TeacherCard
             key={index}
@@ -13,7 +13,7 @@ const TeacherCards = (teachersData, bookTrialLesson) => {
             bookTrialLesson={bookTrialLesson}
           />
         );
-      }}
+      })}
     </ul>
   );
 };
