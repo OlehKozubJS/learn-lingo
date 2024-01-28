@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-import styles from "./TeacherCard.module.css";
+import styles from "./TeacherCards.module.css";
 
 import { SVGImage } from "../../icons";
 
