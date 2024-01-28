@@ -1,5 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 
+.TeacherCardContainer {
+  list-style: none;
+  padding: 0;
+}
+
 .TeacherCard {
   box-sizing: border-box;
   display: flex;
