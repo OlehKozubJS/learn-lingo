@@ -6,19 +6,19 @@ import styles from "./TeacherFilter.module.css";
 
 const TeacherFilter = ({ onChange }) => {
   const [language, setLanguage] = useState("French");
-  const [levelOfKnowledge, setLevelOfKnowledge] = useState("A1 Beginner");
+  const [level, setLevel] = useState("A1 Beginner");
   const [price, setPrice] = useState("10 $");
 
   useEffect(() => {
-    onChange({ language, levelOfKnowledge, price });
-  }, [language, levelOfKnowledge, price]);
+    onChange({ language, level, price });
+  }, [language, level, price]);
 
   const selectLanguage = (selectedLanguage) => {
     setLanguage(selectedLanguage);
   };
 
-  const selectLevelOfKnowledge = (selectedLevelOfKnowledge) => {
-    setLevelOfKnowledge(selectedLevelOfKnowledge);
+  const selectLevel = (selectedLevel) => {
+    setLevel(selectedLevel);
   };
 
   const selectPrice = (selectedPrice) => {
@@ -51,7 +51,7 @@ const TeacherFilter = ({ onChange }) => {
           "C1 Advanced",
           "C2 Proficient",
         ]}
-        select={selectLevelOfKnowledge}
+        select={selectLevel}
         width="250px"
       />
       <FilterSelect
