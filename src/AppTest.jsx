@@ -41,7 +41,10 @@ function AppTest() {
           teacherPhoto={teacherData.avatar_url}
         />
       )}
-      <TeacherCards teachersData={teachers} bookTrialLesson={bookTrialLesson} />
+      <TeacherCards
+        teachersData={teachers.filter((teacher) => {(||)&&(||)&&(||)})}
+        bookTrialLesson={bookTrialLesson}
+      />
     </div>
   );
 }
