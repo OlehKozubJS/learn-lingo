@@ -24,7 +24,7 @@ const TeacherCard = ({ teacherData, bookTrialLesson }) => {
   };
 
   return (
-    <li>
+    <li className={styles.TeacherCardContainer}>
       <article className={styles.TeacherCard}>
         <div className={styles.TeacherImageContainer}>
           <img
