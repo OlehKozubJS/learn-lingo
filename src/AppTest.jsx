@@ -37,7 +37,10 @@ function AppTest() {
         />
       )}
       <ul>
-        <TeacherCards bookTrialLesson={bookTrialLesson} />
+        <TeacherCards
+          teachersData={teachers}
+          bookTrialLesson={bookTrialLesson}
+        />
       </ul>
     </div>
   );
