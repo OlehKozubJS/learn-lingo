@@ -58,7 +58,7 @@ const TeacherFilter = ({ onChange }) => {
         title="Price"
         options={["any price", "10 $", "20 $", "30 $", "40 $"]}
         select={selectPrice}
-        width="124px"
+        width="135px"
       />
     </div>
   );
