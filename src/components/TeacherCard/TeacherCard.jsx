@@ -29,7 +29,7 @@ const TeacherCard = ({ teacherData, bookTrialLesson }) => {
         <div className={styles.TeacherImageContainer}>
           <img
             src={teacherData.avatar_url}
-            alt=""
+            alt={`${teacherData.name} ${teacherData.surname}`}
             className={styles.TeacherImage}
           />
           <div className={styles.TeacherIconContainer}>
