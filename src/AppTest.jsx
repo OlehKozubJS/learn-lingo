@@ -10,6 +10,7 @@ function AppTest() {
   const [teacherData, setTeacherData] = useState({});
   const [lessonModalData, setLessonModalData] = useState({});
   const [isLessonModal, setIsLessonModal] = useState(false);
+  const [filteredTeachers, setFilteredTeachers] = useState([...teachers]);
 
   const bookTrialLesson = (newTeacherData) => {
     setTeacherData(newTeacherData);
@@ -24,15 +25,25 @@ function AppTest() {
     setLessonModalData(data);
   };
 
+  const handleTeacherFilterChange = ({ language, level, price }) => {
+    console.log(language, level, price);
+    setFilteredTeachers(
+      teachers.filter((teacher) => {
+        (language === "any language" || teacher.languages.includes(language)) &&
+          (level === "any level" || teacher.levels.includes(level)) &&
+          (price === "any price" ||
+            (Number(teacher.price_per_hour) >= Number(price.split(" ")[0]) &&
+              Number(teacher.price_per_hour) <
+                Number(price.split(" ")[0]) + 10));
+      })
+    );
+  };
+
   return (
     <div>
       <h1>Test Page</h1>
       <div>{JSON.stringify(lessonModalData)}</div>
-      <TeacherFilter
-        onChange={(data) => {
-          console.log(data);
-        }}
-      />
+      <TeacherFilter onChange={handleTeacherFilterChange} />
       {isLessonModal && (
         <LessonModal
           closeModal={closeLessonModal}
@@ -42,7 +53,7 @@ function AppTest() {
         />
       )}
       <TeacherCards
-        teachersData={teachers.filter((teacher) => {(||)&&(||)&&(||)})}
+        teachersData={filteredTeachers}
         bookTrialLesson={bookTrialLesson}
       />
     </div>
