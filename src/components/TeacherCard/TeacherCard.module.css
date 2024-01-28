@@ -67,7 +67,9 @@
   line-height: 24px;
 }
 
-.TeacherNameLine {
+.TeacherNameHeader {
+  margin: 0;
+
   color: #121417;
   font-family: "Roboto", sans-serif;
   font-size: 24px;
@@ -153,8 +155,91 @@
   font-family: "Roboto", sans-serif;
   font-size: 16px;
   font-weight: 500;
-  line-height: 24px; /* 150% */
+  line-height: 24px;
   text-decoration-line: underline;
+}
+
+.Reviews {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  row-gap: 32px;
+}
+
+.Review {
+  display: flex;
+  flex-direction: column;
+  row-gap: 16px;
+
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+}
+
+.ReviewerImageNameAndRating {
+  display: flex;
+  column-gap: 12px;
+}
+
+.ReviewerImage {
+  width: 44px;
+  height: 44px;
+
+  border-radius: 50%;
+}
+/*
+.ReviewerNameAndRating {
+  display: flex;
+}
+*/
+.ReviewerName {
+  margin: 0;
+
+  color: #8a8a89;
+}
+
+.ReviewerRating {
+  display: flex;
+  align-items: center;
+  column-gap: 8px;
+
+  color: #121417;
+}
+
+.ReviewerComment {
+  color: #121417;
+}
+
+.Levels {
+  list-style: none;
+  padding: 0;
+
+  display: flex;
+  column-gap: 8px;
+}
+
+.Level {
+  display: flex;
+  padding: 8px 12px;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+
+  border-radius: 35px;
+  border: 1px solid rgba(18, 20, 23, 0.2);
+
+  color: #121417;
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 16px;
+}
+
+.Level:first-child {
+  border: none;
+  background: #f4c550;
 }
 
 .BookTrialLessonButton {

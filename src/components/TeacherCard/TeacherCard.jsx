@@ -40,10 +40,10 @@ const TeacherCard = ({ teacherData, bookTrialLesson }) => {
           <div className={styles.CommonInfo}>
             <div className={styles.TeacherNameBlock}>
               <div className={styles.LanguagesLine}>Languages</div>
-              <div className={styles.TeacherNameLine}>
+              <h2 className={styles.TeacherNameHeader}>
                 <span>{teacherData.name}</span>{" "}
                 <span>{teacherData.surname}</span>
-              </div>
+              </h2>
             </div>
             <div className={styles.CommonInfoLineAndFavourite}>
               <div className={styles.CommonInfoLine}>
@@ -106,8 +106,42 @@ const TeacherCard = ({ teacherData, bookTrialLesson }) => {
               {isReadMore ? "Hide" : "Read More"}
             </button>
           </div>
-          {isReadMore && <div>{"Reviews"}</div>}
-          <div></div>
+          {isReadMore && (
+            <ul className={styles.Reviews}>
+              {teacherData.reviews.map((review, index) => {
+                return (
+                  <li key={index} className={styles.Review}>
+                    <div className={styles.ReviewerImageNameAndRating}>
+                      <img
+                        src=""
+                        alt={review.reviewer_name}
+                        className={styles.ReviewerImage}
+                      />
+                      <div className={styles.ReviewerNameAndRating}>
+                        <h3 className={styles.ReviewerName}>
+                          {review.reviewer_name}
+                        </h3>
+                        <div className={styles.ReviewerRating}>
+                          <SVGImage name="star" size={16} />
+                          {review.reviewer_rating}
+                        </div>
+                      </div>
+                    </div>
+                    <p className={styles.ReviewerComment}>{review.comment}</p>
+                  </li>
+                );
+              })}
+            </ul>
+          )}
+          <ul className={styles.Levels}>
+            {teacherData.levels.map((level, index) => {
+              return (
+                <li key={index} className={styles.Level}>
+                  {level}
+                </li>
+              );
+            })}
+          </ul>
           <button
             onClick={handleBookTrialLesson}
             className={styles.BookTrialLessonButton}
