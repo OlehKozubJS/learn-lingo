@@ -1,7 +1,12 @@
-import { LoginModal } from "./modals";
-import { RegisterModal } from "./modals";
-import { LessonModal } from "./modals";
+import { LoginModal, LessonModal, RegisterModal } from "./modals";
 import { TeacherFilter } from "./TeacherFilter";
-import { TeacherCard } from "./TeacherCards";
+import { TeacherCards, TeacherCard } from "./TeacherCards";
 
-export { LoginModal, RegisterModal, LessonModal, TeacherFilter, TeacherCard };
+export {
+  LoginModal,
+  RegisterModal,
+  LessonModal,
+  TeacherFilter,
+  TeacherCards,
+  TeacherCard,
+};
