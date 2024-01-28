@@ -2,7 +2,7 @@ import { useState } from "react";
 
 import teachers from "./teachers.json";
 
-import { TeacherCards, LessonModal } from "./components";
+import { TeacherCards, LessonModal, TeacherFilter } from "./components";
 
 import AppStyles from "./App.module.css";
 
@@ -28,6 +28,11 @@ function AppTest() {
     <div>
       <h1>Test Page</h1>
       <div>{JSON.stringify(lessonModalData)}</div>
+      <TeacherFilter
+        onChange={(data) => {
+          console.log(data);
+        }}
+      />
       {isLessonModal && (
         <LessonModal
           closeModal={closeLessonModal}
