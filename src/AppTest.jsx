@@ -41,10 +41,7 @@ function AppTest() {
           teacherPhoto={teacherData.avatar_url}
         />
       )}
-      <TeacherCards
-        teachersData={teachers.slice(3, 6)}
-        bookTrialLesson={bookTrialLesson}
-      />
+      <TeacherCards teachersData={teachers} bookTrialLesson={bookTrialLesson} />
     </div>
   );
 }
