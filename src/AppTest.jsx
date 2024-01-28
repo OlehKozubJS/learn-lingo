@@ -27,19 +27,24 @@ function AppTest() {
 
   const handleTeacherFilterChange = ({ language, level, price }) => {
     console.log(language, level, price);
-    setFilteredTeachers(
-      teachers.filter((teacher) => {
+    const filtea = teachers.filter(
+      (teacher) =>
+        (language === "any language" || teacher.languages.includes(language)) &&
+        (level === "any level" || teacher.levels.includes(level)) &&
+        (price === "any price" ||
+          (Number(teacher.price_per_hour) >= Number(price.split(" ")[0]) &&
+            Number(teacher.price_per_hour) < Number(price.split(" ")[0]) + 10))
+    );
+    console.log(filtea);
+    setFilteredTeachers(filtea);
+  };
+  /*
         (language === "any language" || teacher.languages.includes(language)) &&
           (level === "any level" || teacher.levels.includes(level)) &&
           (price === "any price" ||
             (Number(teacher.price_per_hour) >= Number(price.split(" ")[0]) &&
               Number(teacher.price_per_hour) <
                 Number(price.split(" ")[0]) + 10));
-      })
-    );
-  };
-  /*
-
 */
   return (
     <div>
