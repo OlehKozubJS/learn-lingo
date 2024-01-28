@@ -5,9 +5,9 @@ import { FilterSelect } from "./FilterSelect";
 import styles from "./TeacherFilter.module.css";
 
 const TeacherFilter = ({ onChange }) => {
-  const [language, setLanguage] = useState("French");
-  const [level, setLevel] = useState("A1 Beginner");
-  const [price, setPrice] = useState("10 $");
+  const [language, setLanguage] = useState("any language");
+  const [level, setLevel] = useState("any level");
+  const [price, setPrice] = useState("any price");
 
   useEffect(() => {
     onChange({ language, level, price });
