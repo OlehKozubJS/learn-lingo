@@ -38,14 +38,7 @@ function AppTest() {
     console.log(filtea);
     setFilteredTeachers(filtea);
   };
-  /*
-        (language === "any language" || teacher.languages.includes(language)) &&
-          (level === "any level" || teacher.levels.includes(level)) &&
-          (price === "any price" ||
-            (Number(teacher.price_per_hour) >= Number(price.split(" ")[0]) &&
-              Number(teacher.price_per_hour) <
-                Number(price.split(" ")[0]) + 10));
-*/
+
   return (
     <div>
       <h1>Test Page</h1>
