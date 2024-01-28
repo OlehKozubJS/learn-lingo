@@ -189,11 +189,12 @@
 
   border-radius: 50%;
 }
-/*
+
 .ReviewerNameAndRating {
   display: flex;
+  flex-direction: column;
 }
-*/
+
 .ReviewerName {
   margin: 0;
 
