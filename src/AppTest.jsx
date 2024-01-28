@@ -2,7 +2,7 @@ import { useState } from "react";
 
 import teachers from "./teachers.json";
 
-import { TeacherCard, LessonModal } from "./components";
+import { TeacherCards, LessonModal } from "./components";
 
 import AppStyles from "./App.module.css";
 
@@ -37,10 +37,7 @@ function AppTest() {
         />
       )}
       <ul>
-        <TeacherCard
-          teacherData={teachers[10]}
-          bookTrialLesson={bookTrialLesson}
-        />
+        <TeacherCards bookTrialLesson={bookTrialLesson} />
       </ul>
     </div>
   );
