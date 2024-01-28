@@ -3,7 +3,6 @@
 .TeacherFilter {
   display: flex;
   column-gap: 20px;
-  height: 74px;
 }
 
 .FilterSelectHeader {
