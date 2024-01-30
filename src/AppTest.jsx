@@ -41,7 +41,7 @@ function AppTest() {
   };
 
   return (
-    <div>
+    <main>
       <h1>Test Page</h1>
       <div>{JSON.stringify(lessonModalData)}</div>
       <TeacherFilter onChange={handleTeacherFilterChange} />
@@ -57,7 +57,7 @@ function AppTest() {
         teachersData={filteredTeachers}
         bookTrialLesson={bookTrialLesson}
       />
-    </div>
+    </main>
   );
 }
 
