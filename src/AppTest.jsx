@@ -32,6 +32,10 @@ function AppTest() {
     setIsLessonModal(false);
   };
 
+  const handlePageSwitcherChange = (data) => {
+    setTeachersOnPage(data);
+  };
+
   const handleTeacherFilterChange = ({ language, level, price }) => {
     console.log(language, level, price);
     const filtea = teachers.filter(
