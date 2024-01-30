@@ -1,7 +1,9 @@
 import { useState } from "react";
 
 const PageSwitcher = ({ array, perPage, onChange }) => {
-  const [pageAmount, setPageAmount] = useState(array.length);
+  const [pageAmount, setPageAmount] = useState(
+    Math.ceil(array.length / perPage)
+  );
   const [pageNumber, setPageNumber] = useState(0);
 
   const firstPage = () => {
@@ -19,7 +21,9 @@ const PageSwitcher = ({ array, perPage, onChange }) => {
   const nextPage = () => {
     setPageNumber(pageNumber + 1);
   };
-  const lastPage = () => {};
+  const lastPage = () => {
+    setPageNumber(pageAmount);
+  };
 
   return (
     <div>
