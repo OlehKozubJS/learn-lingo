@@ -16,6 +16,7 @@ function AppTest() {
   const [lessonModalData, setLessonModalData] = useState({});
   const [isLessonModal, setIsLessonModal] = useState(false);
   const [filteredTeachers, setFilteredTeachers] = useState([...teachers]);
+  const [teachersOnPage, setTeachersOnPage] = useState([...filteredTeachers]);
 
   const bookTrialLesson = (newTeacherData) => {
     setTeacherData(newTeacherData);
@@ -54,7 +55,11 @@ function AppTest() {
         <div>E-mail: {lessonModalData.email}</div>
         <div>Phone number: {lessonModalData.tel}</div>
       </div>
-      <PageSwitcher />
+      <PageSwitcher
+        array={filteredTeachers}
+        onChange={handlePageSwitcherChange}
+        perPage={3}
+      />
       <TeacherFilter onChange={handleTeacherFilterChange} />
       {isLessonModal && (
         <LessonModal
