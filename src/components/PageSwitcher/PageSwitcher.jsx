@@ -19,7 +19,7 @@ const PageSwitcher = ({ array, perPage, onChange }) => {
   };
 
   const enterPageNumber = () => {
-    if (pageNumber <= array.length) {
+    if (pageNumber >= 0 && pageNumber <= array.length) {
       onChange([array[pageNumber]]);
     }
   };
