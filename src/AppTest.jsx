@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 import teachers from "./teachers.json";
 
@@ -35,6 +35,10 @@ function AppTest() {
   const handlePageSwitcherChange = (data) => {
     setTeachersOnPage(data);
   };
+
+  useEffect(() => {
+    setTeachersOnPage(filteredTeachers);
+  }, [filteredTeachers]);
 
   const handleTeacherFilterChange = ({ language, level, price }) => {
     console.log(language, level, price);
