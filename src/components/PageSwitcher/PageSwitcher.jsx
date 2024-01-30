@@ -31,7 +31,7 @@ const PageSwitcher = ({ array, perPage, onChange }) => {
   };
 
   useEffect(() => {
-    onChange(pageNumber);
+    onChange(array[pageNumber]);
   }, [pageNumber]);
 
   return (
