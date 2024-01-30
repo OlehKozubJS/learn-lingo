@@ -74,7 +74,7 @@ function AppTest() {
         />
       )}
       <TeacherCards
-        teachersData={filteredTeachers}
+        teachersData={teachersOnPage}
         bookTrialLesson={bookTrialLesson}
       />
     </main>
