@@ -29,11 +29,13 @@ const PageSwitcher = ({ array, perPage, onChange }) => {
   };
 
   const lastPage = () => {
-    setPageNumber(array.length);
+    setPageNumber(array.length - 1);
   };
 
   useEffect(() => {
-    onChange([array[pageNumber]]);
+    if (pageNumber >= 0 && pageNumber < array.length) {
+      onChange([array[pageNumber]]);
+    }
   }, [pageNumber]);
 
   return (
