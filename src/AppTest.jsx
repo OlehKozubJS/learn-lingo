@@ -35,11 +35,11 @@ function AppTest() {
   const handlePageSwitcherChange = (data) => {
     setTeachersOnPage(data);
   };
-
+  /*
   useEffect(() => {
-    handlePageSwitcherChange();
+    setTeachersOnPage(filteredTeachers);
   }, [filteredTeachers]);
-
+*/
   const handleTeacherFilterChange = ({ language, level, price }) => {
     console.log(language, level, price);
     const filter = teachers.filter(
