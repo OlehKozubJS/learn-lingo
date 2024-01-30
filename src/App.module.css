@@ -1,10 +1,21 @@
 body {
   background-color: #f8f8f8;
+  font-family: "roboto-regular", cursive;
 }
 
 @font-face {
   font-family: "roboto-regular";
   src: url("fonts/Roboto-Regular.ttf") format(truetype);
+}
+
+@font-face {
+  font-family: "roboto-medium";
+  src: url("fonts/Roboto-Medium.ttf") format(truetype);
+}
+
+@font-face {
+  font-family: "roboto-bold";
+  src: url("fonts/Roboto-Bold.ttf") format(truetype);
 }
 
 @media screen and (min-width: 300px) and (max-width: 500px) {
