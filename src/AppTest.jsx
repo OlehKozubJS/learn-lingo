@@ -48,7 +48,12 @@ function AppTest() {
   return (
     <main>
       <h1>Test Page</h1>
-      <div>{JSON.stringify(lessonModalData)}</div>
+      <div>
+        <div>Reason for learning: {lessonModalData.reasonForLearning}</div>
+        <div>Name: {lessonModalData.name}</div>
+        <div>E-mail: {lessonModalData.email}</div>
+        <div>Phone number: {lessonModalData.tel}</div>
+      </div>
       <PageSwitcher />
       <TeacherFilter onChange={handleTeacherFilterChange} />
       {isLessonModal && (
