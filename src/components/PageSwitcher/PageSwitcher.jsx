@@ -1,15 +1,24 @@
 import { useState } from "react";
 
-const PageSwitcher = ({ length, onChange }) => {
+const PageSwitcher = ({ array, perPage, onChange }) => {
+  const [pageAmount, setPageAmount] = useState(array.length);
   const [pageNumber, setPageNumber] = useState(0);
 
-  const firstPage = () => {};
-  const previousPage = () => {};
+  const firstPage = () => {
+    setPageNumber(0);
+  };
+  const previousPage = () => {
+    setPageNumber(pageNumber - 1);
+  };
   const changePageNumber = (event) => {
     setPageNumber(event.target.value);
   };
-  const enterPageNumber = () => {};
-  const nextPage = () => {};
+  const enterPageNumber = () => {
+    onChange(array.slice(pageNumber, pageNumber + perPage));
+  };
+  const nextPage = () => {
+    setPageNumber(pageNumber + 1);
+  };
   const lastPage = () => {};
 
   return (
