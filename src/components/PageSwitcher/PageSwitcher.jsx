@@ -10,7 +10,9 @@ const PageSwitcher = ({ array, perPage, onChange }) => {
   //const [newPageNumber, setNewPageNumber] = useState(0);
 
   const firstPage = () => {
-    setPageNumber(1);
+    if (pageNumber !== 1) {
+      setPageNumber(1);
+    }
   };
 
   const previousPage = () => {
@@ -52,25 +54,41 @@ const PageSwitcher = ({ array, perPage, onChange }) => {
   return (
     <div>
       <div>
-        <button type="button" onClick={firstPage}>
-          First page
-        </button>
-        <button type="button" onClick={previousPage}>
-          Previous page
-        </button>
+        {pageNumber !== 1 ? (
+          <button type="button" onClick={firstPage}>
+            First page
+          </button>
+        ) : (
+          <div>First page</div>
+        )}
+        {pageNumber !== 1 ? (
+          <button type="button" onClick={previousPage}>
+            Previous page
+          </button>
+        ) : (
+          <div>Previous page</div>
+        )}
         <input type="text" onChange={changePageNumber} value={pageNumber} />
         <button type="button" onClick={enterPageNumber}>
           Enter page number
         </button>
-        <button type="button" onClick={nextPage}>
-          Next page
-        </button>
-        <button type="button" onClick={lastPage}>
-          Last page
-        </button>
+        {pageNumber !== pageAmount ? (
+          <button type="button" onClick={nextPage}>
+            Next page
+          </button>
+        ) : (
+          <div>Next page</div>
+        )}
+        {pageNumber !== pageAmount ? (
+          <button type="button" onClick={lastPage}>
+            Last page
+          </button>
+        ) : (
+          <div>Last page</div>
+        )}
       </div>
       <p>
-        Page {pageNumber}/{array.length}
+        Page {pageNumber}/{pageAmount}
       </p>
     </div>
   );
