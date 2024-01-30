@@ -1,12 +1,15 @@
-const PageSwitcher = () => {
+const PageSwitcher = ({}) => {
   return (
     <div>
-      <button>First page</button>
-      <button>Previous page</button>
-      <input type="text" />
-      <button>Enter page number</button>
-      <button>Next page</button>
-      <button>Last page</button>
+      <div>
+        <button>First page</button>
+        <button>Previous page</button>
+        <input type="text" />
+        <button>Enter page number</button>
+        <button>Next page</button>
+        <button>Last page</button>
+      </div>
+      <div>Page 0/0</div>
     </div>
   );
 };
