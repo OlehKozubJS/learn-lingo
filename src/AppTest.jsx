@@ -42,7 +42,7 @@ function AppTest() {
 
   const handleTeacherFilterChange = ({ language, level, price }) => {
     console.log(language, level, price);
-    const filtea = teachers.filter(
+    const filter = teachers.filter(
       (teacher) =>
         (language === "any language" || teacher.languages.includes(language)) &&
         (level === "any level" || teacher.levels.includes(level)) &&
@@ -50,8 +50,8 @@ function AppTest() {
           (Number(teacher.price_per_hour) >= Number(price.split(" ")[0]) &&
             Number(teacher.price_per_hour) < Number(price.split(" ")[0]) + 10))
     );
-    console.log(filtea);
-    setFilteredTeachers(filtea);
+    console.log(filter);
+    setFilteredTeachers(filter);
   };
 
   return (
