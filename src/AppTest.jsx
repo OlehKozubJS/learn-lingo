@@ -23,6 +23,7 @@ function AppTest() {
 
   const handleLessonModalSubmit = (data) => {
     setLessonModalData(data);
+    setIsLessonModal(false);
   };
 
   const handleTeacherFilterChange = ({ language, level, price }) => {
