@@ -37,7 +37,7 @@ function AppTest() {
   };
 
   useEffect(() => {
-    setTeachersOnPage(filteredTeachers);
+    handlePageSwitcherChange();
   }, [filteredTeachers]);
 
   const handleTeacherFilterChange = ({ language, level, price }) => {
