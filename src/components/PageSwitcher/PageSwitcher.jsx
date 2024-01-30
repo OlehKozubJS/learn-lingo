@@ -1,3 +1,5 @@
-const PageSwitcher = () => {};
+const PageSwitcher = () => {
+  return <div></div>;
+};
 
 export { PageSwitcher };
