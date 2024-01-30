@@ -15,7 +15,7 @@ const PageSwitcher = ({ array, perPage, onChange }) => {
   };
 
   const changePageNumber = (event) => {
-    setNewPageNumber(event.target.value);
+    setNewPageNumber(Number(event.target.value));
   };
 
   const enterPageNumber = () => {
@@ -31,7 +31,7 @@ const PageSwitcher = ({ array, perPage, onChange }) => {
   };
 
   useEffect(() => {
-    onChange(array[pageNumber]);
+    onChange([...array[pageNumber]]);
   }, [pageNumber]);
 
   return (
