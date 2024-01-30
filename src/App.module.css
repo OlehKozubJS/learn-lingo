@@ -18,6 +18,18 @@ body {
   src: url("fonts/Roboto-Bold.ttf") format(truetype);
 }
 
+.Regular {
+  font-family: "roboto-regular";
+}
+
+.Medium {
+  font-family: "roboto-medium";
+}
+
+.Bold {
+  font-family: "roboto-bold";
+}
+
 @media screen and (min-width: 300px) and (max-width: 500px) {
   body {
     background-color: green;
