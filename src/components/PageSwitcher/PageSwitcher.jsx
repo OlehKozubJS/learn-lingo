@@ -54,7 +54,9 @@ const PageSwitcher = ({ array, perPage, onChange }) => {
           Last page
         </button>
       </div>
-      <p>Page 0/0</p>
+      <p>
+        Page {pageNumber}/{array.length}
+      </p>
     </div>
   );
 };
