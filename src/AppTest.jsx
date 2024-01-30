@@ -16,7 +16,7 @@ function AppTest() {
   const [lessonModalData, setLessonModalData] = useState({});
   const [isLessonModal, setIsLessonModal] = useState(false);
   const [filteredTeachers, setFilteredTeachers] = useState([...teachers]);
-  const [teachersOnPage, setTeachersOnPage] = useState([...filteredTeachers]);
+  const [teachersOnPage, setTeachersOnPage] = useState(filteredTeachers);
 
   const bookTrialLesson = (newTeacherData) => {
     setTeacherData(newTeacherData);
