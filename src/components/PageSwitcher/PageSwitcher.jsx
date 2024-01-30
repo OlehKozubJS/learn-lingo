@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 
 const PageSwitcher = ({ array, perPage, onChange }) => {
   const [pageNumber, setPageNumber] = useState(0);
-  const [newPageNumber, setNewPageNumber] = useState(0);
+  //const [newPageNumber, setNewPageNumber] = useState(0);
 
   const firstPage = () => {
     setPageNumber(0);
@@ -19,7 +19,7 @@ const PageSwitcher = ({ array, perPage, onChange }) => {
   };
 
   const enterPageNumber = () => {
-    setPageNumber(newPageNumber);
+    onChange(pageNumber);
   };
 
   const nextPage = () => {
