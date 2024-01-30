@@ -24,9 +24,9 @@ const PageSwitcher = ({ array, perPage, onChange }) => {
   const enterPageNumber = () => {
     if (pageNumber > 0 && pageNumber <= pageAmount) {
       onChange([
-        array[pageNumber - 3] * 3,
-        array[pageNumber - 2] * 3,
-        array[pageNumber - 1] * 3,
+        array[pageNumber * 3 - 3],
+        array[pageNumber * 3 - 2],
+        array[pageNumber * 3 - 1],
       ]);
     }
   };
@@ -36,11 +36,11 @@ const PageSwitcher = ({ array, perPage, onChange }) => {
   };
 
   const lastPage = () => {
-    setPageNumber(pageAmount - 1);
+    setPageNumber(pageAmount);
   };
 
   useEffect(() => {
-    if (pageNumber >= 0 && pageNumber < pageAmount) {
+    if (pageNumber > 0 && pageNumber <= pageAmount) {
       onChange([
         array[pageNumber * 3 - 3],
         array[pageNumber * 3 - 2],
