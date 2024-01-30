@@ -31,7 +31,7 @@ const PageSwitcher = ({ array, perPage, onChange }) => {
   };
 
   useEffect(() => {
-    onChange([...array[pageNumber]]);
+    onChange([array[pageNumber]]);
   }, [pageNumber]);
 
   return (
@@ -43,7 +43,7 @@ const PageSwitcher = ({ array, perPage, onChange }) => {
         <button type="button" onClick={previousPage}>
           Previous page
         </button>
-        <input type="text" onChange={changePageNumber} value={newPageNumber} />
+        <input type="text" onChange={changePageNumber} value={pageNumber} />
         <button type="button" onClick={enterPageNumber}>
           Enter page number
         </button>
