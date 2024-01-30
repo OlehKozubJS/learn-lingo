@@ -15,7 +15,7 @@ const PageSwitcher = ({ array, perPage, onChange }) => {
   };
 
   const changePageNumber = (event) => {
-    setNewPageNumber(Number(event.target.value));
+    setPageNumber(Number(event.target.value));
   };
 
   const enterPageNumber = () => {
