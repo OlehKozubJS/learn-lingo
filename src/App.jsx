@@ -11,6 +11,8 @@ function App() {
     <div>
       <nav>
         <button></button>
+        <button></button>
+        <button></button>
       </nav>
       <TeachersPage />
       <AppTest />
