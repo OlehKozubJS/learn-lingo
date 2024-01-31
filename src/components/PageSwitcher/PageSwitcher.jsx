@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 
+import styles from "./PageSwitcher.module.css";
+
 const PageSwitcher = ({ list, perPage, onChange }) => {
   const [pageAmount, setPageAmount] = useState(0);
   const [pageNumber, setPageNumber] = useState(1);
