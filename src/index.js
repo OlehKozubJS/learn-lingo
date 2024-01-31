@@ -8,6 +8,6 @@ const reactRoot = createRoot(root);
 
 reactRoot.render(
   <StrictMode>
-    <AppTest />
+    <App />
   </StrictMode>
 );

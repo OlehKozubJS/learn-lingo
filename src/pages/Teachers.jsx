@@ -1,15 +1,15 @@
 import { useState, useEffect } from "react";
 
-import teachers from "./teachers.json";
+import teachers from "../teachers.json";
 
 import {
   TeacherCards,
   LessonModal,
   TeacherFilter,
   PageSwitcher,
-} from "./components";
+} from "../components";
 
-import AppStyles from "./App.module.css";
+import AppStyles from "../App.module.css";
 
 function TeachersPage() {
   const [teacherData, setTeacherData] = useState({});
