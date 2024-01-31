@@ -57,10 +57,7 @@ const PageSwitcher = ({ list, perPage, onChange }) => {
 
   useEffect(() => {
     const handleKeydown = (event) => {
-      if (
-        event.type === "keydown" &&
-        ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"].includes(event.key)
-      ) {
+      if (event.type === "keydown" && Number(event.key) === NaN) {
         setNewPageNumber(0);
       }
     };
@@ -97,12 +94,16 @@ const PageSwitcher = ({ list, perPage, onChange }) => {
         ) : (
           <div className={styles.PageSwitcherDiv}>Previous page</div>
         )}
-        <input
-          type="text"
-          onChange={handleNewPageChange}
-          value={newPageNumber}
-          className={styles.PageSwitcherInput}
-        />
+        {newPageNumber === NaN ? (
+          <div className={styles.PageSwitcherInput}>{pageNumber}</div>
+        ) : (
+          <input
+            type="text"
+            onChange={handleNewPageChange}
+            value={newPageNumber}
+            className={styles.PageSwitcherInput}
+          />
+        )}
         <button
           type="button"
           onClick={handleNewPageEnter}
