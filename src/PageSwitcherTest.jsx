@@ -22,7 +22,6 @@ const PageSwitcherTest = ({ list, perPage, onChange }) => {
   /**/
   useEffect(() => {
     onChange(list.slice(number * perPage - perPage, number * perPage));
-    console.log(list);
   }, [number]);
 
   return (
@@ -38,7 +37,15 @@ const PageSwitcherTest = ({ list, perPage, onChange }) => {
         </button>
       )}
       <p>Page: {number}</p>
-      <div>{JSON.stringify(list)}</div>
+      <ul>
+        {list.map((item, index) => {
+          return (
+            <li key={index}>
+              <span>{item.name}</span> <span>{item.surname}</span>
+            </li>
+          );
+        })}
+      </ul>
     </div>
   );
 };
