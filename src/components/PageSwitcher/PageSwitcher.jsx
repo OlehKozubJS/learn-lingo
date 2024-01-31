@@ -34,14 +34,14 @@ const PageSwitcher = ({ list, perPage, onChange }) => {
   };
 
   useEffect(() => {
+    setPageAmount(Math.ceil(list.length / perPage));
+  }, [list]);
+
+  useEffect(() => {
     if (pageNumber > 0 && pageNumber <= pageAmount) {
       onChange(list.slice(pageNumber * perPage - 3, pageNumber * perPage));
     }
   }, [pageNumber]);
-
-  useEffect(() => {
-    setPageAmount(Math.ceil(list.length / perPage));
-  }, [list]);
 
   return (
     <div>
