@@ -42,7 +42,6 @@ function AppTest() {
   }, [filteredTeachers]);
 */
   const handleTeacherFilterChange = ({ language, level, price }) => {
-    console.log(language, level, price);
     const filter = teachers.filter(
       (teacher) =>
         (language === "any language" || teacher.languages.includes(language)) &&
