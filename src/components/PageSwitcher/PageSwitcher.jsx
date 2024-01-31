@@ -84,6 +84,7 @@ const PageSwitcher = ({ list, perPage, onChange }) => {
           type="text"
           onChange={handleNewPageChange}
           value={newPageNumber}
+          className={styles.PageSwitcherInput}
         />
         <button
           type="button"

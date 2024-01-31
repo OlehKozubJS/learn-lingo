@@ -7,7 +7,8 @@
 }
 
 .PageSwitcherButton,
-.PageSwitcherDiv {
+.PageSwitcherDiv,
+.PageSwitcherInput {
   display: flex;
   padding: 8px 12px;
   justify-content: center;
@@ -25,6 +26,7 @@
 
 .PageSwitcherButton {
   border: 2px solid #f4c550;
+  background-color: #fff;
 }
 
 .PageSwitcherDiv {
@@ -34,4 +36,13 @@
 .PageSwitcherButton:hover {
   background-color: #f4c550;
   color: #fff;
+}
+
+.PageSwitcherInput {
+  border: 1px solid rgba(18, 20, 23, 0.2);
+  outline: none;
+}
+
+.PageSwitcherInput:focus-within {
+  border: 2px solid #f4c550;
 }
