@@ -1,9 +1,7 @@
 import { useEffect, useState } from "react";
 
 const PageSwitcher = ({ list, perPage, onChange }) => {
-  const [pageAmount, setPageAmount] = useState(
-    Math.ceil(list.length / perPage)
-  );
+  const [pageAmount, setPageAmount] = useState(0);
   const [pageNumber, setPageNumber] = useState(1);
   //const [newPageNumber, setNewPageNumber] = useState(0);
 
