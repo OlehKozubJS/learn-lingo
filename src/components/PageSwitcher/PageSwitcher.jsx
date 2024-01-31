@@ -2,9 +2,9 @@ import { useEffect, useState } from "react";
 
 // array.slice(pageNumber, pageNumber + perPage)
 
-const PageSwitcher = ({ array, perPage, onChange }) => {
+const PageSwitcher = ({ list, perPage, onChange }) => {
   const [pageAmount, setPageAmount] = useState(
-    Math.ceil(array.length / perPage)
+    Math.ceil(list.length / perPage)
   );
   const [pageNumber, setPageNumber] = useState(1);
   //const [newPageNumber, setNewPageNumber] = useState(0);
@@ -26,9 +26,9 @@ const PageSwitcher = ({ array, perPage, onChange }) => {
   const enterPageNumber = () => {
     if (pageNumber > 0 && pageNumber <= pageAmount) {
       onChange([
-        array[pageNumber * 3 - 3],
-        array[pageNumber * 3 - 2],
-        array[pageNumber * 3 - 1],
+        list[pageNumber * 3 - 3],
+        list[pageNumber * 3 - 2],
+        list[pageNumber * 3 - 1],
       ]);
     }
   };
@@ -44,9 +44,9 @@ const PageSwitcher = ({ array, perPage, onChange }) => {
   useEffect(() => {
     if (pageNumber > 0 && pageNumber <= pageAmount) {
       onChange([
-        array[pageNumber * 3 - 3],
-        array[pageNumber * 3 - 2],
-        array[pageNumber * 3 - 1],
+        list[pageNumber * 3 - 3],
+        list[pageNumber * 3 - 2],
+        list[pageNumber * 3 - 1],
       ]);
     }
   }, [pageNumber]);
