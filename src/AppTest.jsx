@@ -64,7 +64,7 @@ function AppTest() {
         <div>Phone number: {lessonModalData.tel}</div>
       </div>
       <PageSwitcher
-        array={filteredTeachers}
+        list={filteredTeachers}
         onChange={handlePageSwitcherChange}
         perPage={3}
       />
