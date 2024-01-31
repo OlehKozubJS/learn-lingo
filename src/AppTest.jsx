@@ -66,10 +66,10 @@ function AppTest() {
           teacherPhoto={teacherData.avatar_url}
         />
       )}
-      <ul>
+      <ul style={{ display: "flex", flexWrap: "wrap", gap: "20 px 10px" }}>
         {filteredTeachers.map((item, index) => {
           return (
-            <li key={index}>
+            <li key={index} style={{ width: "200px" }}>
               <span>{item.name}</span> <span>{item.surname}</span>
             </li>
           );
