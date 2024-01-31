@@ -13,25 +13,8 @@ import { PageSwitcherTest } from "./PageSwitcherTest";
 import AppStyles from "./App.module.css";
 
 function AppTest() {
-  const [teacherData, setTeacherData] = useState({});
-  const [lessonModalData, setLessonModalData] = useState({});
-  const [isLessonModal, setIsLessonModal] = useState(false);
   const [filteredTeachers, setFilteredTeachers] = useState([...teachers]);
   const [teachersOnPage, setTeachersOnPage] = useState([]);
-
-  const bookTrialLesson = (newTeacherData) => {
-    setTeacherData(newTeacherData);
-    setIsLessonModal(true);
-  };
-
-  const closeLessonModal = () => {
-    setIsLessonModal(false);
-  };
-
-  const handleLessonModalSubmit = (data) => {
-    setLessonModalData(data);
-    setIsLessonModal(false);
-  };
 
   const handlePageSwitcherChange = (data) => {
     setTeachersOnPage(data);
@@ -58,14 +41,6 @@ function AppTest() {
         perPage={3}
       />
       <TeacherFilter onChange={handleTeacherFilterChange} />
-      {isLessonModal && (
-        <LessonModal
-          closeModal={closeLessonModal}
-          onSubmit={handleLessonModalSubmit}
-          teacherName={`${teacherData.name} ${teacherData.surname}`}
-          teacherPhoto={teacherData.avatar_url}
-        />
-      )}
       <ol style={{ display: "flex", flexWrap: "wrap", gap: "20 px 10px" }}>
         {teachersOnPage.map((item, index) => {
           return (
