@@ -15,9 +15,22 @@ const PageSwitcher = ({ list, perPage, onChange }) => {
     setNewPageNumber(pageNumber - 1);
   };
 
+  const handleNewPageChange = (event) => {
+    setNewPageNumber(Number(event.target.value));
+  };
+
+  const handleNewPageEnter = () => {
+    if (pageNumber < 1 || pageNumber > pageAmount) {
+      setPageNumber(pageAmount);
+      setNewPageNumber(pageAmount);
+    } else {
+      setPageNumber(newPageNumber);
+    }
+  };
+
   const nextPage = () => {
     setPageNumber(pageNumber + 1);
-    setNewPageNumber(pageAmount + 1);
+    setNewPageNumber(pageNumber + 1);
   };
 
   const lastPage = () => {
@@ -50,8 +63,10 @@ const PageSwitcher = ({ list, perPage, onChange }) => {
         ) : (
           <div>Previous page</div>
         )}
-        <input type="text" />
-        <button>Enter page number</button>
+        <input type="text" onChange={handleNewPageChange} />
+        <button type="button" onClick={handleNewPageEnter}>
+          Enter page number
+        </button>
         {pageNumber !== pageAmount && pageAmount !== 0 ? (
           <button type="button" onClick={nextPage}>
             Next page
