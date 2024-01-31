@@ -34,6 +34,7 @@ function AppTest() {
 
   const handlePageSwitcherChange = (data) => {
     setTeachersOnPage(data);
+    console.log(data);
   };
   /*
   useEffect(() => {
@@ -50,7 +51,6 @@ function AppTest() {
           (Number(teacher.price_per_hour) >= Number(price.split(" ")[0]) &&
             Number(teacher.price_per_hour) < Number(price.split(" ")[0]) + 10))
     );
-    console.log(filter);
     setFilteredTeachers(filter);
   };
 
