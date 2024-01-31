@@ -13,12 +13,12 @@ const PageSwitcherTest = ({ list, perPage, onChange }) => {
   const toNextPage = () => {
     setNumber(number + 1);
   };
-
+  /* */
   useEffect(() => {
-    //setAmount(Math.ceil(list.length / perPage));
+    setAmount(Math.ceil(list.length / perPage));
     setNumber(1);
   }, [list]);
-
+  /* */
   useEffect(() => {
     onChange(list.slice(number * perPage - perPage, number * perPage));
     console.log(list);
