@@ -63,7 +63,11 @@ const PageSwitcher = ({ list, perPage, onChange }) => {
         ) : (
           <div>Previous page</div>
         )}
-        <input type="text" onChange={handleNewPageChange} />
+        <input
+          type="text"
+          onChange={handleNewPageChange}
+          value={newPageNumber}
+        />
         <button type="button" onClick={handleNewPageEnter}>
           Enter page number
         </button>
