@@ -1,4 +1,6 @@
 import { useState } from "react";
+
+import Homepage from "./pages/Home";
 import TeachersPage from "./pages/Teachers";
 import { AppTest } from "./AppTest";
 
