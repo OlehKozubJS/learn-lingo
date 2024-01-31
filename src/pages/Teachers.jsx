@@ -50,13 +50,6 @@ function TeachersPage() {
 
   return (
     <main>
-      <h1>Test Page</h1>
-      <div>
-        <div>Reason for learning: {lessonModalData.reasonForLearning}</div>
-        <div>Name: {lessonModalData.name}</div>
-        <div>E-mail: {lessonModalData.email}</div>
-        <div>Phone number: {lessonModalData.tel}</div>
-      </div>
       <PageSwitcher
         list={filteredTeachers}
         onChange={handlePageSwitcherChange}
