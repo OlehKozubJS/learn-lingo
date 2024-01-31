@@ -67,7 +67,7 @@ function AppTest() {
         />
       )}
       <ul>
-        {list.map((item, index) => {
+        {filteredTeachers.map((item, index) => {
           return (
             <li key={index}>
               <span>{item.name}</span> <span>{item.surname}</span>
