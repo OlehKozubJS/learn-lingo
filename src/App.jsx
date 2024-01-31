@@ -9,6 +9,9 @@ function App() {
 
   return (
     <div>
+      <nav>
+        <button></button>
+      </nav>
       <TeachersPage />
       <AppTest />
     </div>
