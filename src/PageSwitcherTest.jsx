@@ -37,15 +37,6 @@ const PageSwitcherTest = ({ list, perPage, onChange }) => {
         </button>
       )}
       <p>Page: {number}</p>
-      <ul>
-        {list.map((item, index) => {
-          return (
-            <li key={index}>
-              <span>{item.name}</span> <span>{item.surname}</span>
-            </li>
-          );
-        })}
-      </ul>
     </div>
   );
 };
