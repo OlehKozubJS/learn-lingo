@@ -67,7 +67,7 @@ function AppTest() {
         />
       )}
       <ol style={{ display: "flex", flexWrap: "wrap", gap: "20 px 10px" }}>
-        {filteredTeachers.map((item, index) => {
+        {teachersOnPage.map((item, index) => {
           return (
             <li key={index} style={{ width: "200px" }}>
               <span>{item.name}</span> <span>{item.surname}</span>
