@@ -3,12 +3,10 @@ import { useEffect, useState } from "react";
 const PageSwitcher = ({ list, perPage, onChange }) => {
   const [pageAmount, setPageAmount] = useState(0);
   const [pageNumber, setPageNumber] = useState(1);
-  //const [newPageNumber, setNewPageNumber] = useState(0);
+  const [newPageNumber, setNewPageNumber] = useState(1);
 
   const firstPage = () => {
-    if (pageNumber !== 1) {
-      setPageNumber(1);
-    }
+    setPageNumber(1);
   };
 
   const previousPage = () => {
@@ -25,13 +23,11 @@ const PageSwitcher = ({ list, perPage, onChange }) => {
 
   useEffect(() => {
     setPageAmount(Math.ceil(list.length / perPage));
-  }, [pageNumber, list]);
+  }, [list]);
 
   useEffect(() => {
-    if (pageNumber > 0 && pageNumber <= pageAmount) {
-      onChange(list.slice(pageNumber * perPage - 3, pageNumber * perPage));
-    }
-  }, [pageNumber]);
+    onChange(list.slice((pageNumber - 1) * perPage, pageNumber * perPage));
+  }, [pageNumber, list]);
 
   return (
     <div>
