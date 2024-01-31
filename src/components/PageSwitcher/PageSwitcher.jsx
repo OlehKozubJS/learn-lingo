@@ -44,6 +44,8 @@ const PageSwitcher = ({ list, perPage, onChange }) => {
   };
 
   useEffect(() => {
+    setPageNumber(1);
+    setNewPageNumber(1);
     setPageAmount(Math.ceil(list.length / perPage));
   }, [list]);
 
