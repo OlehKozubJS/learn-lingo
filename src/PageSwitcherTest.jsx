@@ -1,7 +1,9 @@
 import { useState, useEffect } from "react";
 
 const PageSwitcherTest = ({ list, perPage, onChange }) => {
-  const [amount /* */, setAmount /**/] = useState(0);
+  const [amount /* */, setAmount /**/] = useState(
+    Math.ceil(list.length / perPage)
+  );
   const [number, setNumber] = useState(1);
 
   const toPreviousPage = () => {
@@ -13,9 +15,14 @@ const PageSwitcherTest = ({ list, perPage, onChange }) => {
   };
 
   useEffect(() => {
-    setAmount(Math.ceil(list.length / perPage));
+    //setAmount(Math.ceil(list.length / perPage));
+    setNumber(1);
+  }, [list]);
+
+  useEffect(() => {
     onChange(list.slice(number * perPage - perPage, number * perPage));
-  }, [number, list]);
+    console.log(list);
+  }, [number]);
 
   return (
     <div>
