@@ -55,6 +55,23 @@ const PageSwitcher = ({ list, perPage, onChange }) => {
     onChange(list.slice((pageNumber - 1) * perPage, pageNumber * perPage));
   }, [pageNumber, list]);
 
+  useEffect(() => {
+    const handleKeydown = (event) => {
+      if (
+        event.type === "keydown" &&
+        ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"].includes(event.key)
+      ) {
+        setNewPageNumber(1);
+      }
+    };
+
+    window.addEventListener("keydown", handleKeydown);
+
+    return () => {
+      window.removeEventListener("keydown", handleKeydown);
+    };
+  }, []);
+
   return (
     <div>
       <div className={styles.PageSwitcherButtons}>
