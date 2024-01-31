@@ -57,42 +57,62 @@ const PageSwitcher = ({ list, perPage, onChange }) => {
 
   return (
     <div>
-      <div>
+      <div className={styles.PageSwitcherButtons}>
         {pageNumber !== 1 && pageAmount !== 0 ? (
-          <button type="button" onClick={firstPage}>
+          <button
+            type="button"
+            onClick={firstPage}
+            className={styles.PageSwitcherButton}
+          >
             First page
           </button>
         ) : (
-          <div>First page</div>
+          <div className={styles.PageSwitcherDiv}>First page</div>
         )}
         {pageNumber !== 1 && pageAmount !== 0 ? (
-          <button type="button" onClick={previousPage}>
+          <button
+            type="button"
+            onClick={previousPage}
+            className={styles.PageSwitcherButton}
+          >
             Previous page
           </button>
         ) : (
-          <div>Previous page</div>
+          <div className={styles.PageSwitcherDiv}>Previous page</div>
         )}
         <input
           type="text"
           onChange={handleNewPageChange}
           value={newPageNumber}
         />
-        <button type="button" onClick={handleNewPageEnter}>
+        <button
+          type="button"
+          onClick={handleNewPageEnter}
+          className={styles.PageSwitcherButton}
+        >
           Enter page number
         </button>
         {pageNumber !== pageAmount && pageAmount !== 0 ? (
-          <button type="button" onClick={nextPage}>
+          <button
+            type="button"
+            onClick={nextPage}
+            className={styles.PageSwitcherButton}
+          >
             Next page
           </button>
         ) : (
-          <div>Next page</div>
+          <div className={styles.PageSwitcherDiv}>Next page</div>
         )}
         {pageNumber !== pageAmount && pageAmount !== 0 ? (
-          <button type="button" onClick={lastPage}>
+          <button
+            type="button"
+            onClick={lastPage}
+            className={styles.PageSwitcherButton}
+          >
             Last page
           </button>
         ) : (
-          <div>Last page</div>
+          <div className={styles.PageSwitcherDiv}>Last page</div>
         )}
       </div>
       <p>
