@@ -7,18 +7,22 @@ const PageSwitcher = ({ list, perPage, onChange }) => {
 
   const firstPage = () => {
     setPageNumber(1);
+    setNewPageNumber(1);
   };
 
   const previousPage = () => {
     setPageNumber(pageNumber - 1);
+    setNewPageNumber(pageNumber - 1);
   };
 
   const nextPage = () => {
     setPageNumber(pageNumber + 1);
+    setNewPageNumber(pageAmount + 1);
   };
 
   const lastPage = () => {
     setPageNumber(pageAmount);
+    setNewPageNumber(pageAmount);
   };
 
   useEffect(() => {
@@ -32,28 +36,30 @@ const PageSwitcher = ({ list, perPage, onChange }) => {
   return (
     <div>
       <div>
-        {pageNumber !== 1 ? (
+        {pageNumber !== 1 && pageAmount !== 0 ? (
           <button type="button" onClick={firstPage}>
             First page
           </button>
         ) : (
           <div>First page</div>
         )}
-        {pageNumber !== 1 ? (
+        {pageNumber !== 1 && pageAmount !== 0 ? (
           <button type="button" onClick={previousPage}>
             Previous page
           </button>
         ) : (
           <div>Previous page</div>
         )}
-        {pageNumber !== pageAmount ? (
+        <input type="text" />
+        <button>Enter page number</button>
+        {pageNumber !== pageAmount && pageAmount !== 0 ? (
           <button type="button" onClick={nextPage}>
             Next page
           </button>
         ) : (
           <div>Next page</div>
         )}
-        {pageNumber !== pageAmount ? (
+        {pageNumber !== pageAmount && pageAmount !== 0 ? (
           <button type="button" onClick={lastPage}>
             Last page
           </button>
