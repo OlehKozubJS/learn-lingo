@@ -37,7 +37,8 @@ const PageSwitcherTest = ({ list, perPage, onChange }) => {
           Next
         </button>
       )}
-      <div>Page: {number}</div>
+      <p>Page: {number}</p>
+      <div>{JSON.stringify(list)}</div>
     </div>
   );
 };
