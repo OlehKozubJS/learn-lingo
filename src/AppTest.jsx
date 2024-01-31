@@ -52,12 +52,6 @@ function AppTest() {
   return (
     <main>
       <h1>Test Page</h1>
-      <div>
-        <div>Reason for learning: {lessonModalData.reasonForLearning}</div>
-        <div>Name: {lessonModalData.name}</div>
-        <div>E-mail: {lessonModalData.email}</div>
-        <div>Phone number: {lessonModalData.tel}</div>
-      </div>
       <PageSwitcherTest
         list={filteredTeachers}
         onChange={handlePageSwitcherChange}
@@ -72,10 +66,15 @@ function AppTest() {
           teacherPhoto={teacherData.avatar_url}
         />
       )}
-      <TeacherCards
-        teachersData={teachersOnPage}
-        bookTrialLesson={bookTrialLesson}
-      />
+      <ul>
+        {list.map((item, index) => {
+          return (
+            <li key={index}>
+              <span>{item.name}</span> <span>{item.surname}</span>
+            </li>
+          );
+        })}
+      </ul>
     </main>
   );
 }
