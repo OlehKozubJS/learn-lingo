@@ -57,7 +57,7 @@ const PageSwitcher = ({ list, perPage, onChange }) => {
 
   useEffect(() => {
     const handleKeydown = (event) => {
-      if (event.type === "keydown" && Number(event.key) === NaN) {
+      if (event.type === "keydown" && Number(event.key) !== NaN) {
         setNewPageNumber(0);
       }
     };
