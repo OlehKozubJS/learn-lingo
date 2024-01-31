@@ -15,16 +15,6 @@ const PageSwitcher = ({ list, perPage, onChange }) => {
     setPageNumber(pageNumber - 1);
   };
 
-  const changePageNumber = (event) => {
-    setPageNumber(Number(event.target.value));
-  };
-
-  const enterPageNumber = () => {
-    if (pageNumber > 0 && pageNumber <= pageAmount) {
-      onChange(list.slice(pageNumber * perPage - 3, pageNumber * perPage));
-    }
-  };
-
   const nextPage = () => {
     setPageNumber(pageNumber + 1);
   };
@@ -60,10 +50,6 @@ const PageSwitcher = ({ list, perPage, onChange }) => {
         ) : (
           <div>Previous page</div>
         )}
-        <input type="text" onChange={changePageNumber} value={pageNumber} />
-        <button type="button" onClick={enterPageNumber}>
-          Enter page number
-        </button>
         {pageNumber !== pageAmount ? (
           <button type="button" onClick={nextPage}>
             Next page
