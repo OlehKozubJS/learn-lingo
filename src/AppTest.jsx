@@ -6,8 +6,9 @@ import {
   TeacherCards,
   LessonModal,
   TeacherFilter,
-  PageSwitcher,
+  /*PageSwitcher,*/
 } from "./components";
+import { PageSwitcherTest } from "./PageSwitcherTest";
 
 import AppStyles from "./App.module.css";
 
@@ -57,7 +58,7 @@ function AppTest() {
         <div>E-mail: {lessonModalData.email}</div>
         <div>Phone number: {lessonModalData.tel}</div>
       </div>
-      <PageSwitcher
+      <PageSwitcherTest
         list={filteredTeachers}
         onChange={handlePageSwitcherChange}
         perPage={3}
