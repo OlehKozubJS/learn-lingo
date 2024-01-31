@@ -18,7 +18,7 @@ const PageSwitcher = ({ list, perPage, onChange }) => {
   };
 
   const handleNewPageChange = (event) => {
-    const newNumber = Number(event.target.value);
+    const newNumber = event.target.value;
     if (newNumber === NaN) {
       setNewPageNumber(pageNumber);
     } else {
@@ -54,20 +54,6 @@ const PageSwitcher = ({ list, perPage, onChange }) => {
   useEffect(() => {
     onChange(list.slice((pageNumber - 1) * perPage, pageNumber * perPage));
   }, [pageNumber, list]);
-
-  useEffect(() => {
-    const handleKeydown = (event) => {
-      if (event.type === "keydown" && Number(event.key) !== NaN) {
-        setNewPageNumber(0);
-      }
-    };
-
-    window.addEventListener("keydown", handleKeydown);
-
-    return () => {
-      window.removeEventListener("keydown", handleKeydown);
-    };
-  }, []);
 
   return (
     <div>
