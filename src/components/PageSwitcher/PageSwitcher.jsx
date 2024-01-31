@@ -1,7 +1,5 @@
 import { useEffect, useState } from "react";
 
-// array.slice(pageNumber, pageNumber + perPage)
-
 const PageSwitcher = ({ list, perPage, onChange }) => {
   const [pageAmount, setPageAmount] = useState(
     Math.ceil(list.length / perPage)
