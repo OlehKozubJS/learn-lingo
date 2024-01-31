@@ -13,7 +13,7 @@ const PageSwitcherTest = ({ list, perPage, onChange }) => {
   const toNextPage = () => {
     setNumber(number + 1);
   };
-  /* */
+  /* *
   useEffect(() => {
     setAmount(Math.ceil(list.length / perPage));
     setNumber(1);
