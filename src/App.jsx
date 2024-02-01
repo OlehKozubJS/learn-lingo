@@ -17,30 +17,42 @@ function App() {
     <div>
       <header>
         <nav className={styles.NavigationBar}>
-          <button
-            type="button"
-            onClick={getPage}
-            value="home"
-            className={styles.NavigationButton}
-          >
-            Home
-          </button>
-          <button
-            type="button"
-            onClick={getPage}
-            value="teachers"
-            className={styles.NavigationButton}
-          >
-            Teachers
-          </button>
-          <button
-            type="button"
-            onClick={getPage}
-            value="test"
-            className={styles.NavigationButton}
-          >
-            Test Page
-          </button>
+          {pageName !== "home" ? (
+            <button
+              type="button"
+              onClick={getPage}
+              value="home"
+              className={styles.NavigationButton}
+            >
+              Home
+            </button>
+          ) : (
+            <div className={styles.NavigationDiv}>Home</div>
+          )}
+          {pageName !== "teachers" ? (
+            <button
+              type="button"
+              onClick={getPage}
+              value="teachers"
+              className={styles.NavigationButton}
+            >
+              Teachers
+            </button>
+          ) : (
+            <div className={styles.NavigationDiv}>Teachers</div>
+          )}
+          {pageName !== "test" ? (
+            <button
+              type="button"
+              onClick={getPage}
+              value="test"
+              className={styles.NavigationButton}
+            >
+              Test Page
+            </button>
+          ) : (
+            <div className={styles.NavigationDiv}>Test</div>
+          )}
         </nav>
       </header>
       {pageName === "home" && <HomePage />}
