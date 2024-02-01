@@ -39,7 +39,8 @@
 }
 
 .PageSwitcherButton:active {
-  background-color: ;
+  background-color: #ffdc86;
+  color: #fff;
 }
 
 .PageSwitcherInput {
