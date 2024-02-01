@@ -40,12 +40,10 @@
 
 .OptionListButton:hover {
   background-color: #f4c550;
-  color: #fff;
 }
 
 .OptionListButton:active {
   background-color: #ffdc86;
-  color: #fff;
 }
 
 .OptionList {
