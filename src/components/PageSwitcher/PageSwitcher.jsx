@@ -9,12 +9,10 @@ const PageSwitcher = ({ list, perPage, onChange }) => {
 
   const firstPage = () => {
     setPageNumber(1);
-    setNewPageNumber(1);
   };
 
   const previousPage = () => {
     setPageNumber(pageNumber - 1);
-    setNewPageNumber(pageNumber - 1);
   };
 
   const handleNewPageChange = (event) => {
@@ -24,29 +22,24 @@ const PageSwitcher = ({ list, perPage, onChange }) => {
 
   const handleNewPageEnter = () => {
     if (
-      Number(newPageNumber).toString() === "NaN" ||
-      newPageNumber < 1 ||
+      Number(newPageNumber).toString() !== "NaN" &&
+      newPageNumber < 1 &&
       newPageNumber > pageAmount
     ) {
-      setNewPageNumber(pageNumber);
-    } else {
       setPageNumber(Number(newPageNumber));
     }
   };
 
   const nextPage = () => {
     setPageNumber(pageNumber + 1);
-    setNewPageNumber(pageNumber + 1);
   };
 
   const lastPage = () => {
     setPageNumber(pageAmount);
-    setNewPageNumber(pageAmount);
   };
 
   useEffect(() => {
     setPageNumber(1);
-    setNewPageNumber(1);
     setPageAmount(Math.ceil(list.length / perPage));
   }, [list]);
 
