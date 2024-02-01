@@ -9,6 +9,8 @@ import {
   PageSwitcher,
 } from "./components";
 
+import { SVGImage } from "./icons";
+
 import AppStyles from "./App.module.css";
 
 function AppTest() {
@@ -30,6 +32,7 @@ function AppTest() {
     <main>
       <h1>Test Page</h1>
       <div>{keyName}</div>
+      <SVGImage name={"log-in"} size={20} />
     </main>
   );
 }
