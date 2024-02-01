@@ -38,6 +38,14 @@
   line-height: 20px;
 }
 
+.OptionListButton:hover {
+  background-color: #f4c550;
+}
+
+.OptionListButton:active {
+  background-color: #ffdc86;
+}
+
 .OptionList {
   box-sizing: border-box;
   list-style: none;
