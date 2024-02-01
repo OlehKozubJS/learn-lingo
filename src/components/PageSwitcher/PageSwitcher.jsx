@@ -23,8 +23,7 @@ const PageSwitcher = ({ list, perPage, onChange }) => {
   };
 
   const handleNewPageEnter = () => {
-    const newPageNumberData = Number(newPageNumber).toString();
-    if (newPageNumberData === "NaN") {
+    if (Number(newPageNumber).toString() === "NaN") {
       setPageNumber(1);
       setNewPageNumber(1);
     } else if (newPageNumber < 1 || newPageNumber > pageAmount) {
