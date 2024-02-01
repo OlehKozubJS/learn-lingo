@@ -33,6 +33,7 @@ function AppTest() {
       <h1>Test Page</h1>
       <div>{keyName}</div>
       <SVGImage name={"log-in"} size={20} />
+      <SVGImage name={"logo"} size={28} />
     </main>
   );
 }
