@@ -2,6 +2,9 @@ body {
   background-color: #f8f8f8;
   font-family: "roboto-regular", cursive;
   font-size: 16px;
+}
+
+button {
   transition: 500ms;
 }
 
