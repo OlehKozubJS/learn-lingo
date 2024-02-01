@@ -19,7 +19,7 @@ const PageSwitcher = ({ list, perPage, onChange }) => {
 
   const handleNewPageChange = (event) => {
     const newNumber = event.target.value;
-    if (newNumber === NaN) {
+    if (Number(newNumber) === NaN) {
       setNewPageNumber(pageNumber);
     } else {
       setNewPageNumber(newNumber);
