@@ -54,6 +54,10 @@ const PageSwitcher = ({ list, perPage, onChange }) => {
     onChange(list.slice((pageNumber - 1) * perPage, pageNumber * perPage));
   }, [pageNumber, list]);
 
+  useEffect(() => {
+    setNewPageNumber(pageNumber);
+  }, [pageNumber]);
+
   return (
     <div>
       <div className={styles.PageSwitcherButtons}>
