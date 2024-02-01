@@ -15,17 +15,19 @@ function App() {
 
   return (
     <div>
-      <nav>
-        <button type="button" onClick={getPage} value="home">
-          Home
-        </button>
-        <button type="button" onClick={getPage} value="teachers">
-          Teachers
-        </button>
-        <button type="button" onClick={getPage} value="test">
-          Test Page
-        </button>
-      </nav>
+      <header>
+        <nav>
+          <button type="button" onClick={getPage} value="home">
+            Home
+          </button>
+          <button type="button" onClick={getPage} value="teachers">
+            Teachers
+          </button>
+          <button type="button" onClick={getPage} value="test">
+            Test Page
+          </button>
+        </nav>
+      </header>
       {pageName === "home" && <HomePage />}
       {pageName === "teachers" && <TeachersPage />}
       {pageName === "test" && <AppTest />}
