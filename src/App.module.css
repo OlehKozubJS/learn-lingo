@@ -56,6 +56,10 @@ body {
   color: #f4c550;
 }
 
+.NavigationButton:active {
+  color: #fbe9ba;
+}
+
 .NavigationDiv {
   color: rgba(18, 20, 23, 0.2);
   font-size: 16px;
