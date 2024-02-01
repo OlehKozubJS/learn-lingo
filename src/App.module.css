@@ -1,6 +1,7 @@
 body {
   background-color: #f8f8f8;
   font-family: "roboto-regular", cursive;
+  font-size: 16px;
 }
 
 @font-face {
@@ -35,3 +36,36 @@ body {
     background-color: green;
   }
 }
+
+.NavigationBar {
+  display: flex;
+  gap: 28px;
+}
+
+.NavigationButton {
+  border: none;
+  background: none;
+  padding: none;
+
+  color: #121417;
+  line-height: 20px;
+}
+
+.NavigationButton:hover {
+  border: none;
+  background: none;
+  padding: none;
+
+  color: #121417;
+  line-height: 20px;
+}
+
+/*
+Colors:
+#121417
+#fbe9ba
+#f4c550
+#8a8a89
+rgba(18, 20, 23, 0.2)
+#fff
+*/
