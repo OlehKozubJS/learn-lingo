@@ -6,6 +6,7 @@
 }
 
 .FilterSelect {
+  position: relative;
 }
 
 .FilterSelectHeader {
@@ -32,13 +33,13 @@
   border-radius: 14px;
   background: #fff;
 
-  margin-bottom: 4px;
-
   color: #121417;
   font-family: "Roboto", sans-serif;
   font-size: 18px;
   font-weight: 500;
   line-height: 20px;
+
+  margin-bottom: 4px;
 }
 
 .OptionListButton:hover {
@@ -50,6 +51,10 @@
 }
 
 .OptionList {
+  position: absolute;
+  top: 78px;
+  left: 0px;
+
   box-sizing: border-box;
   list-style: none;
   margin: 0;
