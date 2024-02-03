@@ -54,6 +54,7 @@
   position: absolute;
   top: 78px;
   left: 0px;
+  z-index: 1;
 
   box-sizing: border-box;
   list-style: none;
