@@ -20,6 +20,7 @@
 }
 
 .TeacherImageContainer {
+  position: relative;
   box-sizing: border-box;
   min-width: 120px;
   height: 120px;
