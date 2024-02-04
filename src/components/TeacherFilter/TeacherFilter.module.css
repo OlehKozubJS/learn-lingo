@@ -7,10 +7,13 @@
 
 .FilterSelect {
   position: relative;
+  display: flex;
+  flex-direction: column;
+  row-gap: 8px;
 }
 
 .FilterSelectHeader {
-  margin-top: 0;
+  margin: 0;
   width: 100%;
 
   color: #8a8a89;
@@ -18,8 +21,6 @@
   font-size: 14px;
   font-weight: 500;
   line-height: 18px;
-
-  margin-bottom: 8px;
 }
 
 .OptionListButton {
@@ -29,7 +30,7 @@
   display: flex;
   justify-content: space-between;
 
-  border: 0;
+  border: none;
   border-radius: 14px;
   background: #fff;
 
@@ -38,8 +39,6 @@
   font-size: 18px;
   font-weight: 500;
   line-height: 20px;
-
-  margin-bottom: 4px;
 }
 
 .OptionListButton:hover {
@@ -52,13 +51,14 @@
 
 .OptionList {
   position: absolute;
-  top: 60px;
+  top: 80px;
   left: 0px;
   z-index: 1;
 
   box-sizing: border-box;
   list-style: none;
 
+  margin: 0;
   width: 100%;
   display: flex;
   padding: 14px 18px;
