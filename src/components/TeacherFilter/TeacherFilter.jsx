@@ -14,9 +14,14 @@ const TeacherFilter = ({ onChange }) => {
 
   useEffect(() => {
     const getDataFromBackend = async () => {
-      const response = await axios.get("http://localhost:3000/load");
-      const { data } = response;
-      setTeachers(JSON.parse(data));
+      try {
+        const response = await axios.get("http://localhost:3000/load");
+        const { data } = response;
+        setTeachers(JSON.parse(data));
+      } catch (error) {
+        console.log(error.message);
+        throw error;
+      }
     };
     getDataFromBackend();
   }, []);
