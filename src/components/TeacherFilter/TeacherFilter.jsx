@@ -36,7 +36,7 @@ const TeacherFilter = ({ onChange }) => {
             Number(teacher.price_per_hour) < Number(price.split(" ")[0]) + 10))
     );
     onChange(filteredTeachers);
-  }, [language, level, price]);
+  }, [language, level, price, teachers]);
 
   const selectLanguage = (selectedLanguage) => {
     setLanguage(selectedLanguage);
