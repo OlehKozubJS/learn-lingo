@@ -1,13 +1,25 @@
+import axios from "axios";
+
 import { useEffect, useState } from "react";
 
 import { FilterSelect } from "./FilterSelect";
 
 import styles from "./TeacherFilter.module.css";
 
-const TeacherFilter = ({ teachers, onChange }) => {
+const TeacherFilter = ({ onChange }) => {
+  const [teachers, setTeachers] = useState([]);
   const [language, setLanguage] = useState("any language");
   const [level, setLevel] = useState("any level");
   const [price, setPrice] = useState("any price");
+
+  useEffect(() => {
+    const getDataFromBackend = async () => {
+      const response = await axios.get("http://localhost:3000/load");
+      const { data } = response;
+      setTeachers(JSON.parse(data));
+    };
+    getDataFromBackend();
+  }, []);
 
   useEffect(() => {
     const filteredTeachers = teachers.filter(
