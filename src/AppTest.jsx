@@ -16,7 +16,7 @@ import css from "./AppTest.module.css";
 
 function AppTest() {
   const [keyName, setKeyName] = useState("");
-  const [left, setLeft] = useState(0);
+  const [leftSide, setLeftSide] = useState(0);
   const [mode, setMode] = useState("stop");
 
   useEffect(() => {
@@ -37,15 +37,18 @@ function AppTest() {
 
   useEffect(() => {
     const changeLeft = () => {
-      let step = 0;
+      let step;
       if (mode === "left") {
-        step = 10;
-      } else if (mode === "right") {
         step = -10;
+      } else if (mode === "right") {
+        step = 10;
       } else {
         step = 0;
       }
-      setLeft(left, step);
+      setLeftSide((leftSide) => {
+        return leftSide + step;
+      });
+      console.log(leftSide);
     };
 
     const changeLeftSetInterval = setInterval(changeLeft, 500);
@@ -71,7 +74,7 @@ function AppTest() {
         </button>
       </div>
       <div className={css.Parent}>
-        <div style={{ left: `${left}px` }} className={css.Child}></div>
+        <div style={{ left: `${leftSide}px` }} className={css.Child}></div>
       </div>
     </main>
   );
