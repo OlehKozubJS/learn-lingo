@@ -15,7 +15,7 @@ function TeachersPage() {
   const [teacherData, setTeacherData] = useState({});
   const [lessonModalData, setLessonModalData] = useState({});
   const [isLessonModal, setIsLessonModal] = useState(false);
-  const [filteredTeachers, setFilteredTeachers] = useState([...teachers]);
+  const [filteredTeachers, setFilteredTeachers] = useState(teachers);
   const [teachersOnPage, setTeachersOnPage] = useState([]);
 
   const bookTrialLesson = (newTeacherData) => {
