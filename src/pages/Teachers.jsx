@@ -1,5 +1,3 @@
-import axios from "axios";
-
 import { useState, useEffect } from "react";
 
 import {
@@ -15,8 +13,7 @@ function TeachersPage() {
   const [teacherData, setTeacherData] = useState({});
   const [lessonModalData, setLessonModalData] = useState({});
   const [isLessonModal, setIsLessonModal] = useState(false);
-  const [dataFromBackend, setDataFromBackend] = useState([]);
-  const [filteredTeachers, setFilteredTeachers] = useState(dataFromBackend);
+  const [filteredTeachers, setFilteredTeachers] = useState({});
   const [teachersOnPage, setTeachersOnPage] = useState([]);
 
   const bookTrialLesson = (newTeacherData) => {
@@ -41,16 +38,6 @@ function TeachersPage() {
     setFilteredTeachers(data);
   };
 
-  useEffect(() => {
-    const getDataFromBackend = async () => {
-      const response = await axios.get("http://localhost:3000/load");
-      const { data } = await response;
-      setDataFromBackend(JSON.parse(data));
-      console.log(data);
-    };
-    getDataFromBackend();
-  }, []);
-
   return (
     <main>
       <PageSwitcher
@@ -58,10 +45,7 @@ function TeachersPage() {
         onChange={handlePageSwitcherChange}
         perPage={3}
       />
-      <TeacherFilter
-        teachers={dataFromBackend}
-        onChange={handleTeacherFilterChange}
-      />
+      <TeacherFilter onChange={handleTeacherFilterChange} />
       {isLessonModal && (
         <LessonModal
           closeModal={closeLessonModal}
