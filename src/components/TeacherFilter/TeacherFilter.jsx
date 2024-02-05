@@ -4,13 +4,21 @@ import { FilterSelect } from "./FilterSelect";
 
 import styles from "./TeacherFilter.module.css";
 
-const TeacherFilter = ({ onChange }) => {
+const TeacherFilter = ({ teachers, onChange }) => {
   const [language, setLanguage] = useState("any language");
   const [level, setLevel] = useState("any level");
   const [price, setPrice] = useState("any price");
 
   useEffect(() => {
-    onChange({ language, level, price });
+    const filteredTeachers = teachers.filter(
+      (teacher) =>
+        (language === "any language" || teacher.languages.includes(language)) &&
+        (level === "any level" || teacher.levels.includes(level)) &&
+        (price === "any price" ||
+          (Number(teacher.price_per_hour) >= Number(price.split(" ")[0]) &&
+            Number(teacher.price_per_hour) < Number(price.split(" ")[0]) + 10))
+    );
+    onChange(filteredTeachers);
   }, [language, level, price]);
 
   const selectLanguage = (selectedLanguage) => {
