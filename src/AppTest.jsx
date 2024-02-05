@@ -35,13 +35,16 @@ function AppTest() {
     <main>
       <h1>Test Page</h1>
       <div>{keyName}</div>
-      <div>
-        <div></div>
+      <div className={css.Parent}>
+        <div className={css.Child}></div>
       </div>
-      <SVGImage name={"log-in"} size={20} />
-      <SVGImage name={"logo"} size={28} />
     </main>
   );
 }
 
 export { AppTest };
+
+/*
+      <SVGImage name={"log-in"} size={20} />
+      <SVGImage name={"logo"} size={28} />
+*/
