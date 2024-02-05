@@ -12,7 +12,9 @@ const PageSwitcher = ({ list, perPage, onChange }) => {
   };
 
   const previousPage = () => {
-    setPageNumber(pageNumber - 1);
+    setPageNumber((pageNumber) => {
+      return pageNumber - 1;
+    });
   };
 
   const handleNewPageChange = (event) => {
@@ -35,7 +37,9 @@ const PageSwitcher = ({ list, perPage, onChange }) => {
   };
 
   const nextPage = () => {
-    setPageNumber(pageNumber + 1);
+    setPageNumber((pageNumber) => {
+      return pageNumber + 1;
+    });
   };
 
   const lastPage = () => {
