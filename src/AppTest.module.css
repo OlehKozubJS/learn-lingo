@@ -1,0 +1,15 @@
+.Parent {
+  position: relative;
+  height: 100px;
+
+  background-color: red;
+}
+
+.Child {
+  position: absolute;
+  top: 0;
+  width: 200px;
+  height: 100px;
+
+  background-color: blue;
+}
