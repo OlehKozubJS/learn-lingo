@@ -50,7 +50,6 @@ function AppTest() {
       }
       newLeftSide += step;
       setLeftSide(newLeftSide);
-      console.log(newLeftSide);
     };
 
     changeLeftSetInterval = setInterval(changeLeft, 500);
@@ -77,6 +76,7 @@ function AppTest() {
       <div className={css.Parent}>
         <div style={{ left: `${leftSide}px` }} className={css.Child}></div>
       </div>
+      <div>{leftSide}</div>
       <div>{keyName}</div>
     </main>
   );
