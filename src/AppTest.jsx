@@ -1,3 +1,5 @@
+import axios from "axios";
+
 import { useState, useEffect } from "react";
 
 import teachers from "./teachers.json";
@@ -63,8 +65,11 @@ function AppTest() {
   }, [mode]);
 
   useEffect(() => {
-    const getDataFromBackend = await() => {const response = };
-    
+    const getDataFromBackend = async () => {
+      const response = await axios.get("http://localhost:3000/load");
+      await setDataFromBackend(JSON.stringify(response));
+    };
+    getDataFromBackend();
   }, []);
 
   return (
