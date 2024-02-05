@@ -37,7 +37,7 @@ function AppTest() {
 
   useEffect(() => {
     let changeLeftSetInterval;
-
+    let number = 0;
     const changeLeft = () => {
       let step;
       if (mode === "left" && leftSide > 0) {
@@ -51,7 +51,8 @@ function AppTest() {
       setLeftSide((leftSide) => {
         return leftSide + step;
       });
-      console.log(leftSide);
+      number += step;
+      console.log(number);
     };
 
     changeLeftSetInterval = setInterval(changeLeft, 500);
@@ -64,7 +65,6 @@ function AppTest() {
   return (
     <main>
       <h1>Test Page</h1>
-      <div>{keyName}</div>
       <div>
         <button onClick={handleModeValue} value="left">
           Left
@@ -79,6 +79,7 @@ function AppTest() {
       <div className={css.Parent}>
         <div style={{ left: `${leftSide}px` }} className={css.Child}></div>
       </div>
+      <div>{keyName}</div>
     </main>
   );
 }
