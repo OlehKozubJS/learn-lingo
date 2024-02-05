@@ -18,6 +18,7 @@ function AppTest() {
   const [keyName, setKeyName] = useState("");
   const [leftSide, setLeftSide] = useState(0);
   const [mode, setMode] = useState("stop");
+  const [dataFromBackend, setDataFromBackend] = useState("");
 
   useEffect(() => {
     const handleKeydown = (event) => {
@@ -61,6 +62,11 @@ function AppTest() {
     };
   }, [mode]);
 
+  useEffect(() => {
+    const getDataFromBackend = await() => {const response = };
+    
+  }, []);
+
   return (
     <main>
       <h1>Test Page</h1>
@@ -80,6 +86,7 @@ function AppTest() {
       </div>
       <div>{leftSide}</div>
       <div>{keyName}</div>
+      <div>{dataFromBackend}</div>
     </main>
   );
 }
