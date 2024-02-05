@@ -7,7 +7,6 @@ import { FilterSelect } from "./FilterSelect";
 import styles from "./TeacherFilter.module.css";
 
 const TeacherFilter = ({ onChange }) => {
-  const [teachers, setTeachers] = useState([]);
   const [language, setLanguage] = useState("any language");
   const [level, setLevel] = useState("any level");
   const [price, setPrice] = useState("any price");
@@ -15,28 +14,18 @@ const TeacherFilter = ({ onChange }) => {
   useEffect(() => {
     const getDataFromBackend = async () => {
       try {
-        const response = await axios.get("http://localhost:3000/load");
+        const response = await axios.get(
+          `http://localhost:3000/load?language=${language}&level=${level}&price=${price}`
+        );
         const { data } = response;
-        setTeachers(JSON.parse(data));
+        onChange(JSON.parse(data));
       } catch (error) {
         console.log(error.message);
         throw error;
       }
     };
     getDataFromBackend();
-  }, []);
-
-  useEffect(() => {
-    const filteredTeachers = teachers.filter(
-      (teacher) =>
-        (language === "any language" || teacher.languages.includes(language)) &&
-        (level === "any level" || teacher.levels.includes(level)) &&
-        (price === "any price" ||
-          (Number(teacher.price_per_hour) >= Number(price.split(" ")[1]) &&
-            Number(teacher.price_per_hour) < Number(price.split(" ")[3])))
-    );
-    onChange(filteredTeachers);
-  }, [language, level, price, teachers]);
+  }, [language, level, price]);
 
   const selectLanguage = (selectedLanguage) => {
     setLanguage(selectedLanguage);
