@@ -19,6 +19,7 @@ const TeacherFilter = ({ onChange }) => {
         );
         const { data } = response;
         onChange(JSON.parse(data));
+        console.log(JSON.parse(data));
       } catch (error) {
         console.log(error.message);
         throw error;
