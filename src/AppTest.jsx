@@ -11,7 +11,7 @@ import {
 
 import { SVGImage } from "./icons";
 
-import AppStyles from "./App.module.css";
+import styles from "./App.module.css";
 
 function AppTest() {
   const [keyName, setKeyName] = useState("");
@@ -28,10 +28,15 @@ function AppTest() {
     };
   }, []);
 
+  useEffect(() => {}, []);
+
   return (
     <main>
       <h1>Test Page</h1>
       <div>{keyName}</div>
+      <div>
+        <div></div>
+      </div>
       <SVGImage name={"log-in"} size={20} />
       <SVGImage name={"logo"} size={28} />
     </main>
