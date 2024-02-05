@@ -36,14 +36,17 @@ function AppTest() {
   };
 
   useEffect(() => {
+    let changeLeftSetInterval;
+
     const changeLeft = () => {
       let step;
-      if (mode === "left") {
+      if (mode === "left" && leftSide > 0) {
         step = -10;
-      } else if (mode === "right") {
+      } else if (mode === "right" && leftSide < 500) {
         step = 10;
       } else {
         step = 0;
+        clearInterval(changeLeftSetInterval);
       }
       setLeftSide((leftSide) => {
         return leftSide + step;
@@ -51,7 +54,7 @@ function AppTest() {
       console.log(leftSide);
     };
 
-    const changeLeftSetInterval = setInterval(changeLeft, 500);
+    changeLeftSetInterval = setInterval(changeLeft, 500);
 
     return () => {
       clearInterval(changeLeftSetInterval);
