@@ -44,7 +44,9 @@ function TeachersPage() {
   useEffect(() => {
     const getDataFromBackend = async () => {
       const response = await axios.get("http://localhost:3000/load");
-      setDataFromBackend(response);
+      const { data } = await response;
+      setDataFromBackend(JSON.parse(data));
+      console.log(data);
     };
     getDataFromBackend();
   }, []);
