@@ -36,16 +36,8 @@ function TeachersPage() {
     setTeachersOnPage(data);
   };
 
-  const handleTeacherFilterChange = ({ language, level, price }) => {
-    const filter = teachers.filter(
-      (teacher) =>
-        (language === "any language" || teacher.languages.includes(language)) &&
-        (level === "any level" || teacher.levels.includes(level)) &&
-        (price === "any price" ||
-          (Number(teacher.price_per_hour) >= Number(price.split(" ")[0]) &&
-            Number(teacher.price_per_hour) < Number(price.split(" ")[0]) + 10))
-    );
-    setFilteredTeachers(filter);
+  const handleTeacherFilterChange = (data) => {
+    setFilteredTeachers(data);
   };
 
   return (
@@ -55,7 +47,7 @@ function TeachersPage() {
         onChange={handlePageSwitcherChange}
         perPage={3}
       />
-      <TeacherFilter onChange={handleTeacherFilterChange} />
+      <TeacherFilter teachers={teachers} onChange={handleTeacherFilterChange} />
       {isLessonModal && (
         <LessonModal
           closeModal={closeLessonModal}
