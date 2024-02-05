@@ -15,7 +15,7 @@ const TeacherFilter = ({ onChange }) => {
     const getDataFromBackend = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:3000/load/${language}/${level}/${price}`
+          `http://localhost:3000/load/${{ language, level, price }}`
         );
         const { data } = response;
         onChange(JSON.parse(data));
