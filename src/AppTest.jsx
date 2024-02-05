@@ -21,7 +21,9 @@ function AppTest() {
 
   useEffect(() => {
     const handleKeydown = (event) => {
-      setKeyName(event.key);
+      setKeyName((keyName) => {
+        return keyName + event.key;
+      });
     };
 
     window.addEventListener("keydown", handleKeydown);
