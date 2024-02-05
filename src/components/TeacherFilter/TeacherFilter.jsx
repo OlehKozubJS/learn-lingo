@@ -63,7 +63,7 @@ const TeacherFilter = ({ onChange }) => {
           "Polish",
         ]}
         select={selectLanguage}
-        width="221px"
+        width="220px"
       />
       <FilterSelect
         title="Level of knowledge"
@@ -81,9 +81,15 @@ const TeacherFilter = ({ onChange }) => {
       />
       <FilterSelect
         title="Price"
-        options={["any price", "10 $", "20 $", "30 $", "40 $"]}
+        options={[
+          "any price",
+          "from 10 to 19 $",
+          "from 20 to 29 $",
+          "from 30 to 39 $",
+          "from 40 to 49 $",
+        ]}
         select={selectPrice}
-        width="135px"
+        width="200px"
       />
     </div>
   );
