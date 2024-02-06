@@ -53,6 +53,10 @@ const PageSwitcher = ({ pageAmount, onChange }) => {
     setNewPageNumber(pageNumber);
   }, [pageNumber]);
 
+  useEffect(() => {
+    setPageNumber(1);
+  }, [pageAmount]);
+
   return (
     <div>
       <div className={styles.PageSwitcherButtons}>
