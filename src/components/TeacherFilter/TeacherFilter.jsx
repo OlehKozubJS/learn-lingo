@@ -11,18 +11,21 @@ const TeacherFilter = ({ onChange }) => {
   const [level, setLevel] = useState("any level");
   const [price, setPrice] = useState("any price");
 
-  useEffect(async () => {
-    try {
-      const response = await axios.get(
-        `http://localhost:3000/load/?language=${language}&level=${level}&price=${price}`
-      );
-      const { data } = response;
-      onChange(data);
-      console.log(data);
-    } catch (error) {
-      console.log(error.message);
-      throw error;
-    }
+  useEffect(() => {
+    const getDataFromBackend = async () => {
+      try {
+        const response = await axios.get(
+          `http://localhost:3000/load/?language=${language}&level=${level}&price=${price}`
+        );
+        const { data } = response;
+        onChange(data);
+        console.log(data);
+      } catch (error) {
+        console.log(error.message);
+        throw error;
+      }
+    };
+    getDataFromBackend();
   }, [language, level, price]);
 
   const selectLanguage = (selectedLanguage) => {
