@@ -58,70 +58,68 @@ const PageSwitcher = ({ pageAmount, onChange }) => {
   }, [pageAmount]);
 
   return (
-    <div>
-      <div className={styles.PageSwitcherButtons}>
-        {pageNumber !== 1 && pageAmount !== 0 ? (
-          <button
-            type="button"
-            onClick={firstPage}
-            className={styles.PageSwitcherButton}
-          >
-            First page
-          </button>
-        ) : (
-          <div className={styles.PageSwitcherDiv}>First page</div>
-        )}
-        {pageNumber !== 1 && pageAmount !== 0 ? (
-          <button
-            type="button"
-            onClick={previousPage}
-            className={styles.PageSwitcherButton}
-          >
-            Previous page
-          </button>
-        ) : (
-          <div className={styles.PageSwitcherDiv}>Previous page</div>
-        )}
-        <input
-          type="text"
-          onChange={handleNewPageChange}
-          value={newPageNumber}
-          className={styles.PageSwitcherInput}
-          placeholder={`Page ${pageNumber}/${pageAmount}`}
-        />
-        <p>
-          Page {pageNumber}/{pageAmount}
-        </p>
+    <div className={styles.PageSwitcherButtons}>
+      {pageNumber !== 1 && pageAmount !== 0 ? (
         <button
           type="button"
-          onClick={handleNewPageEnter}
+          onClick={firstPage}
           className={styles.PageSwitcherButton}
         >
-          Enter page number
+          First page
         </button>
-        {pageNumber !== pageAmount && pageAmount !== 0 ? (
-          <button
-            type="button"
-            onClick={nextPage}
-            className={styles.PageSwitcherButton}
-          >
-            Next page
-          </button>
-        ) : (
-          <div className={styles.PageSwitcherDiv}>Next page</div>
-        )}
-        {pageNumber !== pageAmount && pageAmount !== 0 ? (
-          <button
-            type="button"
-            onClick={lastPage}
-            className={styles.PageSwitcherButton}
-          >
-            Last page
-          </button>
-        ) : (
-          <div className={styles.PageSwitcherDiv}>Last page</div>
-        )}
-      </div>
+      ) : (
+        <div className={styles.PageSwitcherDiv}>First page</div>
+      )}
+      {pageNumber !== 1 && pageAmount !== 0 ? (
+        <button
+          type="button"
+          onClick={previousPage}
+          className={styles.PageSwitcherButton}
+        >
+          Previous page
+        </button>
+      ) : (
+        <div className={styles.PageSwitcherDiv}>Previous page</div>
+      )}
+      <input
+        type="text"
+        onChange={handleNewPageChange}
+        value={newPageNumber}
+        className={styles.PageSwitcherInput}
+        placeholder={`Page ${pageNumber}/${pageAmount}`}
+      />
+      <p>
+        Page {pageNumber}/{pageAmount}
+      </p>
+      <button
+        type="button"
+        onClick={handleNewPageEnter}
+        className={styles.PageSwitcherButton}
+      >
+        Enter page number
+      </button>
+      {pageNumber !== pageAmount && pageAmount !== 0 ? (
+        <button
+          type="button"
+          onClick={nextPage}
+          className={styles.PageSwitcherButton}
+        >
+          Next page
+        </button>
+      ) : (
+        <div className={styles.PageSwitcherDiv}>Next page</div>
+      )}
+      {pageNumber !== pageAmount && pageAmount !== 0 ? (
+        <button
+          type="button"
+          onClick={lastPage}
+          className={styles.PageSwitcherButton}
+        >
+          Last page
+        </button>
+      ) : (
+        <div className={styles.PageSwitcherDiv}>Last page</div>
+      )}
     </div>
   );
 };
