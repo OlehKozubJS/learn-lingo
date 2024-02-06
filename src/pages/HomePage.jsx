@@ -8,7 +8,6 @@ import {
   TeacherFilter,
   PageSwitcher,
 } from "../components";
-//import { PageSwitcherTest } from "./PageSwitcherTest";
 
 import AppStyles from "../App.module.css";
 
