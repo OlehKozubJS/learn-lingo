@@ -18,6 +18,7 @@ function TeachersPage() {
   const [filteredTeachers, setFilteredTeachers] = useState([]);
   const [filterData, setFilterData] = useState({});
   const [pageNumber, setPageNumber] = useState(1);
+  const [pageAmount, setPageAmount] = useState(0);
   const [teachersOnPage, setTeachersOnPage] = useState([]);
 
   const bookTrialLesson = (newTeacherData) => {
@@ -58,15 +59,20 @@ function TeachersPage() {
   }, [filterData]);
 
   useEffect(() => {
+    setPageNumber(1);
+    setPageAmount(Math.ceil(filteredTeachers.length / 3));
+  }, [filteredTeachers]);
+
+  useEffect(() => {
     setTeachersOnPage(
-      filteredTeachers.slice((pageNumber - 1) * perPage, pageNumber * perPage)
+      filteredTeachers.slice((pageNumber - 1) * 3, pageNumber * 3)
     );
   }, [pageNumber, filteredTeachers]);
 
   return (
     <main>
       <PageSwitcher
-        list={filteredTeachers}
+        pageAmount={pageAmount}
         onChange={handlePageSwitcherChange}
         perPage={3}
       />

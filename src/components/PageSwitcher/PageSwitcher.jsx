@@ -2,8 +2,7 @@ import { useEffect, useState } from "react";
 
 import styles from "./PageSwitcher.module.css";
 
-const PageSwitcher = ({ list, perPage, onChange }) => {
-  const [pageAmount, setPageAmount] = useState(0);
+const PageSwitcher = ({ pageAmount, onChange }) => {
   const [pageNumber, setPageNumber] = useState(1);
   const [newPageNumber, setNewPageNumber] = useState(1);
 
@@ -47,13 +46,8 @@ const PageSwitcher = ({ list, perPage, onChange }) => {
   };
 
   useEffect(() => {
-    setPageNumber(1);
-    setPageAmount(Math.ceil(list.length / perPage));
-  }, [list]);
-
-  useEffect(() => {
-    onChange(list.slice((pageNumber - 1) * perPage, pageNumber * perPage));
-  }, [pageNumber, list]);
+    onChange(pageNumber);
+  }, [pageNumber, pageAmount]);
 
   useEffect(() => {
     setNewPageNumber(pageNumber);
