@@ -24,26 +24,26 @@
 }
 
 .PageSwitcherButton {
-  border: 2px solid #fff;
+  border: 1px solid #fff;
   background-color: #fff;
 
   color: #121417;
 }
 
 .PageSwitcherDiv {
-  border: 2px solid rgba(18, 20, 23, 0.2);
+  border: 1px solid rgba(18, 20, 23, 0.2);
   background: none;
   color: rgba(18, 20, 23, 0.2);
 }
 
 .PageSwitcherButton:hover {
-  border: 2px solid #f4c550;
+  border: 1px solid #f4c550;
   background-color: #f4c550;
   color: #fff;
 }
 
 .PageSwitcherButton:active {
-  border: 2px solid #ffdc86;
+  border: 1px solid #ffdc86;
   background-color: #ffdc86;
   color: #fff;
 }
@@ -51,10 +51,10 @@
 .PageSwitcherInput {
   width: 50px;
 
-  border: 2px solid rgba(18, 20, 23, 0.2);
+  border: 1px solid rgba(18, 20, 23, 0.2);
   outline: none;
 }
 
 .PageSwitcherInput:focus-within {
-  border: 2px solid #f4c550;
+  border: 1px solid #f4c550;
 }
