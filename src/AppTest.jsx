@@ -67,7 +67,7 @@ function AppTest() {
   useEffect(() => {
     const getDataFromBackend = async () => {
       const response = await axios.get("http://localhost:3000/load");
-      await setDataFromBackend(JSON.stringify(response));
+      setDataFromBackend(JSON.stringify(response));
     };
     getDataFromBackend();
   }, []);
