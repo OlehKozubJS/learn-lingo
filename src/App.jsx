@@ -1,14 +1,14 @@
 import { useState, lazy, Suspense } from "react";
 
-import HomePage from "./pages/Home";
-import TeachersPage from "./pages/Teachers";
-import AppTest from "./pages/AppTest";
-
 const lazyLoad = (componentName) => {
   return lazy(() => {
     return import(`./pages/${componentName}`);
   });
 };
+
+const HomePage = lazyLoad("HomePage");
+const TeachersPage = lazyLoad("TeachersPage");
+const AppTest = lazyLoad("AppTest");
 
 import styles from "./App.module.css";
 
