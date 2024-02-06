@@ -86,7 +86,7 @@ function AppTest() {
   );
 }
 
-export { AppTest };
+export default AppTest;
 
 /*
       <SVGImage name={"log-in"} size={20} />
