@@ -35,12 +35,6 @@ button {
   font-family: "roboto-bold";
 }
 
-@media screen and (min-width: 300px) and (max-width: 500px) {
-  body {
-    background-color: green;
-  }
-}
-
 .NavigationBar {
   display: flex;
   gap: 28px;
