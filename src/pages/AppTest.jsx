@@ -2,16 +2,16 @@ import axios from "axios";
 
 import { useState, useEffect } from "react";
 
-import teachers from "./teachers.json";
+import teachers from "../teachers.json";
 
 import {
   TeacherCards,
   LessonModal,
   TeacherFilter,
   PageSwitcher,
-} from "./components";
+} from "../components";
 
-import { SVGImage } from "./icons";
+import { SVGImage } from "../icons";
 
 import styles from "./App.module.css";
 import css from "./AppTest.module.css";
