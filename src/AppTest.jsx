@@ -20,7 +20,6 @@ function AppTest() {
   const [keyName, setKeyName] = useState("");
   const [leftSide, setLeftSide] = useState(0);
   const [mode, setMode] = useState("stop");
-  const [dataFromBackend, setDataFromBackend] = useState([]);
 
   useEffect(() => {
     const handleKeydown = (event) => {
@@ -64,16 +63,6 @@ function AppTest() {
     };
   }, [mode]);
 
-  useEffect(() => {
-    const getDataFromBackend = async () => {
-      const response = await axios.get(
-        "http://localhost:3000/load/?language=English&level=B2 Upper-Intermediate&price=from 20 to 29 $"
-      );
-      setDataFromBackend(response.data);
-    };
-    getDataFromBackend();
-  }, []);
-
   return (
     <main>
       <h1>Test Page</h1>
@@ -93,11 +82,6 @@ function AppTest() {
       </div>
       <div>{leftSide}</div>
       <div>{keyName}</div>
-      <ul>
-        {dataFromBackend.map((item, index) => {
-          return <li key={index}>{JSON.stringify(item)}</li>;
-        })}
-      </ul>
     </main>
   );
 }
