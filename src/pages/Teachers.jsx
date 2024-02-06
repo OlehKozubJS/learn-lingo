@@ -17,6 +17,7 @@ function TeachersPage() {
   const [isLessonModal, setIsLessonModal] = useState(false);
   const [filteredTeachers, setFilteredTeachers] = useState([]);
   const [filterData, setFilterData] = useState({});
+  const [pageNumber, setPageNumber] = useState(1);
   const [teachersOnPage, setTeachersOnPage] = useState([]);
 
   const bookTrialLesson = (newTeacherData) => {
@@ -34,7 +35,7 @@ function TeachersPage() {
   };
 
   const handlePageSwitcherChange = (data) => {
-    setTeachersOnPage(data);
+    setPageNumber(data);
   };
 
   const handleTeacherFilterChange = (data) => {
@@ -55,6 +56,12 @@ function TeachersPage() {
     };
     getDataFromBackend();
   }, [filterData]);
+
+  useEffect(() => {
+    setTeachersOnPage(
+      filteredTeachers.slice((pageNumber - 1) * perPage, pageNumber * perPage)
+    );
+  }, [pageNumber, filteredTeachers]);
 
   return (
     <main>
