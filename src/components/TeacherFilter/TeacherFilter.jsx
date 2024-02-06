@@ -18,8 +18,8 @@ const TeacherFilter = ({ onChange }) => {
           `http://localhost:3000/load/?language=${language}&level=${level}&price=${price}`
         );
         const { data } = response;
-        onChange(JSON.parse(data));
-        console.log(JSON.parse(data));
+        onChange(data);
+        console.log(data);
       } catch (error) {
         console.log(error.message);
         throw error;
