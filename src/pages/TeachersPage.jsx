@@ -10,6 +10,7 @@ import {
 } from "../components";
 
 import AppStyles from "../App.module.css";
+import TeachersPageStyles from "./TeachersPage.module.css";
 
 function TeachersPage() {
   const [teacherData, setTeacherData] = useState({});
@@ -64,7 +65,7 @@ function TeachersPage() {
   }, [filterData, pageNumber]);
 
   return (
-    <main>
+    <main className={TeachersPageStyles.TeachersPage}>
       <PageSwitcher
         pageAmount={pageAmount}
         onChange={handlePageSwitcherChange}
