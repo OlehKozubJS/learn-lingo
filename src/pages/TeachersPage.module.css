@@ -1,0 +1,6 @@
+.TeachersPage {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  row-gap: 48px;
+}
