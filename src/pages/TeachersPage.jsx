@@ -53,7 +53,6 @@ function TeachersPage() {
             `&page=${pageNumber || 1}` +
             `&perPage=5`
         );
-        console.log(response.data);
         setTeachers(response.data.teachers);
         setPageAmount(response.data.pages);
       } catch (error) {
