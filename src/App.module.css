@@ -37,7 +37,8 @@ button {
 
 .NavigationBar {
   display: flex;
-  gap: 28px;
+  column-gap: 28px;
+  margin-bottom: 32px;
 }
 
 .NavigationButton {
