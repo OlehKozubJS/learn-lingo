@@ -55,7 +55,7 @@ function App() {
           )}
         </nav>
       </header>
-      <Suspense>
+      <Suspense fallback={<p>Loading. Please Wait...</p>}>
         {pageName === "home" && <HomePage />}
         {pageName === "teachers" && <TeachersPage />}
         {pageName === "test" && <AppTest />}
