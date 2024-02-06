@@ -51,7 +51,7 @@ function TeachersPage() {
             `&level=${filterData.level}` +
             `&price=${filterData.price}` +
             `&page=${pageNumber}` +
-            `&perpage=3`
+            `&perPage=3`
         );
         setTeachers(response.data.teachers);
         setPageAmount(response.data.pages);
@@ -79,10 +79,7 @@ function TeachersPage() {
           teacherPhoto={teacherData.avatar_url}
         />
       )}
-      <TeacherCards
-        teachersData={teachersOnPage}
-        bookTrialLesson={bookTrialLesson}
-      />
+      <TeacherCards teachersData={teachers} bookTrialLesson={bookTrialLesson} />
     </main>
   );
 }
