@@ -2,7 +2,7 @@ import { useState, lazy, Suspense } from "react";
 
 import HomePage from "./pages/Home";
 import TeachersPage from "./pages/Teachers";
-import { AppTest } from "./AppTest";
+import AppTest from "./AppTest";
 
 import styles from "./App.module.css";
 
