@@ -17,9 +17,7 @@ const TeacherFilter = ({ onChange }) => {
         const response = await axios.get(
           `http://localhost:3000/load/?language=${language}&level=${level}&price=${price}`
         );
-        const { data } = response;
-        onChange(data);
-        console.log(data);
+        await onChange(response.data);
       } catch (error) {
         console.log(error.message);
         throw error;
