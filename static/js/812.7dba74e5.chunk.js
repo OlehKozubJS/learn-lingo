@@ -1,0 +1,1 @@
+(self.webpackChunklearn_lingo=self.webpackChunklearn_lingo||[]).push([[812],{812:()=>{}}]);
