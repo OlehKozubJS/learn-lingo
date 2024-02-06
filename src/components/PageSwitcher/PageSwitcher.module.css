@@ -58,3 +58,9 @@
 .PageSwitcherInput:focus-within {
   border: 1px solid #f4c550;
 }
+
+.PageSwitcherOutput {
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
