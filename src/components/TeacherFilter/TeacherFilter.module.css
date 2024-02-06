@@ -74,7 +74,8 @@
   width: 100%;
 }
 
-.OptionItemButton {
+.OptionItemButton,
+.OptionItemDiv {
   border: 0;
   padding: 0;
   background: 0;
@@ -99,10 +100,10 @@
   color: #fff;
 }
 
-.Selected {
-  color: #121417;
+.OptionItemButton {
+  color: rgba(18, 20, 23, 0.2);
 }
 
-.NotSelected {
-  color: rgba(18, 20, 23, 0.2);
+.OptionItemDiv {
+  color: #f4c550;
 }
