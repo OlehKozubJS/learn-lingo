@@ -82,17 +82,16 @@ const PageSwitcher = ({ pageAmount, onChange }) => {
         ) : (
           <div className={styles.PageSwitcherDiv}>Previous page</div>
         )}
-        {newPageNumber === NaN ? (
-          <div className={styles.PageSwitcherInput}>{pageNumber}</div>
-        ) : (
-          <input
-            type="text"
-            onChange={handleNewPageChange}
-            value={newPageNumber}
-            className={styles.PageSwitcherInput}
-            placeholder={`Page ${pageNumber}/${pageAmount}`}
-          />
-        )}
+        <input
+          type="text"
+          onChange={handleNewPageChange}
+          value={newPageNumber}
+          className={styles.PageSwitcherInput}
+          placeholder={`Page ${pageNumber}/${pageAmount}`}
+        />
+        <p>
+          Page {pageNumber}/{pageAmount}
+        </p>
         <button
           type="button"
           onClick={handleNewPageEnter}
@@ -123,9 +122,6 @@ const PageSwitcher = ({ pageAmount, onChange }) => {
           <div className={styles.PageSwitcherDiv}>Last page</div>
         )}
       </div>
-      <p>
-        Page {pageNumber}/{pageAmount}
-      </p>
     </div>
   );
 };
