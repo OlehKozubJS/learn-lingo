@@ -50,29 +50,6 @@ function TeachersPage() {
             `?language=${filterData.language || "any language"}` +
             `&level=${filterData.level || "any level"}` +
             `&price=${filterData.price || "any price"}` +
-            `&page=1` +
-            `&perPage=5`
-        );
-        console.log(response.data);
-        setTeachers(response.data.teachers);
-        setPageNumber(1);
-        setPageAmount(response.data.pages);
-      } catch (error) {
-        console.log(error.message);
-        throw error;
-      }
-    };
-    getDataFromBackend();
-  }, [filterData]);
-
-  useEffect(() => {
-    const getDataFromBackend = async () => {
-      try {
-        const response = await axios.get(
-          `http://localhost:3000/load/` +
-            `?language=${filterData.language || "any language"}` +
-            `&level=${filterData.level || "any level"}` +
-            `&price=${filterData.price || "any price"}` +
             `&page=${pageNumber || 1}` +
             `&perPage=5`
         );
@@ -85,7 +62,7 @@ function TeachersPage() {
       }
     };
     getDataFromBackend();
-  }, [pageNumber]);
+  }, [filterData, pageNumber]);
 
   return (
     <main>
