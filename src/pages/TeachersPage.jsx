@@ -47,12 +47,13 @@ function TeachersPage() {
       try {
         const response = await axios.get(
           `http://localhost:3000/load/` +
-            `?language=${filterData.language}` +
-            `&level=${filterData.level}` +
-            `&price=${filterData.price}` +
-            `&page=${pageNumber}` +
+            `?language=${filterData.language || "any language"}` +
+            `&level=${filterData.level || "any level"}` +
+            `&price=${filterData.price || "any price"}` +
+            `&page=${pageNumber || 1}` +
             `&perPage=3`
         );
+        console.log(response.data);
         setTeachers(response.data.teachers);
         setPageAmount(response.data.pages);
       } catch (error) {
