@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, lazy, Suspense } from "react";
 
 import HomePage from "./pages/Home";
 import TeachersPage from "./pages/Teachers";
@@ -55,9 +55,11 @@ function App() {
           )}
         </nav>
       </header>
-      {pageName === "home" && <HomePage />}
-      {pageName === "teachers" && <TeachersPage />}
-      {pageName === "test" && <AppTest />}
+      <Suspense>
+        {pageName === "home" && <HomePage />}
+        {pageName === "teachers" && <TeachersPage />}
+        {pageName === "test" && <AppTest />}
+      </Suspense>
     </div>
   );
 }
