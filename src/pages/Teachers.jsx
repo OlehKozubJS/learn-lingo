@@ -32,7 +32,7 @@ function TeachersPage() {
   };
 
   const handlePageSwitcherChange = (data) => {
-    setTeachersOnPage(data);
+    setFilterData(data);
   };
 
   const handleTeacherFilterChange = (data) => {
@@ -45,14 +45,14 @@ function TeachersPage() {
         const response = await axios.get(
           `http://localhost:3000/load/?language=${filterData.language}&level=${filterData.level}&price=${filterData.price}`
         );
-        await onChange(response.data);
+        setFilteredTeachers(response.data);
       } catch (error) {
         console.log(error.message);
         throw error;
       }
     };
     getDataFromBackend();
-  }, [language, level, price]);
+  }, [filterData]);
 
   return (
     <main>
