@@ -4,6 +4,12 @@ import HomePage from "./pages/Home";
 import TeachersPage from "./pages/Teachers";
 import AppTest from "./AppTest";
 
+const lazyLoad = (componentName) => {
+  return lazy(() => {
+    return import(componentName);
+  });
+};
+
 import styles from "./App.module.css";
 
 function App() {
