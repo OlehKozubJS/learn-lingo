@@ -88,7 +88,7 @@ const PageSwitcher = ({ pageAmount, onChange }) => {
         className={styles.PageSwitcherInput}
         placeholder={`Page ${pageNumber}/${pageAmount}`}
       />
-      <p>
+      <p className={styles.PageSwitcherOutput}>
         Page {pageNumber}/{pageAmount}
       </p>
       <button
