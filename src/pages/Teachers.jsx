@@ -34,11 +34,11 @@ function TeachersPage() {
   };
 
   const handlePageSwitcherChange = (data) => {
-    setFilterData(data);
+    setTeachersOnPage(data);
   };
 
   const handleTeacherFilterChange = (data) => {
-    setFilteredTeachers(data);
+    setFilterData(data);
   };
 
   useEffect(() => {
