@@ -51,7 +51,7 @@ function TeachersPage() {
             `&level=${filterData.level || "any level"}` +
             `&price=${filterData.price || "any price"}` +
             `&page=${pageNumber || 1}` +
-            `&perPage=5`
+            `&perPage=3`
         );
         setTeachers(response.data.teachers);
         setPageAmount(response.data.pages);
