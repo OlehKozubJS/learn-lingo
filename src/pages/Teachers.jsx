@@ -69,7 +69,6 @@ function TeachersPage() {
       <PageSwitcher
         pageAmount={pageAmount}
         onChange={handlePageSwitcherChange}
-        perPage={3}
       />
       <TeacherFilter onChange={handleTeacherFilterChange} />
       {isLessonModal && (
