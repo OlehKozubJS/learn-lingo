@@ -55,6 +55,7 @@ function TeachersPage() {
         );
         setTeachers(response.data.teachers);
         setPageAmount(response.data.pages);
+        console.log(response);
       } catch (error) {
         console.log(error.message);
         throw error;
