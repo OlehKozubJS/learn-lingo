@@ -1,11 +1,11 @@
 {
   "files": {
     "main.css": "/learn-lingo/static/css/main.a3779c64.css",
-    "main.js": "/learn-lingo/static/js/main.396e5e0f.js",
+    "main.js": "/learn-lingo/static/js/main.7cffe92b.js",
     "static/js/983.9a1923a2.chunk.js": "/learn-lingo/static/js/983.9a1923a2.chunk.js",
     "static/js/157.02be5f57.chunk.js": "/learn-lingo/static/js/157.02be5f57.chunk.js",
-    "static/css/307.31d6cfe0.chunk.css": "/learn-lingo/static/css/307.31d6cfe0.chunk.css",
-    "static/js/307.61784e75.chunk.js": "/learn-lingo/static/js/307.61784e75.chunk.js",
+    "static/css/307.9f7883b0.chunk.css": "/learn-lingo/static/css/307.9f7883b0.chunk.css",
+    "static/js/307.823cb4c8.chunk.js": "/learn-lingo/static/js/307.823cb4c8.chunk.js",
     "static/js/294.612b3869.chunk.js": "/learn-lingo/static/js/294.612b3869.chunk.js",
     "static/media/Roboto-Medium.ttf": "/learn-lingo/static/media/Roboto-Medium.7c8d04cd831df3033c8a.ttf",
     "static/media/Roboto-Regular.ttf": "/learn-lingo/static/media/Roboto-Regular.fc2b5060f7accec5cf74.ttf",
@@ -13,14 +13,15 @@
     "static/media/icons.svg": "/learn-lingo/static/media/icons.c7c4d15815213aa3d4bc6da2654f9527.svg",
     "index.html": "/learn-lingo/index.html",
     "main.a3779c64.css.map": "/learn-lingo/static/css/main.a3779c64.css.map",
-    "main.396e5e0f.js.map": "/learn-lingo/static/js/main.396e5e0f.js.map",
+    "main.7cffe92b.js.map": "/learn-lingo/static/js/main.7cffe92b.js.map",
     "983.9a1923a2.chunk.js.map": "/learn-lingo/static/js/983.9a1923a2.chunk.js.map",
     "157.02be5f57.chunk.js.map": "/learn-lingo/static/js/157.02be5f57.chunk.js.map",
-    "307.61784e75.chunk.js.map": "/learn-lingo/static/js/307.61784e75.chunk.js.map",
+    "307.9f7883b0.chunk.css.map": "/learn-lingo/static/css/307.9f7883b0.chunk.css.map",
+    "307.823cb4c8.chunk.js.map": "/learn-lingo/static/js/307.823cb4c8.chunk.js.map",
     "294.612b3869.chunk.js.map": "/learn-lingo/static/js/294.612b3869.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.a3779c64.css",
-    "static/js/main.396e5e0f.js"
+    "static/js/main.7cffe92b.js"
   ]
 }
