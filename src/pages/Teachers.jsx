@@ -14,6 +14,7 @@ function TeachersPage() {
   const [lessonModalData, setLessonModalData] = useState({});
   const [isLessonModal, setIsLessonModal] = useState(false);
   const [filteredTeachers, setFilteredTeachers] = useState([]);
+  const [filterData, setFilterData] = useState({});
   const [teachersOnPage, setTeachersOnPage] = useState([]);
 
   const bookTrialLesson = (newTeacherData) => {
@@ -37,6 +38,21 @@ function TeachersPage() {
   const handleTeacherFilterChange = (data) => {
     setFilteredTeachers(data);
   };
+
+  useEffect(() => {
+    const getDataFromBackend = async () => {
+      try {
+        const response = await axios.get(
+          `http://localhost:3000/load/?language=${filterData.language}&level=${filterData.level}&price=${filterData.price}`
+        );
+        await onChange(response.data);
+      } catch (error) {
+        console.log(error.message);
+        throw error;
+      }
+    };
+    getDataFromBackend();
+  }, [language, level, price]);
 
   return (
     <main>
