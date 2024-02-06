@@ -15,11 +15,10 @@ function TeachersPage() {
   const [teacherData, setTeacherData] = useState({});
   const [lessonModalData, setLessonModalData] = useState({});
   const [isLessonModal, setIsLessonModal] = useState(false);
-  const [filteredTeachers, setFilteredTeachers] = useState([]);
+  const [teachers, setTeachers] = useState([]);
   const [filterData, setFilterData] = useState({});
   const [pageNumber, setPageNumber] = useState(1);
   const [pageAmount, setPageAmount] = useState(0);
-  const [teachersOnPage, setTeachersOnPage] = useState([]);
 
   const bookTrialLesson = (newTeacherData) => {
     setTeacherData(newTeacherData);
@@ -47,27 +46,22 @@ function TeachersPage() {
     const getDataFromBackend = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:3000/load/?language=${filterData.language}&level=${filterData.level}&price=${filterData.price}`
+          `http://localhost:3000/load/` +
+            `?language=${filterData.language}` +
+            `&level=${filterData.level}` +
+            `&price=${filterData.price}` +
+            `&page=${pageNumber}` +
+            `&perpage=3`
         );
-        setFilteredTeachers(response.data);
+        setTeachers(response.data.teachers);
+        setPageAmount(response.data.pages);
       } catch (error) {
         console.log(error.message);
         throw error;
       }
     };
     getDataFromBackend();
-  }, [filterData]);
-
-  useEffect(() => {
-    setPageNumber(1);
-    setPageAmount(Math.ceil(filteredTeachers.length / 3));
-  }, [filteredTeachers]);
-
-  useEffect(() => {
-    setTeachersOnPage(
-      filteredTeachers.slice((pageNumber - 1) * 3, pageNumber * 3)
-    );
-  }, [pageNumber, filteredTeachers]);
+  }, [filterData, pageNumber]);
 
   return (
     <main>
