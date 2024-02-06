@@ -14,9 +14,9 @@ import {
 import { SVGImage } from "../icons";
 
 import styles from "../App.module.css";
-import css from "./AppTest.module.css";
+import css from "./AppTestPage.module.css";
 
-function AppTest() {
+function AppTestPage() {
   const [keyName, setKeyName] = useState("");
   const [leftSide, setLeftSide] = useState(0);
   const [mode, setMode] = useState("stop");
@@ -65,7 +65,7 @@ function AppTest() {
 
   return (
     <main>
-      <h1>Test Page</h1>
+      <h1>App Test Page</h1>
       <div>
         <button onClick={handleModeValue} value="left">
           Left
@@ -86,7 +86,7 @@ function AppTest() {
   );
 }
 
-export default AppTest;
+export default AppTestPage;
 
 /*
       <SVGImage name={"log-in"} size={20} />
