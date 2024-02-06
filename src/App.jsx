@@ -6,8 +6,8 @@ const lazyLoad = (componentName) => {
   });
 };
 
-const HomePage = lazyLoad("HomePage");
-const TeachersPage = lazyLoad("TeachersPage");
+const HomePage = lazyLoad("Home");
+const TeachersPage = lazyLoad("Teachers");
 const AppTest = lazyLoad("AppTest");
 
 import styles from "./App.module.css";
