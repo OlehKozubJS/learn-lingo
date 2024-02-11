@@ -38,18 +38,15 @@ const FilterSelect = ({ title, options, select, width }) => {
         <ul className={styles.OptionList}>
           {options.map((option, index) => (
             <li key={index} className={styles.OptionItem}>
-              {selected !== option ? (
-                <button
-                  type="button"
-                  onClick={handleClick}
-                  value={option}
-                  className={styles.OptionItemButton}
-                >
-                  {option}
-                </button>
-              ) : (
-                <div className={styles.OptionItemDiv}>{option}</div>
-              )}
+              <button
+                type="button"
+                onClick={handleClick}
+                value={option}
+                className={styles.OptionItemButton}
+                disabled={selected === option}
+              >
+                {option}
+              </button>
             </li>
           ))}
         </ul>
