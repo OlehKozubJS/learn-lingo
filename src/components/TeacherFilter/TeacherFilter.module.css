@@ -85,6 +85,8 @@
   font-weight: 500;
   line-height: 20px;
   text-align: start;
+
+  color: rgba(18, 20, 23, 0.2);
 }
 
 .OptionItemButton:enabled:hover {
@@ -97,10 +99,6 @@
 .OptionItemButton:enabled:active {
   background-color: #ffdc86;
   color: #fff;
-}
-
-.OptionItemButton {
-  color: rgba(18, 20, 23, 0.2);
 }
 
 .OptionItemButton:disabled {
