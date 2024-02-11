@@ -104,6 +104,6 @@
   color: rgba(18, 20, 23, 0.2);
 }
 
-.OptionItemDiv {
+.OptionItemButton:disabled {
   color: #f4c550;
 }
