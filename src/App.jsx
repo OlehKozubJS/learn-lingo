@@ -66,7 +66,7 @@ function App() {
       <Suspense fallback={<p>Loading. Please Wait...</p>}>
         <Routes>
           <Route path="/home" element={<HomePage />} />
-          <Route path="/eachers" element={<TeachersPage />} />
+          <Route path="/teachers" element={<TeachersPage />} />
           <Route path="/test" element={<AppTest />} />
         </Routes>
       </Suspense>
