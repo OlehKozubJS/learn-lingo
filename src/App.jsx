@@ -24,11 +24,11 @@ function App() {
     <div>
       <header>
         <nav className={styles.NavigationBar}>
-          {pageName !== "home" ? (
+          {pageName !== "" ? (
             <button
               type="button"
               onClick={getPage}
-              value="home"
+              value=""
               className={styles.NavigationButton}
             >
               Home
@@ -65,7 +65,7 @@ function App() {
       <Navigate to={pageName} />
       <Suspense fallback={<p>Loading. Please Wait...</p>}>
         <Routes>
-          <Route path="/home" element={<HomePage />} />
+          <Route path="/" element={<HomePage />} />
           <Route path="/teachers" element={<TeachersPage />} />
           <Route path="/test" element={<AppTest />} />
         </Routes>
