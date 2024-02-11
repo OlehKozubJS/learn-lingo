@@ -24,43 +24,33 @@ function App() {
     <div>
       <header>
         <nav className={styles.NavigationBar}>
-          {pageName !== "" ? (
-            <button
-              type="button"
-              onClick={getPage}
-              value=""
-              className={styles.NavigationButton}
-              disabled={false}
-            >
-              Home
-            </button>
-          ) : (
-            <div className={styles.NavigationDiv}>Home</div>
-          )}
-          {pageName !== "teachers" ? (
-            <button
-              type="button"
-              onClick={getPage}
-              value="teachers"
-              className={styles.NavigationButton}
-            >
-              Teachers
-            </button>
-          ) : (
-            <div className={styles.NavigationDiv}>Teachers</div>
-          )}
-          {pageName !== "test" ? (
-            <button
-              type="button"
-              onClick={getPage}
-              value="test"
-              className={styles.NavigationButton}
-            >
-              Test Page
-            </button>
-          ) : (
-            <div className={styles.NavigationDiv}>Test</div>
-          )}
+          <button
+            type="button"
+            onClick={getPage}
+            value=""
+            className={styles.NavigationButton}
+            disabled={pageName === ""}
+          >
+            Home
+          </button>
+          <button
+            type="button"
+            onClick={getPage}
+            value="teachers"
+            className={styles.NavigationButton}
+            disabled={pageName === "teachers"}
+          >
+            Teachers
+          </button>
+          <button
+            type="button"
+            onClick={getPage}
+            value="test"
+            className={styles.NavigationButton}
+            disabled={pageName === "test"}
+          >
+            Test Page
+          </button>
         </nav>
       </header>
       <Navigate to={pageName} />
