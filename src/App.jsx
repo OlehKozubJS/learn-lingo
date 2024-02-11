@@ -62,10 +62,13 @@ function App() {
           )}
         </nav>
       </header>
+      <Navigate to={pageName} />
       <Suspense fallback={<p>Loading. Please Wait...</p>}>
-        {pageName === "home" && <HomePage />}
-        {pageName === "teachers" && <TeachersPage />}
-        {pageName === "test" && <AppTest />}
+        <Routes>
+          <Route path="/home" element={<HomePage />} />
+          <Route path="/eachers" element={<TeachersPage />} />
+          <Route path="/test" element={<AppTest />} />
+        </Routes>
       </Suspense>
     </div>
   );
