@@ -94,7 +94,7 @@
   padding-left: 5px;
 }
 
-.OptionItemButton:active {
+.OptionItemButton:enabled:active {
   background-color: #ffdc86;
   color: #fff;
 }
