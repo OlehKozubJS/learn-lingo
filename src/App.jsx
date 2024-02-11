@@ -1,4 +1,5 @@
 import { useState, lazy, Suspense } from "react";
+import { Navigate, Routes, Route } from "react-router-dom";
 
 const lazyLoad = (componentName) => {
   return lazy(() => {
