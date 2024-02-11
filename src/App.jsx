@@ -30,6 +30,7 @@ function App() {
               onClick={getPage}
               value=""
               className={styles.NavigationButton}
+              disabled={false}
             >
               Home
             </button>
