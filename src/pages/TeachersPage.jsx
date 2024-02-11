@@ -1,4 +1,5 @@
 import axios from "axios";
+import { useSearchParams } from "react-router-dom";
 
 import { useState, useEffect } from "react";
 
@@ -20,6 +21,7 @@ function TeachersPage() {
   const [filterData, setFilterData] = useState({});
   const [pageNumber, setPageNumber] = useState(1);
   const [pageAmount, setPageAmount] = useState(0);
+  const [searchParams, setSearchParams] = useSearchParams({});
 
   const bookTrialLesson = (newTeacherData) => {
     setTeacherData(newTeacherData);
@@ -54,6 +56,13 @@ function TeachersPage() {
             `&page=${pageNumber || 1}` +
             `&perPage=3`
         );
+        setSearchParams({
+          language: filterData.language,
+          level: filterData.level,
+          price: filterData.price,
+          page: pageNumber,
+          perPage: 3,
+        });
         setTeachers(response.data.teachers);
         setPageAmount(response.data.pages);
       } catch (error) {
