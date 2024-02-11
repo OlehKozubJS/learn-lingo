@@ -74,8 +74,7 @@
   width: 100%;
 }
 
-.OptionItemButton,
-.OptionItemDiv {
+.OptionItemButton {
   border: 0;
   padding: 0;
   background: 0;
