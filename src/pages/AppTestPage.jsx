@@ -43,11 +43,13 @@ function AppTestPage() {
     let changeLeftSetInterval;
     let newLeftSide = leftSide;
     const changeLeft = () => {
+      const modeNumber = Number(mode);
+
       if (
-        (Number(mode) === -10 && newLeftSide > 0) ||
-        (Number(mode) === 10 && newLeftSide < 500)
+        (modeNumber === -10 && newLeftSide > 0) ||
+        (modeNumber === 10 && newLeftSide < 500)
       ) {
-        newLeftSide += Number(mode);
+        newLeftSide += modeNumber;
       }
       setLeftSide(newLeftSide);
     };
