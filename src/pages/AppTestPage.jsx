@@ -51,6 +51,7 @@ function AppTestPage() {
       ) {
         newLeftSide += modeNumber;
       }
+
       setLeftSide(newLeftSide);
     };
 
