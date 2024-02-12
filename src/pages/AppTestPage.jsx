@@ -19,7 +19,7 @@ import css from "./AppTestPage.module.css";
 function AppTestPage() {
   const [keyName, setKeyName] = useState("");
   const [leftSide, setLeftSide] = useState(0);
-  const [mode, setMode] = useState("stop");
+  const [mode, setMode] = useState(0);
 
   useEffect(() => {
     const handleKeydown = (event) => {
@@ -43,16 +43,12 @@ function AppTestPage() {
     let changeLeftSetInterval;
     let newLeftSide = leftSide;
     const changeLeft = () => {
-      let step;
-      if (mode === "left" && newLeftSide > 0) {
-        step = -10;
-      } else if (mode === "right" && newLeftSide < 500) {
-        step = 10;
-      } else {
-        step = 0;
-        clearInterval(changeLeftSetInterval);
+      if (
+        (Number(mode) === -10 && newLeftSide > 0) ||
+        (Number(mode) === 10 && newLeftSide < 500)
+      ) {
+        newLeftSide += Number(mode);
       }
-      newLeftSide += step;
       setLeftSide(newLeftSide);
     };
 
@@ -67,13 +63,13 @@ function AppTestPage() {
     <main>
       <h1>App Test Page</h1>
       <div>
-        <button onClick={handleModeValue} value="left">
+        <button onClick={handleModeValue} value={-10}>
           Left
         </button>
-        <button onClick={handleModeValue} value="stop">
+        <button onClick={handleModeValue} value={0}>
           Stop
         </button>
-        <button onClick={handleModeValue} value="right">
+        <button onClick={handleModeValue} value={10}>
           Right
         </button>
       </div>
