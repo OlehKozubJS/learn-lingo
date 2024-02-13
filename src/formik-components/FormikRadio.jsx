@@ -19,9 +19,9 @@ const FormikRadio = ({ formik, title, name, options }) => {
                 className={styles.FormikRadioButton}
               />
               <SVGImage
-                name={`radio${
-                  formik.values[name] === option ? "-checked" : ""
-                }`}
+                name={
+                  formik.values[name] === option ? "radio-checked" : "radio"
+                }
                 size={20}
               />
               <p className={styles.FormikRadioText}>{option}</p>
