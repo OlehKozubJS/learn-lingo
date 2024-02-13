@@ -3,7 +3,7 @@ import { useFormik } from "formik";
 import { Modal } from "./Modal";
 import {
   FormikForm,
-  FormikRadio,
+  FormikModalRadio,
   FormikName,
   FormikEmail,
   FormikPhone,
@@ -37,7 +37,7 @@ const LessonModal = ({ onSubmit, closeModal, teacherPhoto, teacherName }) => {
         </div>
       </div>
       <FormikForm formik={formik} submitName="Book">
-        <FormikRadio
+        <FormikModalRadio
           formik={formik}
           name={"reasonForLearning"}
           title="What is your main reason for learning English?"
