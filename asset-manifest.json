@@ -1,10 +1,10 @@
 {
   "files": {
     "main.css": "/learn-lingo/static/css/main.c10beede.css",
-    "main.js": "/learn-lingo/static/js/main.c8481e25.js",
-    "static/js/983.9a1923a2.chunk.js": "/learn-lingo/static/js/983.9a1923a2.chunk.js",
+    "main.js": "/learn-lingo/static/js/main.aa8bc4ae.js",
+    "static/js/983.899c7617.chunk.js": "/learn-lingo/static/js/983.899c7617.chunk.js",
     "static/css/157.54e0534a.chunk.css": "/learn-lingo/static/css/157.54e0534a.chunk.css",
-    "static/js/157.648ded05.chunk.js": "/learn-lingo/static/js/157.648ded05.chunk.js",
+    "static/js/157.9545f221.chunk.js": "/learn-lingo/static/js/157.9545f221.chunk.js",
     "static/css/307.54e0534a.chunk.css": "/learn-lingo/static/css/307.54e0534a.chunk.css",
     "static/js/307.823cb4c8.chunk.js": "/learn-lingo/static/js/307.823cb4c8.chunk.js",
     "static/js/294.612b3869.chunk.js": "/learn-lingo/static/js/294.612b3869.chunk.js",
@@ -14,16 +14,16 @@
     "static/media/icons.svg": "/learn-lingo/static/media/icons.c7c4d15815213aa3d4bc6da2654f9527.svg",
     "index.html": "/learn-lingo/index.html",
     "main.c10beede.css.map": "/learn-lingo/static/css/main.c10beede.css.map",
-    "main.c8481e25.js.map": "/learn-lingo/static/js/main.c8481e25.js.map",
-    "983.9a1923a2.chunk.js.map": "/learn-lingo/static/js/983.9a1923a2.chunk.js.map",
+    "main.aa8bc4ae.js.map": "/learn-lingo/static/js/main.aa8bc4ae.js.map",
+    "983.899c7617.chunk.js.map": "/learn-lingo/static/js/983.899c7617.chunk.js.map",
     "157.54e0534a.chunk.css.map": "/learn-lingo/static/css/157.54e0534a.chunk.css.map",
-    "157.648ded05.chunk.js.map": "/learn-lingo/static/js/157.648ded05.chunk.js.map",
+    "157.9545f221.chunk.js.map": "/learn-lingo/static/js/157.9545f221.chunk.js.map",
     "307.54e0534a.chunk.css.map": "/learn-lingo/static/css/307.54e0534a.chunk.css.map",
     "307.823cb4c8.chunk.js.map": "/learn-lingo/static/js/307.823cb4c8.chunk.js.map",
     "294.612b3869.chunk.js.map": "/learn-lingo/static/js/294.612b3869.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.c10beede.css",
-    "static/js/main.c8481e25.js"
+    "static/js/main.aa8bc4ae.js"
   ]
 }
