@@ -12,8 +12,8 @@ const FormikRadio = ({ name, options, onChange, children }) => {
               type="radio"
               name={name}
               id={option}
-              onChange={onChange}
               value={option}
+              onChange={onChange}
               className={styles.FormikRadioButton}
             />
             <div>{children}</div>
