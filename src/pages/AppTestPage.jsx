@@ -1,8 +1,8 @@
 import axios from "axios";
+import { useFormik } from "formik";
+import { useState, useEffect } from "react";
 
 import teachers from "../teachers.json";
-
-import { useState, useEffect } from "react";
 
 import {
   TeacherCards,
@@ -10,6 +10,8 @@ import {
   TeacherFilter,
   PageSwitcher,
 } from "../components";
+
+import { FormikRadio } from "../formik-components";
 
 import { SVGImage } from "../icons";
 
