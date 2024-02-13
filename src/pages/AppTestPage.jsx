@@ -1,8 +1,8 @@
 import axios from "axios";
 
-import { useState, useEffect } from "react";
-
 import teachers from "../teachers.json";
+
+import { useState, useEffect } from "react";
 
 import {
   TeacherCards,
