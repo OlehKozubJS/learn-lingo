@@ -2,7 +2,7 @@ import { SVGImage } from "../icons";
 
 import styles from "./FormikRadio.module.css";
 
-const FormikRadio = ({ name, options, onChange, children }) => {
+const LearnLingoRadios = ({ name, options, onChange, children }) => {
   return (
     <ul className={styles.FormikRadio}>
       {options.map((option, index) => (
@@ -24,4 +24,4 @@ const FormikRadio = ({ name, options, onChange, children }) => {
   );
 };
 
-export { FormikRadio };
+export { LearnLingoRadios };
