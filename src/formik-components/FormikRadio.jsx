@@ -9,9 +9,9 @@ const FormikRadio = ({ name, options, onChange, children }) => {
         <li key={index} className={styles.FormikRadioItem}>
           <label htmlFor={option}>
             <input
-              id={option}
-              name={name}
               type="radio"
+              name={name}
+              id={option}
               onChange={onChange}
               value={option}
               className={styles.FormikRadioButton}
