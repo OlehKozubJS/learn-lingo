@@ -2,7 +2,7 @@ import { SVGImage } from "../icons";
 
 import styles from "./FormikRadio.module.css";
 
-const FormikRadio = ({ formik, title, name, options }) => {
+const FormikModalRadio = ({ formik, title, name, options }) => {
   return (
     <div className={styles.FormikRadio}>
       <h3 className={styles.FormikRadioHeader}>{title}</h3>
@@ -33,4 +33,4 @@ const FormikRadio = ({ formik, title, name, options }) => {
   );
 };
 
-export { FormikRadio };
+export { FormikModalRadio };
