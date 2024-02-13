@@ -2,7 +2,7 @@ import { SVGImage } from "../icons";
 
 import styles from "./FormikRadio.module.css";
 
-const FormikRadio = ({ formik, name, options, children, style }) => {
+const FormikRadio = ({ name, options, onChange, children }) => {
   return (
     <ul className={styles.FormikRadio}>
       {options.map((option, index) => (
@@ -12,7 +12,7 @@ const FormikRadio = ({ formik, name, options, children, style }) => {
               id={option}
               name={name}
               type="radio"
-              onChange={formik.handleChange}
+              onChange={onChange}
               value={option}
               className={styles.FormikRadioButton}
             />
