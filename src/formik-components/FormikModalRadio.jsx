@@ -1,6 +1,6 @@
 import { SVGImage } from "../icons";
 
-import styles from "./FormikRadio.module.css";
+import styles from "./FormikModalRadio.module.css";
 
 const FormikModalRadio = ({ formik, title, name, options }) => {
   return (
