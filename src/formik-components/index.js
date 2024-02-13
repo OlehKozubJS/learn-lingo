@@ -4,6 +4,7 @@ import { FormikEmail } from "./FormikEmail";
 import { FormikPassword } from "./FormikPassword";
 import { FormikPhone } from "./FormikPhone";
 import { FormikRadio } from "./FormikRadio";
+import { FormikModalRadio } from "./FormikModalRadio";
 
 export {
   FormikForm,
@@ -12,4 +13,5 @@ export {
   FormikPassword,
   FormikPhone,
   FormikRadio,
+  FormikModalRadio,
 };
