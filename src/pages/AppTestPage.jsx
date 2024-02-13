@@ -11,7 +11,7 @@ import {
   PageSwitcher,
 } from "../components";
 
-import { FormikRadio } from "../formik-components";
+import { LearnLingoRadios } from "../components";
 
 import { SVGImage } from "../icons";
 
@@ -77,6 +77,11 @@ function AppTestPage() {
         <button onClick={handleModeValue} value="10">
           Right
         </button>
+        <LearnLingoRadios
+          name="animationButtons"
+          options={[-10, 0, 10]}
+          onChange={handleModeValue}
+        />
       </div>
       <div className={css.Parent}>
         <div style={{ left: `${leftSide}px` }} className={css.Child}></div>

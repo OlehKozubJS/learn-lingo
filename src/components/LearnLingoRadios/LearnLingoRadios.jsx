@@ -1,8 +1,8 @@
-import { SVGImage } from "../icons";
+import { SVGImage } from "../../icons";
 
-import styles from "./FormikRadio.module.css";
+import styles from "./LearnLingoRadios.module.css";
 
-const LearnLingoRadios = ({ name, options, onChange, children }) => {
+const LearnLingoRadios = ({ name, options, onChange }) => {
   return (
     <ul className={styles.FormikRadio}>
       {options.map((option, index) => (
@@ -16,7 +16,7 @@ const LearnLingoRadios = ({ name, options, onChange, children }) => {
               onChange={onChange}
               className={styles.FormikRadioButton}
             />
-            <div>{children}</div>
+            {option}
           </label>
         </li>
       ))}
