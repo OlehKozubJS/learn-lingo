@@ -66,13 +66,13 @@ function AppTestPage() {
     <main>
       <h1>App Test Page</h1>
       <div>
-        <button onClick={handleModeValue} value={-10}>
+        <button onClick={handleModeValue} value="-10">
           Left
         </button>
-        <button onClick={handleModeValue} value={0}>
+        <button onClick={handleModeValue} value="0">
           Stop
         </button>
-        <button onClick={handleModeValue} value={10}>
+        <button onClick={handleModeValue} value="10">
           Right
         </button>
       </div>
