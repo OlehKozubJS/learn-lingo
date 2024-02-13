@@ -10,12 +10,6 @@ const FormikRadio = ({ formik, title, name, options }) => {
         {options.map((option, index) => (
           <li key={index} className={styles.FormikRadioItem}>
             <label htmlFor={option} className={styles.FormikRadioLabel}>
-              <SVGImage
-                name={`radio${
-                  formik.values[name] === option ? "-checked" : ""
-                }`}
-                size={20}
-              />
               <input
                 id={option}
                 name={name}
@@ -23,6 +17,12 @@ const FormikRadio = ({ formik, title, name, options }) => {
                 onChange={formik.handleChange}
                 value={option}
                 className={styles.FormikRadioButton}
+              />
+              <SVGImage
+                name={`radio${
+                  formik.values[name] === option ? "-checked" : ""
+                }`}
+                size={20}
               />
               <p className={styles.FormikRadioText}>{option}</p>
             </label>
