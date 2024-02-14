@@ -1,9 +1,10 @@
 const Container = ({ children }) => {
+  const NewComponent = children;
+
   return (
     <div>
       {children}
       {children.props.mainValue}
-      {children}
     </div>
   );
 };
