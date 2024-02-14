@@ -1,5 +1,5 @@
 const Content = ({ innerContent }) => {
-  return <div>perivete{innerContent}</div>;
+  return <div>Hello!{innerContent}</div>;
 };
 
 export { Content };
