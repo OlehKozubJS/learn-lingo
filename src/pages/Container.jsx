@@ -4,7 +4,7 @@ const Container = ({ NewComponent, innerContent, children }) => {
       <NewComponent innerContent={","} />
       World!
       {children}
-      {children.props.value}
+      {children.props.mainValue}
     </div>
   );
 };
