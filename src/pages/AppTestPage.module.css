@@ -18,13 +18,13 @@
   border: 0;
   padding: 0;
   background: 0;
-  width: 100%;
+  width: 100px;
 
   font-family: "Roboto", sans-serif;
   font-size: 18px;
   font-weight: 500;
   line-height: 20px;
-  text-align: start;
+  text-align: center;
 
   color: rgba(18, 20, 23, 0.2);
 }
