@@ -11,7 +11,7 @@ import {
   PageSwitcher,
 } from "../components";
 
-import { LearnLingoRadios } from "../components";
+import { LearnLingoRadio } from "../components";
 
 import { SVGImage } from "../icons";
 
@@ -68,20 +68,15 @@ function AppTestPage() {
     <main>
       <h1>App Test Page</h1>
       <div>
-        <button onClick={handleModeValue} value="-10">
+        <LearnLingoRadio name="mode" value="-10" onChange={handleModeValue}>
           Left
-        </button>
-        <button onClick={handleModeValue} value="0">
+        </LearnLingoRadio>
+        <LearnLingoRadio name="mode" value="0" onChange={handleModeValue}>
           Stop
-        </button>
-        <button onClick={handleModeValue} value="10">
+        </LearnLingoRadio>
+        <LearnLingoRadio name="mode" value="10" onChange={handleModeValue}>
           Right
-        </button>
-        <LearnLingoRadios
-          name="animationButtons"
-          options={[-10, 0, 10]}
-          onChange={handleModeValue}
-        />
+        </LearnLingoRadio>
       </div>
       <div className={css.Parent}>
         <div style={{ left: `${leftSide}px` }} className={css.Child}></div>
