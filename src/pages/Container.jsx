@@ -3,6 +3,8 @@ const Container = ({ NewComponent, innerContent, children }) => {
     <div>
       <NewComponent innerContent={","} />
       World!
+      {children}
+      {children.props.value}
     </div>
   );
 };
