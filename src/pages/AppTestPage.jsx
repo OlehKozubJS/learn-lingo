@@ -15,6 +15,9 @@ import { LearnLingoRadio } from "../components";
 
 import { SVGImage } from "../icons";
 
+import { Content } from "./Content";
+import { Container } from "./Container";
+
 import styles from "../App.module.css";
 import css from "./AppTestPage.module.css";
 
@@ -101,6 +104,7 @@ function AppTestPage() {
       </div>
       <div>{leftSide}</div>
       <div>{keyName}</div>
+      <Container NewComponent={Content} innerContent={","} />
     </main>
   );
 }
