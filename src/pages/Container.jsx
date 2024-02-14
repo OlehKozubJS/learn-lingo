@@ -3,6 +3,7 @@ const Container = ({ children }) => {
     <div>
       {children}
       {children.props.mainValue}
+      {children}
     </div>
   );
 };

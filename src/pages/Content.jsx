@@ -1,5 +1,5 @@
-const Content = ({ mainValue }) => {
-  return <div>Progress</div>;
+const Content = ({ mainValue, extraValue }) => {
+  return <div>Progress {extraValue}</div>;
 };
 
 export { Content };
