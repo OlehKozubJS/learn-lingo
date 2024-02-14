@@ -71,6 +71,7 @@ function AppTestPage() {
         <LearnLingoRadio
           name="mode"
           value="-10"
+          isChecked={mode === "-10"}
           onChange={handleModeValue}
           className={css.LearnLingoRadio}
         >
@@ -79,6 +80,7 @@ function AppTestPage() {
         <LearnLingoRadio
           name="mode"
           value="0"
+          isChecked={mode === "0"}
           onChange={handleModeValue}
           className={css.LearnLingoRadio}
         >
@@ -87,10 +89,11 @@ function AppTestPage() {
         <LearnLingoRadio
           name="mode"
           value="10"
+          isChecked={mode === "10"}
           onChange={handleModeValue}
           className={css.LearnLingoRadio}
         >
-          <div className={css.LearnLingoRadio}>Right</div>
+          <div className={css.OptionItemButton}>Right</div>
         </LearnLingoRadio>
       </div>
       <div className={css.Parent}>
