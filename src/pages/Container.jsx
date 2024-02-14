@@ -1,8 +1,6 @@
-const Container = ({ NewComponent, innerContent, children }) => {
+const Container = ({ children }) => {
   return (
     <div>
-      <NewComponent innerContent={","} />
-      World!
       {children}
       {children.props.mainValue}
     </div>
