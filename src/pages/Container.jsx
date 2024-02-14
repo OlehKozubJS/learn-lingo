@@ -1,7 +1,7 @@
 const Container = ({ NewComponent, innerContent }) => {
   return (
     <div>
-      <NewComponent innerContent={innerContent} />
+      <NewComponent innerContent={"-"} />
       mire
     </div>
   );
