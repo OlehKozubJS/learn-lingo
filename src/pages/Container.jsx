@@ -1,4 +1,4 @@
-const Container = ({ NewComponent, innerContent }) => {
+const Container = ({ NewComponent, innerContent, children }) => {
   return (
     <div>
       <NewComponent innerContent={","} />
