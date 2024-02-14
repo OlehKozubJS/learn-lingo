@@ -105,7 +105,7 @@ function AppTestPage() {
       <div>{leftSide}</div>
       <div>{keyName}</div>
       <Container>
-        <Content mainValue=" wins?">Progress</Content>
+        <Content mainValue=" always wins!">Progress</Content>
       </Container>
     </main>
   );
