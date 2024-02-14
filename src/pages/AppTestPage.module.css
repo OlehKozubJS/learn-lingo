@@ -13,3 +13,28 @@
 
   background-color: blue;
 }
+.BookTrialLessonButton {
+  padding: 16px 48px;
+
+  border-radius: 12px;
+  border: 2px solid #f4c550;
+
+  color: #121417;
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 28px;
+}
+
+.BookTrialLessonButton:not(:hover) {
+  background: none;
+}
+
+.BookTrialLessonButton:hover,
+.BookTrialLessonButton:focus {
+  background-color: #f4c550;
+}
+
+.BookTrialLessonButton:active {
+  background-color: #ffdc86;
+}
