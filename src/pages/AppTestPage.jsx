@@ -104,7 +104,7 @@ function AppTestPage() {
       </div>
       <div>{leftSide}</div>
       <div>{keyName}</div>
-      <Container NewComponent={Content} innerContent={","} />
+      <Container NewComponent={Content} />
     </main>
   );
 }
