@@ -68,14 +68,29 @@ function AppTestPage() {
     <main>
       <h1>App Test Page</h1>
       <div>
-        <LearnLingoRadio name="mode" value="-10" onChange={handleModeValue}>
-          Left
+        <LearnLingoRadio
+          name="mode"
+          value="-10"
+          onChange={handleModeValue}
+          className={css.LearnLingoRadio}
+        >
+          <div className={css.OptionItemButton}>Left</div>
         </LearnLingoRadio>
-        <LearnLingoRadio name="mode" value="0" onChange={handleModeValue}>
-          Stop
+        <LearnLingoRadio
+          name="mode"
+          value="0"
+          onChange={handleModeValue}
+          className={css.LearnLingoRadio}
+        >
+          <div className={css.OptionItemButton}>Stop</div>
         </LearnLingoRadio>
-        <LearnLingoRadio name="mode" value="10" onChange={handleModeValue}>
-          Right
+        <LearnLingoRadio
+          name="mode"
+          value="10"
+          onChange={handleModeValue}
+          className={css.LearnLingoRadio}
+        >
+          <div className={css.LearnLingoRadio}>Right</div>
         </LearnLingoRadio>
       </div>
       <div className={css.Parent}>

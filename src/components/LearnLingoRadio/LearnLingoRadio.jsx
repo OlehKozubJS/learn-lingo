@@ -2,7 +2,14 @@ import { SVGImage } from "../../icons";
 
 //import styles from "./LearnLingoRadio.module.css";
 
-const LearnLingoRadio = ({ name, value, onChange, children, className }) => {
+const LearnLingoRadio = ({
+  name,
+  value,
+  isChecked,
+  onChange,
+  children,
+  className,
+}) => {
   return (
     <label htmlFor={value}>
       <input
@@ -13,6 +20,7 @@ const LearnLingoRadio = ({ name, value, onChange, children, className }) => {
         onChange={onChange}
         style={{ display: "none" }}
         className={className}
+        checked={isChecked}
       />
       {children}
     </label>
