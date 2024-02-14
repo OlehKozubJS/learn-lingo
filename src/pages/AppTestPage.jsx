@@ -105,7 +105,7 @@ function AppTestPage() {
       <div>{leftSide}</div>
       <div>{keyName}</div>
       <Container NewComponent={Content}>
-        <div mainValue=" wins!">Progress</div>
+        <div value=" wins!">Progress</div>
       </Container>
     </main>
   );
