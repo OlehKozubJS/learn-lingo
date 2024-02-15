@@ -30,7 +30,7 @@ const LearnLingoRadio = ({ name, values, onChange, element, className }) => {
                 className={className}
                 checked={currentValue === value}
               />
-              <NewComponent />
+              <NewComponent value={value} />
             </label>
           </li>
         );
