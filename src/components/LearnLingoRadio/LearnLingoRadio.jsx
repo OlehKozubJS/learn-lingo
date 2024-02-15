@@ -4,26 +4,36 @@ import { SVGImage } from "../../icons";
 
 const LearnLingoRadio = ({
   name,
-  value,
+  values,
   isChecked,
   onChange,
-  children,
+  element,
   className,
 }) => {
+  const NewComponent = element;
+
   return (
-    <label htmlFor={value}>
-      <input
-        type="radio"
-        name={name}
-        id={value}
-        value={value}
-        onChange={onChange}
-        style={{ display: "none" }}
-        className={className}
-        checked={isChecked}
-      />
-      {children}
-    </label>
+    <ul>
+      {(value, index) => {
+        return (
+          <li key={index}>
+            <label htmlFor={value}>
+              <input
+                type="radio"
+                name={name}
+                id={value}
+                value={value}
+                onChange={onChange}
+                style={{ display: "none" }}
+                className={className}
+                checked={isChecked}
+              />
+              {children}
+            </label>
+          </li>
+        );
+      }}
+    </ul>
   );
 };
 
