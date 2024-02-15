@@ -9,9 +9,11 @@ const LearnLingoRadio = ({
   values,
   firstValue,
   onChange,
-  NewComponent,
+  element,
   className,
 }) => {
+  const NewComponent = element;
+
   const [currentValue, setCurrentValue] = useState(firstValue);
 
   const handleChange = (event) => {

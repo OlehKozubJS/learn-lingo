@@ -75,7 +75,7 @@ function AppTestPage() {
         values={["-10", "0", "10"]}
         firstValue={"0"}
         onChange={handleModeValue}
-        NewComponent={Content}
+        element={Content}
         className={{ list: css.OptionList, item: css.LearnLingoRadio }}
       />
       <div className={css.Parent}>
