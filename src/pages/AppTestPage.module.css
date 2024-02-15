@@ -14,6 +14,18 @@
   background-color: blue;
 }
 
+.OptionList {
+  box-sizing: border-box;
+  width: 150px;
+  padding: 14px 18px;
+  flex-direction: column;
+  gap: 8px;
+
+  border-radius: 12px;
+  background: #fff;
+  border: 1px solid #f4c550;
+}
+
 .LearnLingoRadio + .OptionItemButton {
   border: 0;
   padding: 0;

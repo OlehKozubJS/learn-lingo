@@ -40,8 +40,8 @@ function AppTestPage() {
     };
   }, []);
 
-  const handleModeValue = (event) => {
-    setMode(event.target.value);
+  const handleModeValue = (value) => {
+    setMode(value);
   };
 
   useEffect(() => {
@@ -70,43 +70,19 @@ function AppTestPage() {
   return (
     <main>
       <h1>App Test Page</h1>
-      <div>
-        <LearnLingoRadio
-          name="mode"
-          value="-10"
-          isChecked={mode === "-10"}
-          onChange={handleModeValue}
-          className={css.LearnLingoRadio}
-        >
-          <div className={css.OptionItemButton}>Left</div>
-        </LearnLingoRadio>
-        <LearnLingoRadio
-          name="mode"
-          value="0"
-          isChecked={mode === "0"}
-          onChange={handleModeValue}
-          className={css.LearnLingoRadio}
-        >
-          <div className={css.OptionItemButton}>Stop</div>
-        </LearnLingoRadio>
-        <LearnLingoRadio
-          name="mode"
-          value="10"
-          isChecked={mode === "10"}
-          onChange={handleModeValue}
-          className={css.LearnLingoRadio}
-        >
-          <div className={css.OptionItemButton}>Right</div>
-        </LearnLingoRadio>
-      </div>
+      <LearnLingoRadio
+        name="mode"
+        values={["-10", "0", "10"]}
+        firstValue={"0"}
+        onChange={handleModeValue}
+        NewComponent={Content}
+        className={{ list: css.OptionList, item: css.LearnLingoRadio }}
+      />
       <div className={css.Parent}>
         <div style={{ left: `${leftSide}px` }} className={css.Child}></div>
       </div>
       <div>{leftSide}</div>
       <div>{keyName}</div>
-      <Container>
-        <Content mainValue=" always wins!">Progress</Content>
-      </Container>
     </main>
   );
 }
