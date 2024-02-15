@@ -1,20 +1,22 @@
+import { useState } from "react";
+
 import { SVGImage } from "../../icons";
 
 //import styles from "./LearnLingoRadio.module.css";
 
-const LearnLingoRadio = ({
-  name,
-  values,
-  isChecked,
-  onChange,
-  element,
-  className,
-}) => {
+const LearnLingoRadio = ({ name, values, onChange, element, className }) => {
+  const [currentValue, setCurrentValue] = useState("");
   const NewComponent = element;
+
+  handleChange = (event) => {
+    const newValue = event.target.value;
+    onChange(newValue);
+    setCurrentValue(newValue);
+  };
 
   return (
     <ul>
-      {(value, index) => {
+      {values.map((value, index) => {
         return (
           <li key={index}>
             <label htmlFor={value}>
@@ -23,16 +25,16 @@ const LearnLingoRadio = ({
                 name={name}
                 id={value}
                 value={value}
-                onChange={onChange}
+                onChange={handleChange}
                 style={{ display: "none" }}
                 className={className}
-                checked={isChecked}
+                checked={currentValue === value}
               />
-              {children}
+              <NewComponent />
             </label>
           </li>
         );
-      }}
+      })}
     </ul>
   );
 };
