@@ -53,7 +53,7 @@ function App() {
           </button>
         </nav>
       </header>
-      <Navigate to={pageName} />
+
       <Suspense fallback={<p>Loading. Please Wait...</p>}>
         <Routes>
           <Route path="/" element={<HomePage />} />
@@ -66,3 +66,4 @@ function App() {
 }
 
 export { App };
+//      <Navigate to={pageName} />
