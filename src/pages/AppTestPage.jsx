@@ -82,8 +82,9 @@ function AppTestPage() {
     if (event.type === "mousemove" && isMouseDown) {
       const currentX =
         event.clientX - rangeAxis.getBoundingClientRect().left - initialX;
-      console.log(event.clientX - initialX);
-      setRangeValue(currentX);
+      if (currentX > 0 && currentX < 150) {
+        setRangeValue(currentX);
+      }
     }
 
     if (event.type === "mouseup") {
@@ -167,7 +168,7 @@ function AppTestPage() {
             left: rangeValue + "px",
             height: "25px",
             width: "50px",
-            backgroundColor: "rgb(150, 100, 250)",
+            backgroundColor: "rgb(50, 150, 250)",
           }}
           onMouseDown={handleCustomRangeChange}
           onMouseMove={handleCustomRangeChange}
