@@ -25,6 +25,8 @@ function AppTestPage() {
   const [keyName, setKeyName] = useState("");
   const [leftSide, setLeftSide] = useState(0);
   const [mode, setMode] = useState(0);
+  const [topValue, setTopValue] = useState(50);
+  const [leftValue, setLeftValue] = useState(120);
 
   useEffect(() => {
     const handleKeydown = (event) => {
@@ -42,6 +44,11 @@ function AppTestPage() {
 
   const handleModeValue = (value) => {
     setMode(value);
+  };
+
+  const handlePurpleDivKeydown = (event) => {
+    setTopValue(event.clientY);
+    setLeftValue(event.clientX);
   };
 
   useEffect(() => {
@@ -91,12 +98,13 @@ function AppTestPage() {
           backgroundColor: "rgb(120, 100, 250)",
           marginTop: "25px",
         }}
+        onKeyDown={handlePurpleDivKeydown}
       >
         <div
           style={{
             position: "absolute",
-            top: "10px",
-            left: "20px",
+            top: topValue + "px",
+            left: leftValue + "px",
             height: "25px",
             width: "50px",
             backgroundColor: "rgb(150, 100, 250)",
