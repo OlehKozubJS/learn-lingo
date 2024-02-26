@@ -76,7 +76,6 @@ function AppTestPage() {
 
     if (event.type === "mousedown") {
       setInitialX(event.clientX - rangeDial.getBoundingClientRect().left);
-      console.log(initialX);
       setIsMouseDown(true);
     }
 
@@ -175,6 +174,7 @@ function AppTestPage() {
           onMouseUp={handleCustomRangeChange}
         ></div>
       </div>
+      <div>{rangeValue}</div>
       <div>{leftSide}</div>
       <div>{keyName}</div>
     </main>
