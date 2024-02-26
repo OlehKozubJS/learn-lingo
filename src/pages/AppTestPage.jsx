@@ -47,9 +47,19 @@ function AppTestPage() {
   };
 
   const handlePurpleDivMousedown = (event) => {
-    if (event.target !== event.currentTarget) return;
-    setTopValue(event.clientY - event.target.getBoundingClientRect().top);
-    setLeftValue(event.clientX - event.target.getBoundingClientRect().left);
+    const newTopValue =
+      event.clientY - event.target.getBoundingClientRect().top;
+    const newLeftValue =
+      event.clientX - event.target.getBoundingClientRect().left;
+
+    if (
+      event.target !== event.currentTarget ||
+      newTopValue >= event.target.offsetHeight - 25 ||
+      newLeftValue >= event.target.offsetWidth - 50
+    )
+      return;
+    setTopValue(newTopValue);
+    setLeftValue(newLeftValue);
   };
 
   useEffect(() => {
