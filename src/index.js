@@ -8,9 +8,9 @@ const root = document.querySelector("#root");
 const reactRoot = createRoot(root);
 
 reactRoot.render(
-  <BrowserRouter basename="/learn-lingo">
-    <StrictMode>
+  <StrictMode>
+    <BrowserRouter basename="/learn-lingo">
       <App />
-    </StrictMode>
-  </BrowserRouter>
+    </BrowserRouter>{" "}
+  </StrictMode>
 );
