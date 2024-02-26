@@ -83,7 +83,13 @@ function AppTestPage() {
       <div className={css.Parent}>
         <div style={{ left: `${leftSide}px` }} className={css.Child}></div>
       </div>
-      <div>Hello</div>
+      <div
+        style={{
+          height: "100px",
+          width: "200px",
+          backgroundColor: "rgb(100, 50, 150)",
+        }}
+      ></div>
       <div>{leftSide}</div>
       <div>{keyName}</div>
     </main>
