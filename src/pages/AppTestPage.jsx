@@ -82,7 +82,7 @@ function AppTestPage() {
     if (event.type === "mousemove" && isMouseDown) {
       const currentX =
         event.clientX - rangeAxis.getBoundingClientRect().left - initialX;
-      if (currentX > 0 && currentX < 150) {
+      if (currentX >= 0 && currentX <= 150) {
         setRangeValue(currentX);
       }
     }
