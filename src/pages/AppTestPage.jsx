@@ -87,7 +87,7 @@ function AppTestPage() {
         style={{
           height: "100px",
           width: "200px",
-          backgroundColor: "rgb(100, 50, 150)",
+          backgroundColor: "rgb(120, 100, 250)",
           marginTop: "25px",
         }}
       ></div>
