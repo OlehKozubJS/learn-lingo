@@ -47,17 +47,22 @@ function AppTestPage() {
   };
 
   const handlePurpleDivMousedown = (event) => {
-    const newTopValue =
-      event.clientY - event.target.getBoundingClientRect().top;
-    const newLeftValue =
+    let newTopValue = event.clientY - event.target.getBoundingClientRect().top;
+    let newLeftValue =
       event.clientX - event.target.getBoundingClientRect().left;
 
-    if (
-      event.target !== event.currentTarget ||
-      newTopValue >= event.target.offsetHeight - 25 ||
-      newLeftValue >= event.target.offsetWidth - 50
-    )
+    if (event.target !== event.currentTarget) {
       return;
+    }
+
+    if (newTopValue > event.target.offsetHeight - 25) {
+      newTopValue = event.target.offsetHeight - 25;
+    }
+
+    if (newLeftValue > event.target.offsetWidth - 50) {
+      newLeftValue = event.target.offsetWidth - 50;
+    }
+
     setTopValue(newTopValue);
     setLeftValue(newLeftValue);
   };
