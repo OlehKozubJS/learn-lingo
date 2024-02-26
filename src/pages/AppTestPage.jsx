@@ -27,6 +27,7 @@ function AppTestPage() {
   const [mode, setMode] = useState(0);
   const [topValue, setTopValue] = useState(50);
   const [leftValue, setLeftValue] = useState(120);
+  const [rangeValue, setRangeValue] = useState(0);
 
   useEffect(() => {
     const handleKeydown = (event) => {
@@ -65,6 +66,24 @@ function AppTestPage() {
 
     setTopValue(newTopValue);
     setLeftValue(newLeftValue);
+  };
+
+  const handleCustomRangeChange = (event) => {
+    const rangeDial = event.currentTarget;
+    const rangeAxis = event.currentTarget.parentNode;
+    let initialX;
+    let currentX;
+
+    if (event.type === "mousedown") {
+      initialX = event.clientX - rangeDial.getBoundingClientRect().left;
+    }
+
+    if (event.type === "mousemove") {
+      currentX =
+        event.clientX - rangeAxis.getBoundingClientRect().left - initialX;
+    }
+
+    setRangeValue(currentX);
   };
 
   useEffect(() => {
@@ -125,6 +144,28 @@ function AppTestPage() {
             width: "50px",
             backgroundColor: "rgb(150, 100, 250)",
           }}
+        ></div>
+      </div>
+      <div
+        style={{
+          position: "relative",
+          height: "25px",
+          width: "200px",
+          backgroundColor: "rgb(120, 100, 250)",
+          marginTop: "25px",
+        }}
+      >
+        <div
+          style={{
+            position: "absolute",
+            top: "0px",
+            left: rangeValue + "px",
+            height: "25px",
+            width: "50px",
+            backgroundColor: "rgb(150, 100, 250)",
+          }}
+          onMouseDown={handleCustomRangeChange}
+          onMouseMove={handleCustomRangeChange}
         ></div>
       </div>
       <div>{leftSide}</div>
