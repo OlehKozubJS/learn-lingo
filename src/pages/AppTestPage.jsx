@@ -85,12 +85,24 @@ function AppTestPage() {
       </div>
       <div
         style={{
+          position: "relative",
           height: "100px",
           width: "200px",
           backgroundColor: "rgb(120, 100, 250)",
           marginTop: "25px",
         }}
-      ></div>
+      >
+        <div
+          style={{
+            position: "absolute",
+            top: "10px",
+            left: "20px",
+            height: "25px",
+            width: "50px",
+            backgroundColor: "rgb(150, 100)",
+          }}
+        ></div>
+      </div>
       <div>{leftSide}</div>
       <div>{keyName}</div>
     </main>
