@@ -1,5 +1,5 @@
 import { useState, lazy, Suspense } from "react";
-import { Navigate, Routes, Route } from "react-router-dom";
+import { Navigate, Routes, Route, Outlet } from "react-router-dom";
 
 const lazyLoad = (componentName) => {
   return lazy(() => {
@@ -54,13 +54,21 @@ function App() {
         </nav>
       </header>
       <Navigate to={pageName} />
-      <Suspense fallback={<p>Loading. Please Wait...</p>}>
-        <Routes>
-          <Route path="/" element={<HomePage />} />
+
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <Suspense fallback={<p>Loading. Please Wait...</p>}>
+              <Outlet />
+            </Suspense>
+          }
+        >
+          <Route index element={<HomePage />} />
           <Route path="/teachers" element={<TeachersPage />} />
           <Route path="/test" element={<AppTest />} />
-        </Routes>
-      </Suspense>
+        </Route>
+      </Routes>
     </div>
   );
 }
