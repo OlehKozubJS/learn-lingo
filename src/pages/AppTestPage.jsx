@@ -99,7 +99,7 @@ function AppTestPage() {
             left: "20px",
             height: "25px",
             width: "50px",
-            backgroundColor: "rgb(150, 100)",
+            backgroundColor: "rgb(150, 100, 250)",
           }}
         ></div>
       </div>
