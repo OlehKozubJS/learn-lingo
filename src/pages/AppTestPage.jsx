@@ -46,9 +46,9 @@ function AppTestPage() {
     setMode(value);
   };
 
-  const handlePurpleDivKeydown = (event) => {
-    setTopValue(event.clientY);
-    setLeftValue(event.clientX);
+  const handlePurpleDivMousedown = (event) => {
+    setTopValue(event.clientY - event.target.getBoundingClientRect().top);
+    setLeftValue(event.clientX - event.target.getBoundingClientRect().left);
   };
 
   useEffect(() => {
@@ -98,7 +98,7 @@ function AppTestPage() {
           backgroundColor: "rgb(120, 100, 250)",
           marginTop: "25px",
         }}
-        onKeyDown={handlePurpleDivKeydown}
+        onMouseDown={handlePurpleDivMousedown}
       >
         <div
           style={{
