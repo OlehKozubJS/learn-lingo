@@ -88,6 +88,7 @@ function AppTestPage() {
           height: "100px",
           width: "200px",
           backgroundColor: "rgb(100, 50, 150)",
+          margin: "25px",
         }}
       ></div>
       <div>{leftSide}</div>
