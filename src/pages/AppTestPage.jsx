@@ -47,6 +47,7 @@ function AppTestPage() {
   };
 
   const handlePurpleDivMousedown = (event) => {
+    if (event.target !== event.currentTarget) return;
     setTopValue(event.clientY - event.target.getBoundingClientRect().top);
     setLeftValue(event.clientX - event.target.getBoundingClientRect().left);
   };
