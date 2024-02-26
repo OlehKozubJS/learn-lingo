@@ -47,14 +47,16 @@ function AppTestPage() {
   useEffect(() => {
     let changeLeftSetInterval;
     let newLeftSide = leftSide;
-    const changeLeft = () => {
-      const modeNumber = Number(mode);
+    const modeNumber = Number(mode);
 
+    const changeLeft = () => {
       if (
         (modeNumber === -10 && newLeftSide > 0) ||
         (modeNumber === 10 && newLeftSide < 500)
       ) {
         newLeftSide += modeNumber;
+      } else {
+        clearInterval(changeLeftSetInterval);
       }
 
       setLeftSide(newLeftSide);
