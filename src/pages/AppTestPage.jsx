@@ -28,14 +28,6 @@ function AppTestPage() {
   return (
     <main>
       <h1>App Test Page</h1>
-      <LearnLingoRadio
-        name="mode"
-        values={["-10", "0", "10"]}
-        firstValue={"0"}
-        onChange={handleModeValue}
-        element={Content}
-        className={{ list: css.OptionList, item: css.LearnLingoRadio }}
-      />
       <div>{mode}</div>
     </main>
   );
