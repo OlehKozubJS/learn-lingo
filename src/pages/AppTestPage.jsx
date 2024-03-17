@@ -15,8 +15,6 @@ import { LearnLingoRadio } from "../components";
 
 import { SVGImage } from "../icons";
 
-import { Content } from "./Content";
-
 import styles from "../App.module.css";
 import css from "./AppTestPage.module.css";
 
