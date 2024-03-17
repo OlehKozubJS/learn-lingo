@@ -1,7 +1,5 @@
 import { useState } from "react";
 
-import { SVGImage } from "../../icons";
-
 import styles from "./LearnLingoRadio.module.css";
 
 const LearnLingoRadio = ({
