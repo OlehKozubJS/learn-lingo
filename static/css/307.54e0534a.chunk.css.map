@@ -1,1 +1,0 @@
-{"version":3,"file":"static/css/307.54e0534a.chunk.css","mappings":"AAAA,kCAGE,kBAAmB,CAFnB,YAAa,CACb,qBAAsB,CAEtB,YACF","sources":["pages/TeachersPage.module.css"],"sourcesContent":[".TeachersPage {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  row-gap: 32px;\n}\n"],"names":[],"sourceRoot":""}
