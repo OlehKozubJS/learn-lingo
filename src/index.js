@@ -3,7 +3,7 @@ import { createRoot } from "react-dom/client";
 import { BrowserRouter } from "react-router-dom";
 import { Provider } from "react-redux";
 
-import {} from "./";
+import { store } from "./redux";
 
 import { App } from "./App.jsx";
 
@@ -12,7 +12,7 @@ const reactRoot = createRoot(root);
 
 reactRoot.render(
   <StrictMode>
-    <Provider>
+    <Provider store={store}>
       <BrowserRouter basename="/learn-lingo">
         <App />
       </BrowserRouter>
