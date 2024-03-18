@@ -14,7 +14,7 @@ const handleRejected = (state, action) => {
 const teachersSlice = createSlice({
   name: "teachers",
   initialState: {
-    teachersData: [],
+    teachersData: {},
     isLoading: false,
     error: null,
   },
