@@ -3,6 +3,8 @@ import { useState, useEffect } from "react";
 import { useSearchParams } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 
+import { getTeachers, selectTeachers, selectPages } from "../redux";
+
 import {
   TeacherCards,
   LessonModal,
@@ -21,6 +23,9 @@ function TeachersPage() {
   const [filterData, setFilterData] = useState({});
   const [pageNumber, setPageNumber] = useState(1);
   const [pageAmount, setPageAmount] = useState(0);
+
+  const dispatch = useDispatch();
+
   const [searchParams, setSearchParams] = useSearchParams({});
 
   const bookTrialLesson = (newTeacherData) => {
@@ -48,13 +53,13 @@ function TeachersPage() {
   useEffect(() => {
     const getDataFromBackend = async () => {
       try {
-        const response = await axios.get(
-          `http://localhost:3000/load/` +
-            `?language=${filterData.language || "any language"}` +
-            `&level=${filterData.level || "any level"}` +
-            `&price=${filterData.price || "any price"}` +
-            `&page=${pageNumber || 1}` +
-            `&perPage=3`
+        dispatch(
+          getTeachers({
+            language: filterData.language,
+            level: filterData.level,
+            price: filterData.price,
+            page: pageNumber,
+          })
         );
         setSearchParams({
           language: filterData.language,
@@ -63,8 +68,8 @@ function TeachersPage() {
           page: pageNumber,
           perPage: 3,
         });
-        setTeachers(response.data.teachers);
-        setPageAmount(response.data.pages);
+        setTeachers(useSelector(selectTeachers));
+        setPageAmount(useSelector(selectPages));
       } catch (error) {
         console.log(error.message);
         throw error;
