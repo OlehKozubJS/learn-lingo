@@ -18,3 +18,5 @@ const getTeachers = createAsyncThunk(
     }
   }
 );
+
+export { getTeachers };
