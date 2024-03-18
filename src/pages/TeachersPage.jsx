@@ -19,10 +19,10 @@ function TeachersPage() {
   const [teacherData, setTeacherData] = useState({});
   const [lessonModalData, setLessonModalData] = useState({});
   const [isLessonModal, setIsLessonModal] = useState(false);
-  const [teachers, setTeachers] = useState([]);
+  const teachers = useSelector(selectTeachers);
   const [filterData, setFilterData] = useState({});
   const [pageNumber, setPageNumber] = useState(1);
-  const [pageAmount, setPageAmount] = useState(0);
+  const pageAmount = useSelector(selectPages);
 
   const dispatch = useDispatch();
 
@@ -68,8 +68,8 @@ function TeachersPage() {
           page: pageNumber,
           perPage: 3,
         });
-        //setTeachers(useSelector(selectTeachers));
-        //setPageAmount(useSelector(selectPages));
+        console.log(teachers);
+        console.log(pageAmount);
       } catch (error) {
         console.log(error.message);
         throw error;
@@ -93,9 +93,8 @@ function TeachersPage() {
           teacherPhoto={teacherData.avatar_url}
         />
       )}
-      <TeacherCards teachersData={teachers} bookTrialLesson={bookTrialLesson} />
     </main>
   );
 }
-
+//<TeacherCards teachersData={teachers} bookTrialLesson={bookTrialLesson} />
 export default TeachersPage;
