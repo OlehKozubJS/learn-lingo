@@ -68,8 +68,8 @@ function TeachersPage() {
           page: pageNumber,
           perPage: 3,
         });
-        setTeachers(useSelector(selectTeachers));
-        setPageAmount(useSelector(selectPages));
+        //setTeachers(useSelector(selectTeachers));
+        //setPageAmount(useSelector(selectPages));
       } catch (error) {
         console.log(error.message);
         throw error;
