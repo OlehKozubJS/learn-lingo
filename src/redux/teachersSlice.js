@@ -1,5 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 
+import {} from "./operations";
+
 const handlePending = (state) => {
   state.isLoading = true;
 };
@@ -16,7 +18,9 @@ const teachersSlice = createSlice({
     isLoading: false,
     error: null,
   },
-  extraReducers,
+  extraReducers: {
+    []
+  },
 });
 
 const teachers = teachersSlice.reducer;
