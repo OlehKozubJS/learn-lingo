@@ -1,6 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-import {} from "./operations";
+import { getTeachers } from "./operations";
 
 const handlePending = (state) => {
   state.isLoading = true;
@@ -19,7 +19,13 @@ const teachersSlice = createSlice({
     error: null,
   },
   extraReducers: {
-    []
+    [getTeachers.pending]: handlePending,
+    [getTeachers.rejected]: handleRejected,
+    [getTeachers.fulfilled](state, action) {
+      state.isLoading = false;
+      state.error = null;
+      state.teachersList = action.payload;
+    },
   },
 });
 
