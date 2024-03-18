@@ -18,14 +18,14 @@ const teachersSlice = createSlice({
     isLoading: false,
     error: null,
   },
-  extraReducers: {
-    [getTeachers.pending]: handlePending,
-    [getTeachers.rejected]: handleRejected,
-    [getTeachers.fulfilled](state, action) {
+  extraReducers: (builder) => {
+    builder.addCase(getTeachers.pending, handlePending);
+    builder.addCase(getTeachers.rejected, handleRejected);
+    builder.addCase(getTeachers.fulfilled, (state, action) => {
       state.isLoading = false;
       state.error = null;
       state.teachersData = action.payload;
-    },
+    });
   },
 });
 
