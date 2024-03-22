@@ -15,7 +15,8 @@ const createThunk = (reducerName, thunkName, thunk) => {
   );
 };
 
-const getTeachersThunk = async ({ language, level, price, page }) => {
+const getTeachersThunk = async (params) => {
+  const { language, level, price, page } = params;
   const response = await axios.get(
     `http://localhost:3000/load/` +
       `?language=${language || "any language"}` +
