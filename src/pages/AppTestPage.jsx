@@ -16,7 +16,6 @@ import { LearnLingoRadio } from "../components";
 import { SVGImage } from "../icons";
 
 import styles from "../App.module.css";
-import css from "./AppTestPage.module.css";
 
 function AppTestPage() {
   const [mode, setMode] = useState(0);
