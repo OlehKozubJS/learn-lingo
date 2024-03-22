@@ -11,6 +11,12 @@ const handleRejected = (state, action) => {
   state.error = action.payload;
 };
 
+const handleFullfiled = (state, action) => {
+  state.isLoading = false;
+  state.error = null;
+  state.teachersData = action.payload;
+};
+
 const teachersSlice = createSlice({
   name: "teachers",
   initialState: {
@@ -21,11 +27,7 @@ const teachersSlice = createSlice({
   extraReducers: (builder) => {
     builder.addCase(getTeachers.pending, handlePending);
     builder.addCase(getTeachers.rejected, handleRejected);
-    builder.addCase(getTeachers.fulfilled, (state, action) => {
-      state.isLoading = false;
-      state.error = null;
-      state.teachersData = action.payload;
-    });
+    builder.addCase(getTeachers.fulfilled, handleFullfiled);
   },
 });
 
