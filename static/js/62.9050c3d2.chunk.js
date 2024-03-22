@@ -1,2 +1,0 @@
-"use strict";(self.webpackChunklearn_lingo=self.webpackChunklearn_lingo||[]).push([[62],{62:(e,t,n)=>{n.r(t),n.d(t,{default:()=>i});const i={Parent:"AppTestPage_Parent__QAbJ5",Child:"AppTestPage_Child__uY1ib",OptionList:"AppTestPage_OptionList__IPPdn",LearnLingoRadio:"AppTestPage_LearnLingoRadio__48NcX",OptionItemButton:"AppTestPage_OptionItemButton__iZJvd"}}}]);
-//# sourceMappingURL=62.9050c3d2.chunk.js.map
