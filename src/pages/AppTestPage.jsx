@@ -33,8 +33,3 @@ function AppTestPage() {
 }
 
 export default AppTestPage;
-
-/*
-      <SVGImage name={"log-in"} size={20} />
-      <SVGImage name={"logo"} size={28} />
-*/
