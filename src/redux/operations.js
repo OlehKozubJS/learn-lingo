@@ -6,7 +6,7 @@ const getTeachers = createAsyncThunk(
   `teachers/getTeachers`,
   async (params, thunkAPI) => {
     try {
-      const { language, level, price, page } = await params;
+      const { language, level, price, page } = params;
       const response = await axios.get(
         `http://localhost:3000/load/` +
           `?language=${language || "any language"}` +
